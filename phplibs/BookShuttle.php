@@ -34,7 +34,7 @@ private function pagina() {
 	$smarty = &$this->smarty;
 	$aParam = $this->aParam;
 
-    GestioneLingua::caricaDizionario($smarty, "Home");
+    GestioneLingua::caricaDizionario($smarty, "BookShuttle");
 
 	$this->setPaginaDaMostrare($smarty->fetch('bookShuttle.tpl'));
 }
