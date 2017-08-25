@@ -12,6 +12,7 @@
                         <input type="text" name="destination" id="destination" value="" placeholder="Destination" />
                     </div>
                 </div>
+
                 <div class="row uniform 50%">
                     <div class="6u 12u(mobile)">
                         <input type="text" id="datepicker" placeholder="Date" />
