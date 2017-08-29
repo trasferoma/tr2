@@ -20,20 +20,20 @@ class BaseClass {
 	var $smarty;
 	var $hCtx;
 	var $hSessionCtx;
-	var $aParam;
-	var $stModKey;
+	var $modulo;
 	var $paginaDaMostrare;
+
+
 
 /** *************************************************** */
 /**
  *	Costruttore
  */
-function BaseClass( &$hCtx, &$hSessionCtx, $stModKey ) {
+function BaseClass( &$hCtx, &$hSessionCtx, $modulo ) {
 	$this->smarty = &$hCtx->smarty;
-	$this->aParam 	 = $hCtx->aRequest;
 	$this->hCtx 	 = &$hCtx;
 	$this->hSessionCtx = &$hSessionCtx;
-	$this->stModKey  = $stModKey;
+	$this->$modulo  = $modulo;
 
 	$this->paginaDaMostrare = "";
 }

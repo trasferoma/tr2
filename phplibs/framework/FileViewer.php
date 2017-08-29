@@ -19,7 +19,6 @@
 class FileViewer {
 	var $hFastTmpl;
 	var $hCtx;
-	var $aParam;
 	var $stModKey;
 
 	var $stUrl;
@@ -33,7 +32,6 @@ class FileViewer {
 function FileViewer( &$hCtx, $stModKey, $stFilePath, $stFileOriginalName, $stUrl ) {
 
 	$this->hFastTmpl = &$hCtx->hFastTemplate;
-	$this->aParam 	 = $hCtx->aRequest;
 	$this->hCtx 	 = &$hCtx;
 
 	$this->stModKey  = $stModKey;
@@ -51,11 +49,6 @@ function FileViewer( &$hCtx, $stModKey, $stFilePath, $stFileOriginalName, $stUrl
  *	Gestisce il lavoro del modulo 
  */
 function working() {
-
-	$h = &$this->hFastTmpl;
-	$aParam   = $this->aParam;
-	$stModKey = $this->stModKey;
-
 	if( $this->stUrl != "" ) {
 		Utility::redirect( $this->stUrl );
 		return;

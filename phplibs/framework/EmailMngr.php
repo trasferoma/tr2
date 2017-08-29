@@ -45,11 +45,9 @@ function EmailMngr( &$hCtx, $stModKey, $fNoWork=false ) {
  */
 function working() {
 
-	$h 		  = &$this->hFastTmpl;
-	$aParam   = $this->aParam;
 	$stModKey = $this->stModKey;
 
-	switch( $aParam[ "modop" ] ) {
+	switch( $_REQUEST[ "modop" ] ) {
 	case "send":
 		$n = $this->makeEmail();	
 		Utility::redirect("?m=$stModKey&nemail=$n");
@@ -90,17 +88,17 @@ function getPrivacyHTML($stNumAgenzia = "", $stFax = "") {
 	$stFax = ( $stFax == "" ) ? $this->stFax : $stFax ;
 
 	$st = "
-Note sulla Privacy & Diritti dell’Interessato<br>
+Note sulla Privacy & Diritti dellï¿½Interessato<br>
 <br>
-Le abbiamo inviato questa email per soddisfare una sua richiesta d’interessamento ai nostri servizi pervenutaci tramite il nostro sito e confermata telefonicamente, e per metterla quindi al corrente di quelle che sono le offerte, le condizioni contrattuali ed altri informazioni pertinenti alla sua richiesta, che abbiamo cercato di soddisfare tramite l’invio di appositi allegati alla presente.<br>
+Le abbiamo inviato questa email per soddisfare una sua richiesta dï¿½interessamento ai nostri servizi pervenutaci tramite il nostro sito e confermata telefonicamente, e per metterla quindi al corrente di quelle che sono le offerte, le condizioni contrattuali ed altri informazioni pertinenti alla sua richiesta, che abbiamo cercato di soddisfare tramite lï¿½invio di appositi allegati alla presente.<br>
 <br>
-Ai sensi dell’art. 13 del D. lgs. 196/2003 sulla privacy, la TargeTpoinT titolare del trattamento dei suoi dati, con sede in via Carlo Galassi Paluzzi, 5 telefono: $stNumAgenzia fax $stFax ha integrato nel suo sito internet www.puntotreg.it un’idonea informativa accessibile a tutti. <br>
+Ai sensi dellï¿½art. 13 del D. lgs. 196/2003 sulla privacy, la TargeTpoinT titolare del trattamento dei suoi dati, con sede in via Carlo Galassi Paluzzi, 5 telefono: $stNumAgenzia fax $stFax ha integrato nel suo sito internet www.puntotreg.it unï¿½idonea informativa accessibile a tutti. <br>
  <br> 
-A riguardo, desideriamo informarLa che Lei potrà sempre esercitare i diritti di cui all'articolo 7 del D.LGS. n. 196/03, tra cui il diritto di accedere ai Suoi dati, di ottenerne senza ritardo l'aggiornamento, la rettificazione ovvero, quando vi ha interesse, l’integrazione, la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi quelli di cui non e' necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o successivamente trattati. Infine potrà opporsi al trattamento dei Suoi dati o semplicemente può opporsi alla trasmissione di email  per finalità di informazione commerciale o pubblicitaria. <br>
+A riguardo, desideriamo informarLa che Lei potrï¿½ sempre esercitare i diritti di cui all'articolo 7 del D.LGS. n. 196/03, tra cui il diritto di accedere ai Suoi dati, di ottenerne senza ritardo l'aggiornamento, la rettificazione ovvero, quando vi ha interesse, lï¿½integrazione, la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi quelli di cui non e' necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o successivamente trattati. Infine potrï¿½ opporsi al trattamento dei Suoi dati o semplicemente puï¿½ opporsi alla trasmissione di email  per finalitï¿½ di informazione commerciale o pubblicitaria. <br>
 <br>
-Per esercitare i diritti in oggetto La preghiamo di contattarci all’indirizzo email privacy@puntotreg.it o di contattarci senza alcuna formalità al numero di fax sopra indicato.<br>
+Per esercitare i diritti in oggetto La preghiamo di contattarci allï¿½indirizzo email privacy@puntotreg.it o di contattarci senza alcuna formalitï¿½ al numero di fax sopra indicato.<br>
 <br>
-RingraziandoLa ancora per averCi contattato, l’occasione ci è gradita per porgerLe i nostri più Cordiali Saluti.<br>
+RingraziandoLa ancora per averCi contattato, lï¿½occasione ci ï¿½ gradita per porgerLe i nostri piï¿½ Cordiali Saluti.<br>
 	";
 	return $st;
 }
@@ -116,17 +114,17 @@ function getPrivacy($stNumAgenzia = "", $stFax = "") {
 	$stFax = ( $stFax == "" ) ? $this->stFax : $stFax ;
 
 	$st = "
-Note sulla Privacy & Diritti dell’Interessato
+Note sulla Privacy & Diritti dellï¿½Interessato
 
-Le abbiamo inviato questa email per soddisfare una sua richiesta d’interessamento ai nostri servizi pervenutaci tramite il nostro sito e confermata telefonicamente, e per metterla quindi al corrente di quelle che sono le offerte, le condizioni contrattuali ed altri informazioni pertinenti alla sua richiesta, che abbiamo cercato di soddisfare tramite l’invio di appositi allegati alla presente.
+Le abbiamo inviato questa email per soddisfare una sua richiesta dï¿½interessamento ai nostri servizi pervenutaci tramite il nostro sito e confermata telefonicamente, e per metterla quindi al corrente di quelle che sono le offerte, le condizioni contrattuali ed altri informazioni pertinenti alla sua richiesta, che abbiamo cercato di soddisfare tramite lï¿½invio di appositi allegati alla presente.
 
-Ai sensi dell’art. 13 del D. lgs. 196/2003 sulla privacy, la TargeTpoinT titolare del trattamento dei suoi dati, con sede in via Carlo Galassi Paluzzi, 5 telefono: $stNumAgenzia fax $stFax ha integrato nel suo sito internet www.puntotreg.it un’idonea informativa accessibile a tutti. 
+Ai sensi dellï¿½art. 13 del D. lgs. 196/2003 sulla privacy, la TargeTpoinT titolare del trattamento dei suoi dati, con sede in via Carlo Galassi Paluzzi, 5 telefono: $stNumAgenzia fax $stFax ha integrato nel suo sito internet www.puntotreg.it unï¿½idonea informativa accessibile a tutti. 
   
-A riguardo, desideriamo informarLa che Lei potrà sempre esercitare i diritti di cui all'articolo 7 del D.LGS. n. 196/03, tra cui il diritto di accedere ai Suoi dati, di ottenerne senza ritardo l'aggiornamento, la rettificazione ovvero, quando vi ha interesse, l’integrazione, la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi quelli di cui non e' necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o successivamente trattati. Infine potrà opporsi al trattamento dei Suoi dati o semplicemente può opporsi alla trasmissione di email  per finalità di informazione commerciale o pubblicitaria. 
+A riguardo, desideriamo informarLa che Lei potrï¿½ sempre esercitare i diritti di cui all'articolo 7 del D.LGS. n. 196/03, tra cui il diritto di accedere ai Suoi dati, di ottenerne senza ritardo l'aggiornamento, la rettificazione ovvero, quando vi ha interesse, lï¿½integrazione, la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi quelli di cui non e' necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o successivamente trattati. Infine potrï¿½ opporsi al trattamento dei Suoi dati o semplicemente puï¿½ opporsi alla trasmissione di email  per finalitï¿½ di informazione commerciale o pubblicitaria. 
 
-Per esercitare i diritti in oggetto La preghiamo di contattarci all’indirizzo email privacy@puntotreg.it o di contattarci senza alcuna formalità al numero di fax sopra indicato.
+Per esercitare i diritti in oggetto La preghiamo di contattarci allï¿½indirizzo email privacy@puntotreg.it o di contattarci senza alcuna formalitï¿½ al numero di fax sopra indicato.
 
-RingraziandoLa ancora per averCi contattato, l’occasione ci è gradita per porgerLe i nostri più Cordiali Saluti.
+RingraziandoLa ancora per averCi contattato, lï¿½occasione ci ï¿½ gradita per porgerLe i nostri piï¿½ Cordiali Saluti.
 	
 	";
 	return $st;
@@ -194,11 +192,9 @@ $st = "Ovviamente siamo a vostra completa disposizione per qualsiasi tipo di inf
  */
 function getModelli() {
 
-	$aParam = $this->aParam;
-
 	$aRet = Array();
 
-	while( list( $k, $v ) = @each( $aParam ) ) {
+	while( list( $k, $v ) = @each( $_REQUEST ) ) {
 
 		if( strncmp( $k, "chk_", strlen( "chk_" ) ) != 0 ) { continue; }
 		$aRet[] = $v;
@@ -211,11 +207,7 @@ function getModelli() {
  */
 function makeEmail() {
 	
-	$aParam = $this->aParam;
-
-	$nID = Access::getUserID();
-
-	$aDestinatari = explode(",", $aParam["destinatari"] );
+	$aDestinatari = explode(",", $_REQUEST["destinatari"] );
 
 	$aModelli 		= $this->getModelli();
 	$stTmplBodyHTML = $this->getBody($aModelli, $fHTML=true);
@@ -256,8 +248,6 @@ function send($stTitolo, $stEmail, $stBodyHTML, $stBodyTEXT, $aFile) {
 
 	global $HTTP_COOKIE_VARS;
 
-	$aParam = $this->aParam;
-
 	$INCLUDE_DIR = "./phplibs";
 
 	require_once($INCLUDE_DIR . "/class.phpmailer.php");
@@ -279,7 +269,7 @@ function send($stTitolo, $stEmail, $stBodyHTML, $stBodyTEXT, $aFile) {
 	// ----------- $mail->AddBCC($HTTP_COOKIE_VARS[ LOGIN_COOKIE_EMAIL ]);
 	//$mail->AddBCC($HTTP_COOKIE_VARS[ LOGIN_COOKIE_EMAIL2]);
 
-	$mail->Subject = $aParam["oggetto"];
+	$mail->Subject = $_REQUEST["oggetto"];
 
 	for( $i = 0 ; $i < count($aFile); $i++ ) {
 		$stFilePath = $aFile[ $i ];
@@ -400,8 +390,6 @@ function send2($stTitolo, $stEmail, $stBody, $aFile) {
 
 	global $HTTP_COOKIE_VARS;
 
-	$aParam = $this->aParam;
-
 	$mail = new sendmail();
 	$mail->SetCharSet("ISO-8859-1");
 	
@@ -418,7 +406,7 @@ function send2($stTitolo, $stEmail, $stBody, $aFile) {
 	$mail->bcc(EMAIL_CONTENITORE);
 	$mail->bcc($HTTP_COOKIE_VARS[ LOGIN_COOKIE_EMAIL ]);
 
-	$mail->subject($aParam["oggetto"]);
+	$mail->subject($_REQUEST["oggetto"]);
 
 	$mail->text($stBody);
 
@@ -520,14 +508,11 @@ function lista() {
 	global $EmProp_aEmail;
 
 	$h 		= &$this->hFastTmpl;
-	$aParam = $this->aParam;
-	$hCtx   = &$this->hCtx;
-	$stModKey = $this->stModKey;
 
 	$h->define_dynamic ( $DynBlk="row_chk", $TmplKey="dati" );
 
-	if( isset( $aParam["nemail"] ) ) {
-		$h->assign("EMAIL_INVIATE", "<b>" . $aParam["nemail"] . "</b>");
+	if( isset( $_REQUEST["nemail"] ) ) {
+		$h->assign("EMAIL_INVIATE", "<b>" . $_REQUEST["nemail"] . "</b>");
 	}else{
 		$h->assign("EMAIL_INVIATE", "" );
 	}

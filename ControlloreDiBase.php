@@ -61,10 +61,6 @@ function ricaricaPaginaPrecedente($default) {
  */
 function controlloFlusso($modulo) {
 
-	$smarty = &$this->hCtx->smarty;
-	$aParam = $this->hCtx->aRequest;
-	$hSessionCtx = &$this->hSessionCtx;
-
 	if ($modulo == "scaricaFile") {
 		require_once("./phplibs/ScaricaFile.php");
 		new ScaricaFile($this->hCtx, $this->hSessionCtx, $stModKey = "scaricaFile");
@@ -77,11 +73,21 @@ function controlloFlusso($modulo) {
 		$this->ricaricaPaginaPrecedente("?m=home");
 	}
 
-	Api::building($this->hCtx, $this->hSessionCtx, $aParam["tipoStruttura"]);
+	Api::building($this->hCtx, $this->hSessionCtx, $_REQUEST["tipoStruttura"]);
 
 	// echo "-"; echo Utility::cookieGet("linguaImpostata", ""); echo "-";
 
 	switch ($modulo) {
+        case "arrivoInRoma":
+            $_SERVER["QUERY_STRING"] = "m=arrivoInRoma";
+            require_once("./phplibs/ArrivoInRoma.php");
+            $this->currMod = new ArrivoInRoma($this->hCtx, $this->hSessionCtx);
+            break;
+        case "partenzaDaRoma":
+            $_SERVER["QUERY_STRING"] = "m=partenzaDaRoma";
+            require_once("./phplibs/PartenzaDaRoma.php");
+            $this->currMod = new PartenzaDaRoma($this->hCtx, $this->hSessionCtx);
+            break;
         case "immagini":
             $_SERVER["QUERY_STRING"] = "m=immagini";
             require_once("./phplibs/Immagini.php");

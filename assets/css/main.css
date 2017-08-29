@@ -3801,3 +3801,12 @@
 			}
 
 	}
+
+/* validazione campi del form */
+
+input.invalid[type="text"], input.invalid[type="password"], input.invalid[type="email"], select.invalid, textarea.invalid {
+	border-color: #ff0000;
+}
+input.success[type="text"], input.success[type="password"], input.success[type="email"], select.success, textarea.success {
+	border-color: #00ff00;
+}

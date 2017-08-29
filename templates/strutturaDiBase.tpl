@@ -15,13 +15,7 @@
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         
-		  <script>
-			  {literal}
-              $( function() {
-                $( "#datepicker" ).datepicker();
-              } );
-              {/literal}
-          </script>
+
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -32,7 +26,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="index.php">Home</a></li>
-                            <li><a href="#book">Book your shuttle</a></li>
+                            <li><a href="index.php?m=bookShuttle">Book your shuttle</a></li>
 							<li>
 								<a href="#" class="icon fa-angle-down">Layouts</a>
 								<ul>
@@ -60,8 +54,11 @@
 							<li>
 								<a href="#" class="icon fa-angle-down">Cambio Lingua</a>
 								<ul>
-									<li><a href="index.php?m=impostaLingua&lingua={$codiceLinguaItaliano}">Italiano</a></li>
-									<li><a href="index.php?m=impostaLingua&lingua={$codiceLinguaInglese}">Inglese</a></li>
+									<li><a href="index.php?m=impostaLingua&lingua={$codiceLinguaItaliano}">{#linguaItaliana#}</a></li>
+									<li><a href="index.php?m=impostaLingua&lingua={$codiceLinguaInglese}">{#linguaInglese#}</a></li>
+									<li><a href="index.php?m=impostaLingua&lingua={$codiceLinguaInglese}">{#linguaEbraica#}</a></li>
+
+
 								</ul>
 							</li>
 							<li><a href="#" class="button">Sign Up</a></li>
@@ -77,10 +74,7 @@
                 </div>
             </div>
 				<section id="main" class="container">
-					<header>
-						<h2>Elements</h2>
-						<p>Transferoma elements example.</p>
-					</header>
+
                     
                     {$paginaDaVisualizzare}
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2017-08-24 15:10:23
+<?php /* Smarty version 2.6.19, created on 2017-08-28 17:00:28
          compiled from strutturaDiBase.tpl */ ?>
 <!DOCTYPE HTML>
 <!--
@@ -18,14 +18,7 @@
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         
-		  <script>
-			  <?php echo '
-              $( function() {
-                $( "#datepicker" ).datepicker();
-              } );
-              '; ?>
 
-          </script>
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -36,7 +29,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="index.php">Home</a></li>
-                            <li><a href="#book">Book your shuttle</a></li>
+                            <li><a href="index.php?m=bookShuttle">Book your shuttle</a></li>
 							<li>
 								<a href="#" class="icon fa-angle-down">Layouts</a>
 								<ul>
@@ -65,9 +58,16 @@
 								<a href="#" class="icon fa-angle-down">Cambio Lingua</a>
 								<ul>
 									<li><a href="index.php?m=impostaLingua&lingua=<?php echo $this->_tpl_vars['codiceLinguaItaliano']; ?>
-">Italiano</a></li>
+"><?php echo $this->_config[0]['vars']['linguaItaliana']; ?>
+</a></li>
 									<li><a href="index.php?m=impostaLingua&lingua=<?php echo $this->_tpl_vars['codiceLinguaInglese']; ?>
-">Inglese</a></li>
+"><?php echo $this->_config[0]['vars']['linguaInglese']; ?>
+</a></li>
+									<li><a href="index.php?m=impostaLingua&lingua=<?php echo $this->_tpl_vars['codiceLinguaInglese']; ?>
+"><?php echo $this->_config[0]['vars']['linguaEbraica']; ?>
+</a></li>
+
+
 								</ul>
 							</li>
 							<li><a href="#" class="button">Sign Up</a></li>
@@ -83,10 +83,7 @@
                 </div>
             </div>
 				<section id="main" class="container">
-					<header>
-						<h2>Elements</h2>
-						<p>Transferoma elements example.</p>
-					</header>
+
                     
                     <?php echo $this->_tpl_vars['paginaDaVisualizzare']; ?>
 

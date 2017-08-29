@@ -33,7 +33,6 @@ class GestioneLingua {
 
         switch ($linguaImpostata) {
 			case Lingue::EN:
-
                 $smarty->config_load('./../dizionario/en.conf', $sezioneDizionario );
 				break;
             case Lingue::IT:

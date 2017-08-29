@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2017-08-23 09:38:51
+<?php /* Smarty version 2.6.19, created on 2017-08-25 17:20:51
          compiled from bookShuttle.tpl */ ?>
 <div class="row">
     <div class="12u">
@@ -14,6 +14,7 @@
                         <input type="text" name="destination" id="destination" value="" placeholder="Destination" />
                     </div>
                 </div>
+
                 <div class="row uniform 50%">
                     <div class="6u 12u(mobile)">
                         <input type="text" id="datepicker" placeholder="Date" />

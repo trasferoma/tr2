@@ -18,12 +18,7 @@ function Liste(&$hCtx, &$hSessionCtx) {
 }
 /** *************************************************** */
 public function controlloFlusso() {
-	$smarty = &$this->smarty;
-	$aParam   = $this->aParam;
-
-	// Api::voceMenuSelezionata($this->hCtx, "bookShuttle");
-
-	switch ($aParam["operazione"]) {
+	switch ($_REQUEST["operazione"]) {
 	default:
 		$this->pagina();
 		break;
@@ -32,7 +27,6 @@ public function controlloFlusso() {
 /** *************************************************** */
 private function pagina() {
 	$smarty = &$this->smarty;
-	$aParam = $this->aParam;
 
     GestioneLingua::caricaDizionario($smarty, "Home");
 

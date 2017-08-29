@@ -2,6 +2,8 @@
 require_once("./phplibs/framework/BaseClass.php");
 require_once("./phplibs/framework/Utility.php");
 require_once("./phplibs/framework/UtilityPerFileSystem.php");
+require_once("./phplibs/enumerazioni/FasiArriviInRoma.php");
+require_once("./phplibs/enumerazioni/FasiPartenzeDaRoma.php");
 
 /**
  *	PHP CLASS DEFINITION
@@ -18,25 +20,25 @@ function BookShuttle(&$hCtx, &$hSessionCtx) {
 }
 /** *************************************************** */
 public function controlloFlusso() {
-	$smarty = &$this->smarty;
-	$aParam   = $this->aParam;
-
-	// Api::voceMenuSelezionata($this->hCtx, "bookShuttle");
-
-	switch ($aParam["operazione"]) {
-	default:
-		$this->pagina();
-		break;
+	switch ($_REQUEST["operazione"]) {
+		case "sceltaTipoTrasferimento":
+		default:
+			$this->sceltaTipoTrasferimento();
+			break;
 	}
 }
 /** *************************************************** */
-private function pagina() {
+private function sceltaTipoTrasferimento() {
 	$smarty = &$this->smarty;
-	$aParam = $this->aParam;
 
-    GestioneLingua::caricaDizionario($smarty, "BookShuttle");
+    GestioneLingua::caricaDizionario($smarty, "BookShuttle_SceltaTipoTrasferimento");
 
-	$this->setPaginaDaMostrare($smarty->fetch('bookShuttle.tpl'));
+    /*
+    $smarty->assign("faseSuccessivaArrivoInRoma", FasiArriviInRoma::SceltaStrutturaDiArrivo);
+    $smarty->assign("faseSuccessivaPartenzaDaRoma", FasiPartenzeDaRoma::InserimentoIndirizzoDiPartenza);
+	*/
+
+	$this->setPaginaDaMostrare($smarty->fetch('bookShuttle/sceltaTipoTrasferimento.tpl'));
 }
 /** *************************************************** */
 } //End of class definition.
