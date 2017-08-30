@@ -1,0 +1,8 @@
+La configurazione del DB si trova nel file cfg.php,
+i valori di default sono i seguenti:
+
+
+Server: localhost
+Nome DB: transferoma
+Utente DB: root
+Password DB:
