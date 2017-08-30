@@ -51,16 +51,6 @@ class ValidazioneFormArrivoDataPiuStruttura
 
         return $validazione;
     }
-    /**
-     * Verifica che il valore sia diverso da "".
-     *
-     * @param $valore
-     * @return bool
-     */
-    private function campoPresente($valore)
-    {
-        return $valore != null && $valore != "";
-    }
 
     private function validazioneStruttura()
     {

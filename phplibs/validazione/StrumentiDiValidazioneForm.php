@@ -48,4 +48,36 @@ class StrumentiDiValidazioneForm
         return $validazione;
     }
 
+    public function isNumericoMaggioreUgualeZero($valore)
+    {
+        $campoNumericoValido = false;
+
+        $presente = StrumentiDiValidazioneForm::campoPresente($valore);
+
+        if ($presente) {
+            $campoNumericoValido = is_numeric($valore) && $valore >= 0;
+        }
+
+        return $presente && $campoNumericoValido;
+    }
+
+    /**
+     * Elimina i caratteri non numerici, il risultato è considerato un numero di telefono se
+     * il numero complessivo è della dimensione 7 o 10.
+     *
+     * @param $valore
+     * @return bool
+     */
+    function isValoreUnNumeroDiTelefono($valore) {
+        $soloNumeri = preg_replace('/\D/', '', $valore);
+        $numeroDicaratteri = strlen($soloNumeri);
+
+        return $numeroDicaratteri == 7 or $numeroDicaratteri == 10;
+    }
+
+    public static function isValoreUnaEmail($valore)
+    {
+        return filter_var($valore, FILTER_VALIDATE_EMAIL);
+    }
+
 }

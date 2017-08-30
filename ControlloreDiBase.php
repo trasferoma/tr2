@@ -78,6 +78,11 @@ function controlloFlusso($modulo) {
 	// echo "-"; echo Utility::cookieGet("linguaImpostata", ""); echo "-";
 
 	switch ($modulo) {
+        case "sessioneNonValida":
+            $_SERVER["QUERY_STRING"] = "m=sessioneNonValida";
+            require_once("./phplibs/SessioneNonValida.php");
+            $this->currMod = new SessioneNonValida($this->hCtx, $this->hSessionCtx);
+            break;
         case "arrivoInRoma":
             $_SERVER["QUERY_STRING"] = "m=arrivoInRoma";
             require_once("./phplibs/ArrivoInRoma.php");

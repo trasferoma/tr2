@@ -19,11 +19,6 @@ class ValidazioneFormArrivoVoloPiuOrario
     }
 
     public function datiValidi() {
-        /*
-                echo "<br>data valida:" . $this->dataValida;
-                echo "<br>struttura valida:" . $this->strutturaValida;
-                exit;
-        */
         return $this->voloPiuOrario;
     }
 
