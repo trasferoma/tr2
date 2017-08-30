@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe62466c-2357-4aee-8607-e31347b15e10" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/_strutturaDiBase.tpl" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/databaseMysql/transferoma.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dizionario/en.conf" afterPath="$PROJECT_DIR$/dizionario/en.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dizionario/it.conf" afterPath="$PROJECT_DIR$/dizionario/it.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/Api.php" afterPath="$PROJECT_DIR$/phplibs/Api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bookShuttle.tpl" afterPath="$PROJECT_DIR$/templates/bookShuttle.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneDataPiuStruttura.tpl" afterPath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneDataPiuStruttura.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezionePasseggeri.tpl" afterPath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezionePasseggeri.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneVoliPiuOrari.tpl" afterPath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneVoliPiuOrari.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bookShuttle/sceltaTipoTrasferimento.tpl" afterPath="$PROJECT_DIR$/templates/bookShuttle/sceltaTipoTrasferimento.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bottoni.tpl" afterPath="$PROJECT_DIR$/templates/bottoni.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/form.tpl" afterPath="$PROJECT_DIR$/templates/form.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home.tpl" afterPath="$PROJECT_DIR$/templates/home.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/immagini.tpl" afterPath="$PROJECT_DIR$/templates/immagini.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/liste.tpl" afterPath="$PROJECT_DIR$/templates/liste.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/strutturaDiBase.tpl" afterPath="$PROJECT_DIR$/templates/strutturaDiBase.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tabelle.tpl" afterPath="$PROJECT_DIR$/templates/tabelle.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/testo.tpl" afterPath="$PROJECT_DIR$/templates/testo.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/%%65^65A^65A5580D%%en.conf%7CHome.php" afterPath="$PROJECT_DIR$/templates_c/%%65^65A^65A5580D%%en.conf%7CHome.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/%%86^864^8644F0D6%%home.tpl.php" afterPath="$PROJECT_DIR$/templates_c/%%86^864^8644F0D6%%home.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/%%89^890^8903E68C%%en.conf.php" afterPath="$PROJECT_DIR$/templates_c/%%89^890^8903E68C%%en.conf.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/%%D2^D25^D2565E22%%strutturaDiBase.tpl.php" afterPath="$PROJECT_DIR$/templates_c/%%D2^D25^D2565E22%%strutturaDiBase.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,11 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="it.conf" pinned="false" current-in-tab="true">
+      <file leaf-file-name="it.conf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dizionario/it.conf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transferoma.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/databaseMysql/transferoma.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -263,48 +253,7 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="tr2" type="cbb8eebc:String" user="tr2" />
-              <item name="dizionario" type="cbb8eebc:String" user="dizionario" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="tr2" type="cbb8eebc:String" user="tr2" />
-              <item name="phplibs" type="cbb8eebc:String" user="phplibs" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="tr2" type="cbb8eebc:String" user="tr2" />
-              <item name="phplibs" type="cbb8eebc:String" user="phplibs" />
-              <item name="db" type="cbb8eebc:String" user="db" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="tr2" type="cbb8eebc:String" user="tr2" />
-              <item name="phplibs" type="cbb8eebc:String" user="phplibs" />
-              <item name="enumerazioni" type="cbb8eebc:String" user="enumerazioni" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="tr2" type="cbb8eebc:String" user="tr2" />
-              <item name="phplibs" type="cbb8eebc:String" user="phplibs" />
-              <item name="pojo" type="cbb8eebc:String" user="pojo" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="tr2" type="cbb8eebc:String" user="tr2" />
-              <item name="templates" type="cbb8eebc:String" user="templates" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="tr2" type="cbb8eebc:String" user="tr2" />
-              <item name="templates" type="cbb8eebc:String" user="templates" />
-              <item name="bookShuttle" type="cbb8eebc:String" user="bookShuttle" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="tr2" type="cbb8eebc:String" user="tr2" />
-              <item name="templates" type="cbb8eebc:String" user="templates" />
-              <item name="bookShuttle" type="cbb8eebc:String" user="bookShuttle" />
-              <item name="arrivoInRoma" type="cbb8eebc:String" user="arrivoInRoma" />
+              <item name="databaseMysql" type="cbb8eebc:String" user="databaseMysql" />
             </path>
           </expand>
           <select />
@@ -342,16 +291,16 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\tr2\phplibs\enumerazioni" />
+      <recent name="C:\xampp\htdocs\tr2" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\tr2\databaseMysql" />
       <recent name="C:\xampp\htdocs\tr2\templates\bookShuttle\arrivoInRoma" />
       <recent name="C:\xampp\htdocs\tr2\phplibs\db" />
       <recent name="C:\xampp\htdocs\tr2\phplibs\validazione" />
       <recent name="C:\xampp\htdocs\tr2\phplibs" />
-      <recent name="C:\xampp\htdocs\tr2\phplibs\enumerazioni" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\tr2\phplibs\enumerazioni" />
-      <recent name="C:\xampp\htdocs\tr2" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -414,7 +363,7 @@
       <workItem from="1503909752190" duration="12692000" />
       <workItem from="1503991306672" duration="23239000" />
       <workItem from="1504022637330" duration="409000" />
-      <workItem from="1504077353961" duration="2220000" />
+      <workItem from="1504077353961" duration="2342000" />
     </task>
     <task id="LOCAL-00001" summary="Correzioni">
       <created>1503674355785</created>
@@ -430,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1504021724677</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Nuove implementazioni.">
+      <created>1504081324784</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1504081324784</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -439,13 +395,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59090000" />
+    <option name="totallyTimeSpent" value="59212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.289644" sideWeight="0.49312714" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.289644" sideWeight="0.49312714" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -507,13 +463,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/phplibs/framework/EmailMngr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="513" column="24" lean-forward="false" selection-start-line="513" selection-start-column="24" selection-end-line="513" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/Tabelle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
@@ -889,6 +838,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseMysql/transferoma.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
