@@ -2,50 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe62466c-2357-4aee-8607-e31347b15e10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/strumentiPerValidazioneForm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dizionario/abjad.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/ArrivoInRoma.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/CaricatoreDomini.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/db/StruttureDb.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/db/VoliPiuOrariDb.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/enumerazioni/FasiArriviInRoma.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/enumerazioni/FasiPartenzeDaRoma.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/pojo/Arrivo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/validazione/StrumentiDiValidazioneForm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/validazione/ValidazioneFormArrivoVoloPiuOrario.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/validazione/validazioneFormArrivoDataPiuStruttura.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneDataPiuStruttura.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezionePasseggeri.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneVoliPiuOrari.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/testatinaArrivoInRoma.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/bookShuttle/sceltaTipoTrasferimento.tpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/phplibs/Lingue.php" afterPath="$PROJECT_DIR$/phplibs/enumerazioni/Lingue.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/_strutturaDiBase.tpl" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ControlloreDiBase.php" afterPath="$PROJECT_DIR$/ControlloreDiBase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/main.css" afterPath="$PROJECT_DIR$/assets/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dizionario/en.conf" afterPath="$PROJECT_DIR$/dizionario/en.conf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dizionario/it.conf" afterPath="$PROJECT_DIR$/dizionario/it.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/BookShuttle.php" afterPath="$PROJECT_DIR$/phplibs/BookShuttle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/Bottoni.php" afterPath="$PROJECT_DIR$/phplibs/Bottoni.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/Form.php" afterPath="$PROJECT_DIR$/phplibs/Form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/GestioneLingua.php" afterPath="$PROJECT_DIR$/phplibs/GestioneLingua.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/Home.php" afterPath="$PROJECT_DIR$/phplibs/Home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/Immagini.php" afterPath="$PROJECT_DIR$/phplibs/Immagini.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/Liste.php" afterPath="$PROJECT_DIR$/phplibs/Liste.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/Tabelle.php" afterPath="$PROJECT_DIR$/phplibs/Tabelle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/Testo.php" afterPath="$PROJECT_DIR$/phplibs/Testo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/framework/BaseClass.php" afterPath="$PROJECT_DIR$/phplibs/framework/BaseClass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/framework/EmailMngr.php" afterPath="$PROJECT_DIR$/phplibs/framework/EmailMngr.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/framework/FileViewer.php" afterPath="$PROJECT_DIR$/phplibs/framework/FileViewer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/framework/Home.php" afterPath="$PROJECT_DIR$/phplibs/framework/Home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/framework/class.fileviewer.php" afterPath="$PROJECT_DIR$/phplibs/framework/class.fileviewer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/site.properties.php" afterPath="$PROJECT_DIR$/phplibs/site.properties.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/Api.php" afterPath="$PROJECT_DIR$/phplibs/Api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bookShuttle.tpl" afterPath="$PROJECT_DIR$/templates/bookShuttle.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneDataPiuStruttura.tpl" afterPath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneDataPiuStruttura.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezionePasseggeri.tpl" afterPath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezionePasseggeri.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneVoliPiuOrari.tpl" afterPath="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneVoliPiuOrari.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bookShuttle/sceltaTipoTrasferimento.tpl" afterPath="$PROJECT_DIR$/templates/bookShuttle/sceltaTipoTrasferimento.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bottoni.tpl" afterPath="$PROJECT_DIR$/templates/bottoni.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/form.tpl" afterPath="$PROJECT_DIR$/templates/form.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home.tpl" afterPath="$PROJECT_DIR$/templates/home.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/immagini.tpl" afterPath="$PROJECT_DIR$/templates/immagini.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/liste.tpl" afterPath="$PROJECT_DIR$/templates/liste.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/strutturaDiBase.tpl" afterPath="$PROJECT_DIR$/templates/strutturaDiBase.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/%%2C^2CF^2CF689C3%%it.conf%7CHome.php" afterPath="$PROJECT_DIR$/templates_c/%%2C^2CF^2CF689C3%%it.conf%7CHome.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/%%68^68C^68CE6256%%bookShuttle.tpl.php" afterPath="$PROJECT_DIR$/templates_c/%%68^68C^68CE6256%%bookShuttle.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tabelle.tpl" afterPath="$PROJECT_DIR$/templates/tabelle.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/testo.tpl" afterPath="$PROJECT_DIR$/templates/testo.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/%%65^65A^65A5580D%%en.conf%7CHome.php" afterPath="$PROJECT_DIR$/templates_c/%%65^65A^65A5580D%%en.conf%7CHome.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/%%86^864^8644F0D6%%home.tpl.php" afterPath="$PROJECT_DIR$/templates_c/%%86^864^8644F0D6%%home.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/%%89^890^8903E68C%%en.conf.php" afterPath="$PROJECT_DIR$/templates_c/%%89^890^8903E68C%%en.conf.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/%%D2^D25^D2565E22%%strutturaDiBase.tpl.php" afterPath="$PROJECT_DIR$/templates_c/%%D2^D25^D2565E22%%strutturaDiBase.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/%%EC^ECE^ECEEAD05%%it.conf.php" afterPath="$PROJECT_DIR$/templates_c/%%EC^ECE^ECEEAD05%%it.conf.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,41 +48,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ArrivoInRoma.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/phplibs/ArrivoInRoma.php">
+      <file leaf-file-name="it.conf" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dizionario/it.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="86" column="83" lean-forward="false" selection-start-line="86" selection-start-column="83" selection-end-line="86" selection-end-column="83" />
+            <state relative-caret-position="170">
+              <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selezioneVoliPiuOrari.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneVoliPiuOrari.tpl">
+      <file leaf-file-name="Api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phplibs/Api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="52" column="102" lean-forward="false" selection-start-line="52" selection-start-column="78" selection-end-line="52" selection-end-column="102" />
+            <state relative-caret-position="254">
+              <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selezionePasseggeri.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezionePasseggeri.tpl">
+      <file leaf-file-name="Home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phplibs/Home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="493">
+              <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ValidazioneFormArrivoDataPiuStruttura.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phplibs/validazione/ValidazioneFormArrivoDataPiuStruttura.php">
+      <file leaf-file-name="home.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/home.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="en.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dizionario/en.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lingue.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/Lingue.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strutturaDiBase.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/strutturaDiBase.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="62" column="74" lean-forward="false" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -114,8 +122,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$aPa</find>
-      <find>aPara</find>
       <find>aPa</find>
       <find>hasDa</find>
       <find>validazioneData</find>
@@ -144,6 +150,8 @@
       <find>isValoreUnaDataValida</find>
       <find>validazioneCampoObbligatorio</find>
       <find>print_r</find>
+      <find>codiceLinguaItaliano</find>
+      <find>caricaDizionario</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -155,16 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/phplibs/Lingue.php" />
-        <option value="$PROJECT_DIR$/templates/home.tpl" />
-        <option value="$PROJECT_DIR$/phplibs/Api.php" />
-        <option value="$PROJECT_DIR$/dizionario/en.conf" />
-        <option value="$PROJECT_DIR$/phplibs/framework/Context.php" />
-        <option value="$PROJECT_DIR$/phplibs/cfg.php" />
-        <option value="$PROJECT_DIR$/phplibs/db/DizionarioDb.php" />
-        <option value="$PROJECT_DIR$/phplibs/db/UtentiDb.php" />
-        <option value="$PROJECT_DIR$/templates/bookShuttle.tpl" />
-        <option value="$PROJECT_DIR$/phplibs/enumerazioni/FasiArriviInRoma" />
         <option value="$PROJECT_DIR$/phplibs/enumerazioni/FasiArriviInRoma.php" />
         <option value="$PROJECT_DIR$/phplibs/enumerazioni/FasiPartenzeDaRoma.php" />
         <option value="$PROJECT_DIR$/phplibs/site.properties.php" />
@@ -179,14 +177,11 @@
         <option value="$PROJECT_DIR$/phplibs/framework/FileViewer.php" />
         <option value="$PROJECT_DIR$/phplibs/framework/Home.php" />
         <option value="$PROJECT_DIR$/phplibs/framework/class.fileviewer.php" />
-        <option value="$PROJECT_DIR$/templates/bookShuttle/sceltaTipoTrasferimento.tpl" />
         <option value="$PROJECT_DIR$/phplibs/BookShuttle.php" />
         <option value="$PROJECT_DIR$/ControlloreDiBase.php" />
         <option value="$PROJECT_DIR$/phplibs/framework/BaseClass.php" />
         <option value="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/testatinaArrivoInRoma.tpl" />
         <option value="$PROJECT_DIR$/phplibs/GestioneLingua.php" />
-        <option value="$PROJECT_DIR$/templates/strutturaDiBase.tpl" />
-        <option value="$PROJECT_DIR$/phplibs/enumerazioni/Lingue.php" />
         <option value="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneStruttura.tpl" />
         <option value="$PROJECT_DIR$/phplibs/db/StruttureDb.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a39dc296-c5fd-4e79-9ef7-eefc1092f461/console.sql" />
@@ -197,15 +192,28 @@
         <option value="$PROJECT_DIR$/phplibs/db/VoliPiuOrariDb.php" />
         <option value="$PROJECT_DIR$/phplibs/CaricatoreDomini.php" />
         <option value="$PROJECT_DIR$/assets/js/strumentiPerValidazioneForm.js" />
-        <option value="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneVoliPiuOrari.tpl" />
         <option value="$PROJECT_DIR$/phplibs/pojo/Arrivo.php" />
         <option value="$PROJECT_DIR$/phplibs/validazione/ValidazioneFormArrivoVoloPiuOrario.php" />
         <option value="$PROJECT_DIR$/phplibs/validazione/StrumentiDiValidazioneForm.php" />
-        <option value="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneDataPiuStruttura.tpl" />
         <option value="$PROJECT_DIR$/phplibs/validazione/ValidazioneFormArrivoDataPiuStruttura.php" />
-        <option value="$PROJECT_DIR$/dizionario/it.conf" />
-        <option value="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezionePasseggeri.tpl" />
         <option value="$PROJECT_DIR$/phplibs/ArrivoInRoma.php" />
+        <option value="$PROJECT_DIR$/phplibs/enumerazioni/Lingue.php" />
+        <option value="$PROJECT_DIR$/templates/bookShuttle/sceltaTipoTrasferimento.tpl" />
+        <option value="$PROJECT_DIR$/templates/bookShuttle.tpl" />
+        <option value="$PROJECT_DIR$/templates/bottoni.tpl" />
+        <option value="$PROJECT_DIR$/templates/form.tpl" />
+        <option value="$PROJECT_DIR$/templates/immagini.tpl" />
+        <option value="$PROJECT_DIR$/templates/liste.tpl" />
+        <option value="$PROJECT_DIR$/templates/tabelle.tpl" />
+        <option value="$PROJECT_DIR$/templates/testo.tpl" />
+        <option value="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneDataPiuStruttura.tpl" />
+        <option value="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezionePasseggeri.tpl" />
+        <option value="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneVoliPiuOrari.tpl" />
+        <option value="$PROJECT_DIR$/phplibs/Api.php" />
+        <option value="$PROJECT_DIR$/templates/home.tpl" />
+        <option value="$PROJECT_DIR$/templates/strutturaDiBase.tpl" />
+        <option value="$PROJECT_DIR$/dizionario/en.conf" />
+        <option value="$PROJECT_DIR$/dizionario/it.conf" />
       </list>
     </option>
   </component>
@@ -245,45 +253,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phplibs" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="tr2" type="cbb8eebc:String" user="tr2" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="tr2" type="cbb8eebc:String" user="tr2" />
-              <item name="assets" type="cbb8eebc:String" user="assets" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="tr2" type="cbb8eebc:String" user="tr2" />
-              <item name="assets" type="cbb8eebc:String" user="assets" />
-              <item name="js" type="cbb8eebc:String" user="js" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
@@ -305,7 +280,13 @@
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="tr2" type="cbb8eebc:String" user="tr2" />
               <item name="phplibs" type="cbb8eebc:String" user="phplibs" />
-              <item name="validazione" type="cbb8eebc:String" user="validazione" />
+              <item name="enumerazioni" type="cbb8eebc:String" user="enumerazioni" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="tr2" type="cbb8eebc:String" user="tr2" />
+              <item name="phplibs" type="cbb8eebc:String" user="phplibs" />
+              <item name="pojo" type="cbb8eebc:String" user="pojo" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
@@ -325,65 +306,27 @@
               <item name="bookShuttle" type="cbb8eebc:String" user="bookShuttle" />
               <item name="arrivoInRoma" type="cbb8eebc:String" user="arrivoInRoma" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
             <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
+              <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
+              <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="phplibs" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="f.dearcangelis" type="cbb8eebc:String" user="f.dearcangelis" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="f.dearcangelis" type="cbb8eebc:String" user="f.dearcangelis" />
-              <item name=".PhpStorm2017.2" type="cbb8eebc:String" user=".PhpStorm2017.2" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="f.dearcangelis" type="cbb8eebc:String" user="f.dearcangelis" />
-              <item name=".PhpStorm2017.2" type="cbb8eebc:String" user=".PhpStorm2017.2" />
-              <item name="config" type="cbb8eebc:String" user="config" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="f.dearcangelis" type="cbb8eebc:String" user="f.dearcangelis" />
-              <item name=".PhpStorm2017.2" type="cbb8eebc:String" user=".PhpStorm2017.2" />
-              <item name="config" type="cbb8eebc:String" user="config" />
-              <item name="consoles" type="cbb8eebc:String" user="consoles" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="f.dearcangelis" type="cbb8eebc:String" user="f.dearcangelis" />
-              <item name=".PhpStorm2017.2" type="cbb8eebc:String" user=".PhpStorm2017.2" />
-              <item name="config" type="cbb8eebc:String" user="config" />
-              <item name="consoles" type="cbb8eebc:String" user="consoles" />
-              <item name=".history" type="cbb8eebc:String" user=".history" />
+              <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -469,7 +412,9 @@
       <workItem from="1503561597651" duration="11861000" />
       <workItem from="1503587675165" duration="541000" />
       <workItem from="1503909752190" duration="12692000" />
-      <workItem from="1503991306672" duration="23179000" />
+      <workItem from="1503991306672" duration="23239000" />
+      <workItem from="1504022637330" duration="409000" />
+      <workItem from="1504077353961" duration="2220000" />
     </task>
     <task id="LOCAL-00001" summary="Correzioni">
       <created>1503674355785</created>
@@ -478,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503674355785</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Nuove implementazioni.">
+      <created>1504021724677</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1504021724677</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -487,18 +439,17 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56401000" />
+    <option name="totallyTimeSpent" value="59090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28640777" sideWeight="0.49312714" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.289644" sideWeight="0.49312714" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884398" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -507,18 +458,19 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955106" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884398" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -526,7 +478,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28640777" sideWeight="0.49312714" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2859304" sideWeight="0.49312714" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -545,7 +497,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correzioni" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correzioni" />
+    <MESSAGE value="Nuove implementazioni." />
+    <option name="LAST_COMMIT_MESSAGE" value="Nuove implementazioni." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -554,69 +507,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/home.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/FasiArriviInRoma" />
-    <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/FasiArriviInRoma.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/FasiPartenzeDaRoma.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/framework/Context.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/Liste.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/Testo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Smarty/libs/Smarty_Compiler.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="2073" column="37" lean-forward="false" selection-start-line="2073" selection-start-column="37" selection-end-line="2073" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/Bottoni.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/framework/EmailMngr.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -636,7 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,7 +533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -659,6 +547,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -673,7 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -685,39 +573,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/testatinaArrivoInRoma.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookShuttle.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="22" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bottoni.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="73" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/BookShuttle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookShuttle/sceltaTipoTrasferimento.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -744,13 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/Lingue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneStruttura.tpl" />
     <entry file="das://table:/26ef857c/a39dc296-c5fd-4e79-9ef7-eefc1092f461/transferoma.tr_struttura_2_lingue">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -770,15 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ControlloreDiBase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="80" column="26" lean-forward="false" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -786,15 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="3804" column="29" lean-forward="false" selection-start-line="3804" selection-start-column="29" selection-end-line="3804" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="33" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -802,7 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -810,7 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="15" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -818,9 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <marker date="1503934271471" expanded="true" signature="549:815" ph="SELECT s.id,... tr_strutture" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -838,11 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1503588219177" expanded="true" signature="522:596" ph="SELECT count... tr_utenti" />
-            <marker date="1503588219177" expanded="true" signature="1096:1119" ph="SELECT * FRO... tr_utenti" />
-            <marker date="1503588219177" expanded="true" signature="1517:1555" ph="INSERT INTO tr_utenti... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -850,9 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="19" column="81" lean-forward="true" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
-          <folding>
-            <marker date="1504017543446" expanded="true" signature="1078:1104" ph="SELECT v.id,... tr_voli_piu_orari" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -860,15 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/strutturaDiBase.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="56" lean-forward="true" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,58 +701,194 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/validazione/StrumentiDiValidazioneForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneDataPiuStruttura.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/validazione/ValidazioneFormArrivoDataPiuStruttura.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
+        <state relative-caret-position="1326">
           <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dizionario/it.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="60" lean-forward="false" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezionePasseggeri.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneVoliPiuOrari.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="52" column="102" lean-forward="false" selection-start-line="52" selection-start-column="78" selection-end-line="52" selection-end-column="102" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/ArrivoInRoma.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="1462">
           <caret line="86" column="83" lean-forward="false" selection-start-line="86" selection-start-column="83" selection-end-line="86" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/Liste.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/validazione/StrumentiDiValidazioneForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bookShuttle/sceltaTipoTrasferimento.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="10" lean-forward="false" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bookShuttle.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="64" column="10" lean-forward="false" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bottoni.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/form.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="84" column="10" lean-forward="false" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/immagini.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="10" lean-forward="false" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/liste.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="95" column="10" lean-forward="false" selection-start-line="95" selection-start-column="10" selection-end-line="95" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tabelle.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/testo.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="56" column="10" lean-forward="false" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneDataPiuStruttura.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="71" lean-forward="false" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezionePasseggeri.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneVoliPiuOrari.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="71" lean-forward="false" selection-start-line="28" selection-start-column="71" selection-end-line="28" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/testatinaArrivoInRoma.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/Lingue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ControlloreDiBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/Api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/strutturaDiBase.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="62" column="74" lean-forward="false" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dizionario/en.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dizionario/it.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           <folding />
         </state>
       </provider>

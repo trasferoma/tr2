@@ -18,7 +18,7 @@ class Api {
  */
 static function risolviDizionario (&$hCtx) {
 	$smarty = &$hCtx->smarty;
-    GestioneLingua::caricaDizionario($smarty);
+    GestioneLingua::caricaDizionario($smarty, "Generali");
 }
 /**
  *	Monta la struttura standard dell'applicazione
@@ -65,8 +65,11 @@ static function visualizzaPagina(&$hCtx, &$hSessionCtx, $modulo, $struct = false
 static function interfacciaNormale(&$hCtx, &$hSessionCtx) {
 	$smarty = &$hCtx->smarty;
 
+    GestioneLingua::caricaDizionario($smarty, "Menu");
+
 	$smarty->assign("codiceLinguaItaliano", Lingue::IT);
     $smarty->assign("codiceLinguaInglese", Lingue::EN);
+    $smarty->assign("codiceLinguaEbraica", Lingue::ABJAD);
 
 	// $hSessionCtx->setStructDaUsare("strutturaDiBase.tpl");
 }

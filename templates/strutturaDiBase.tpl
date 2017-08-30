@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        
 
 	</head>
 	<body>
@@ -26,7 +25,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="index.php">Home</a></li>
-                            <li><a href="index.php?m=bookShuttle">Book your shuttle</a></li>
+                            <li><a href="index.php?m=bookShuttle">{#prenotazione#}</a></li>
 							<li>
 								<a href="#" class="icon fa-angle-down">Layouts</a>
 								<ul>
@@ -52,42 +51,25 @@
 								</ul>
 							</li>
 							<li>
-								<a href="#" class="icon fa-angle-down">Cambio Lingua</a>
+								<a href="#" class="icon fa-angle-down">{#cambioLingua#}</a>
 								<ul>
 									<li><a href="index.php?m=impostaLingua&lingua={$codiceLinguaItaliano}">{#linguaItaliana#}</a></li>
 									<li><a href="index.php?m=impostaLingua&lingua={$codiceLinguaInglese}">{#linguaInglese#}</a></li>
-									<li><a href="index.php?m=impostaLingua&lingua={$codiceLinguaInglese}">{#linguaEbraica#}</a></li>
+									<li><a href="index.php?m=impostaLingua&lingua={$codiceLinguaEbraica}">{#linguaEbraica#}</a></li>
 
 
 								</ul>
 							</li>
-							<li><a href="#" class="button">Sign Up</a></li>
+							<li><a href="#" class="button">{#registrazione#}</a></li>
 						</ul>
 					</nav>
                     <div class="nav-shadow"></div>
 				</header>
 
 			<!-- Main -->
-            <div class="fullbanner" id="top">
-                <div class="12u" style="pointer-events: none;">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11457290.45890233!2d14.05549351014667!3d45.48611744998677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1500453366402&t=p&amp;&z=2;" width="100%" height="640" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-            </div>
-				<section id="main" class="container">
 
-                    
                     {$paginaDaVisualizzare}
 
-
-
-
-
-
-
-
-
-
-				</section>
 
 			<!-- Footer -->
 				<footer id="footer">
