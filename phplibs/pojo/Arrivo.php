@@ -10,7 +10,7 @@ class Arrivo implements Serializable
 {
     private $data = null;
     private $struttura = null;
-    private $voloPiuOrario = null;
+    private $mezzoPiuOrario = null;
     private $numeroAdulti = null;
     private $numeroAnimali = null;
     private $numeroBambiniDa3A6 = null;
@@ -49,17 +49,17 @@ class Arrivo implements Serializable
     /**
      * @return null
      */
-    public function getVoloPiuOrario()
+    public function getMezzoPiuOrario()
     {
-        return $this->voloPiuOrario;
+        return $this->mezzoPiuOrario;
     }
 
     /**
-     * @param null $voloPiuOrario
+     * @param null $mezzoPiuOrario
      */
-    public function setVoloPiuOrario($voloPiuOrario)
+    public function setMezzoPiuOrario($mezzoPiuOrario)
     {
-        $this->voloPiuOrario = $voloPiuOrario;
+        $this->mezzoPiuOrario = $mezzoPiuOrario;
     }
 
     /**
@@ -236,7 +236,7 @@ class Arrivo implements Serializable
         return serialize([
             $this->data,
             $this->struttura,
-            $this->voloPiuOrario,
+            $this->mezzoPiuOrario,
             $this->numeroAdulti,
             $this->numeroAnimali,
             $this->numeroBambiniDa3A6,
@@ -265,7 +265,7 @@ class Arrivo implements Serializable
         list(
             $this->data,
             $this->struttura,
-            $this->voloPiuOrario,
+            $this->mezzoPiuOrario,
             $this->numeroAdulti,
             $this->numeroAnimali,
             $this->numeroBambiniDa3A6,

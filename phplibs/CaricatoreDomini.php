@@ -1,6 +1,6 @@
 <?php
 require_once ("db/StruttureDb.php");
-require_once ("db/VoliPiuOrariDb.php");
+require_once ("db/MezziPiuOrariDb.php");
 
 class CaricatoreDomini
 {
@@ -23,9 +23,9 @@ class CaricatoreDomini
     }
 
 
-    static public function listaVoliPiuOrari(&$hCtx, &$smarty, $sectionDiSmarty, $idStruttura) {
+    static public function listaMezziPiuOrari(&$hCtx, &$smarty, $sectionDiSmarty, $idStruttura) {
         $linguaImpostata = GestioneLingua::getLinguaImpostata();
-        $listaElementi = VoliPiuOrariDb::listaCompleta($hCtx, $linguaImpostata, $idStruttura);
+        $listaElementi = MezziPiuOrariDb::listaCompleta($hCtx, $linguaImpostata, $idStruttura);
 
         $listaValoriDominio = array();
 

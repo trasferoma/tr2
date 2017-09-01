@@ -5,7 +5,7 @@
  *  “d”	Corrisponde a variabili associate al tipo di dato numeri double.
  *  “b”	Corrisponde a variabili associate al tipo di dato BLOB, formato binario.
  */
-class VoliPiuOrariDb {
+class MezziPiuOrariDb {
 
     // ---------------------------------------
     static function listaCompleta(&$hCtx, $suffissoPerCampiLingua, $idStruttura) {
@@ -14,8 +14,8 @@ class VoliPiuOrariDb {
         $stmt  = $mysqli->prepare(
                                     " SELECT "
                                 .   " v.id, v.id_struttura, l.descrizione_$suffissoPerCampiLingua as descrizione "
-                                .   " FROM tr_voli_piu_orari v "
-                                .   " inner join tr_voli_piu_orari_2_lingue l on v.id = l.id_volo_piu_orario "
+                                .   " FROM tr_mezzi_piu_orari v "
+                                .   " inner join tr_mezzi_piu_orari_2_lingue l on v.id = l.id_mezzo_piu_orario "
                                 .   " where v.id_struttura = ? "
                                 .   " order by l.descrizione_$suffissoPerCampiLingua "
         );

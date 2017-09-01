@@ -5,7 +5,7 @@ require_once("./phplibs/framework/UtilityPerFileSystem.php");
 require_once("./phplibs/enumerazioni/FasiArriviInRoma.php");
 require_once("./phplibs/enumerazioni/FasiPartenzeDaRoma.php");
 require_once ("db/StruttureDb.php");
-require_once ("db/VoliPiuOrariDb.php");
+require_once ("db/MezziPiuOrariDb.php");
 require_once ("db/PrenotazioniDb.php");
 require_once ("pojo/Arrivo.php");
 require_once ("CaricatoreDomini.php");
@@ -50,10 +50,10 @@ class ArrivoInRoma extends BaseClass {
                 $this->consolePasseggeri();
                 break;
             case "salvaPassoB":
-                $this->salvaVoloPiuOrario();
+                $this->salvaMezzoPiuOrario();
                 break;
             case "passoB":
-                $this->consoleVoliPiuOrari();
+                $this->consoleMezziPiuOrari();
                 break;
             case "salvaPassoA":
                 $this->salvaDatoPiuStruttura();
@@ -90,7 +90,7 @@ class ArrivoInRoma extends BaseClass {
 	}
 
     /** *************************************************** */
-    private function consoleVoliPiuOrari() {
+    private function consoleMezziPiuOrari() {
         $smarty = &$this->smarty;
 
         $this->controlloSessioneValida();
@@ -99,14 +99,14 @@ class ArrivoInRoma extends BaseClass {
 
         $arrivo = $this->getArrivo();
 
-        CaricatoreDomini::listaVoliPiuOrari($this->hCtx, $smarty, "voliPiuOrari", $arrivo->getStruttura());
+        CaricatoreDomini::listaMezziPiuOrari($this->hCtx, $smarty, "mezziPiuOrari", $arrivo->getStruttura());
 
         $this->settaDatiDiBasePerLaVista();
 
         //echo "<pre>"; print_r($arrivo); exit;
 
         if ($arrivo != null) {
-            $smarty->assign("voloPiuOrarioSelezionato", $arrivo->getVoloPiuOrario());
+            $smarty->assign("mezzoPiuOrarioSelezionato", $arrivo->getMezzoPiuOrario());
         }
 
 		$smarty->assign("moduloCodificato", urlencode($this->modulo));
@@ -114,7 +114,7 @@ class ArrivoInRoma extends BaseClass {
 		$smarty->assign("passoPrecedente", "passoA");
         $smarty->assign("prossimoPasso", "salvaPassoB");
 
-        $this->setPaginaDaMostrare($smarty->fetch('bookShuttle/arrivoInRoma/selezioneVoliPiuOrari.tpl'));
+        $this->setPaginaDaMostrare($smarty->fetch('bookShuttle/arrivoInRoma/selezioneMezziPiuOrari.tpl'));
     }
 
     /** *************************************************** */
@@ -154,8 +154,6 @@ class ArrivoInRoma extends BaseClass {
 
         $arrivo = $this->getArrivo();
 
-        // CaricatoreDomini::listaVoliPiuOrari($this->hCtx, $smarty, "voliPiuOrari", $arrivo->getStruttura());
-
         $this->settaDatiDiBasePerLaVista();
 
         if ($arrivo != null) {
@@ -191,7 +189,7 @@ class ArrivoInRoma extends BaseClass {
 
         $smarty->assign("data", $arrivo->getData());
         $smarty->assign("struttura", $arrivo->getStruttura());
-        $smarty->assign("voloPiuOrario", $arrivo->getVoloPiuOrario());
+        $smarty->assign("mezzoPiuOrario", $arrivo->getMezzoPiuOrario());
         $smarty->assign("numeroAdulti", $arrivo->getNumeroAdulti());
         $smarty->assign("numeroAnimali", $arrivo->getNumeroAnimali());
         $smarty->assign("numeroBambiniDa3A6", $arrivo->getNumeroBambiniDa3A6());
@@ -257,7 +255,7 @@ class ArrivoInRoma extends BaseClass {
 			$arrivo->setData($_REQUEST["dataArrivo"]);
             $arrivo->setStruttura($_REQUEST["struttura"]);
 
-            $this->vaiVoliPiuOrari($_REQUEST["token"]);
+            $this->vaiMezziPiuOrari($_REQUEST["token"]);
 		} else {
             $this->vaiDataPiuStruttura($_REQUEST["token"]);
 		}
@@ -270,19 +268,19 @@ class ArrivoInRoma extends BaseClass {
      *  Colleziona le informazioni validate
      *  Vai al passo successivo
      */
-    private function salvaVoloPiuOrario()
+    private function salvaMezzoPiuOrario()
     {
         $this->controlloSessioneValida();
 
-        $datiValidi = $this->validazioneFormVoloPiuOrario();
+        $datiValidi = $this->validazioneFormMezzoPiuOrario();
 
         if ($datiValidi) {
             $arrivo = $this->getArrivo();
-            $arrivo->setVoloPiuOrario($_REQUEST["voloPiuOrario"]);
+            $arrivo->setMezzoPiuOrario($_REQUEST["mezzoPiuOrario"]);
 
             $this->vaiPasseggeri($_REQUEST["token"]);
         } else {
-            $this->vaiVoliPiuOrari($_REQUEST["token"]);
+            $this->vaiMezziPiuOrari($_REQUEST["token"]);
         }
     }
 
@@ -377,7 +375,7 @@ class ArrivoInRoma extends BaseClass {
         exit;
     }
 
-    private function vaiVoliPiuOrari($token)
+    private function vaiMezziPiuOrari($token)
     {
         $tokenCodificato = urlencode ($token);
         $indirizzo = sprintf("index.php?m=%s&operazione=passoB&token=%s", $this->modulo, $tokenCodificato);
@@ -422,11 +420,11 @@ class ArrivoInRoma extends BaseClass {
 		return $validatore->datiValidi();
     }
 
-    private function validazioneFormVoloPiuOrario()
+    private function validazioneFormMezzoPiuOrario()
     {
-        require_once ("validazione/ValidazioneFormArrivoVoloPiuOrario.php");
+        require_once ("validazione/ValidazioneFormArrivoMezzoPiuOrario.php");
 
-        $validatore = new ValidazioneFormArrivoVoloPiuOrario();
+        $validatore = new ValidazioneFormArrivoMezzoPiuOrario();
 
         return $validatore->datiValidi();
     }

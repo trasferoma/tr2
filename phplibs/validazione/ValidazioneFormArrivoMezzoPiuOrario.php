@@ -7,25 +7,25 @@
  */
 require_once ("./phplibs/validazione/StrumentiDiValidazioneForm.php");
 
-class ValidazioneFormArrivoVoloPiuOrario
+class ValidazioneFormArrivoMezzoPiuOrario
 {
-    private $voloPiuOrario = false;
+    private $mezzoPiuOrario = false;
     /**
-     * ValidazioneFormArrivoVoloPiuOrario constructor.
+     * ValidazioneFormArrivoMezzoPiuOrario constructor.
      */
     public function __construct()
     {
-        $this->voloPiuOrario = $this->validazioneVoloPiuOrario();
+        $this->mezzoPiuOrario = $this->validazioneMezzoPiuOrario();
     }
 
     public function datiValidi() {
-        return $this->voloPiuOrario;
+        return $this->mezzoPiuOrario;
     }
 
 
-    private function validazioneVoloPiuOrario()
+    private function validazioneMezzoPiuOrario()
     {
-        $valore = $_REQUEST["voloPiuOrario"];
+        $valore = $_REQUEST["mezzoPiuOrario"];
 
         $valorePresente = StrumentiDiValidazioneForm::campoPresente($valore);
 
@@ -35,8 +35,8 @@ class ValidazioneFormArrivoVoloPiuOrario
     /**
      * @return bool
      */
-    public function isVoloPiuOrarioValido()
+    public function isMezzoPiuOrarioValido()
     {
-        return $this->voloPiuOrario;
+        return $this->mezzoPiuOrario;
     }
 }

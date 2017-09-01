@@ -50,8 +50,8 @@
                                 </tr>
 
                                 <tr>
-                                    <td>{#voloPiuOrario#}</td>
-                                    <td>{$voloPiuOrario}</td>
+                                    <td>{#mezzoPiuOrario#}</td>
+                                    <td>{$mezzoPiuOrario}</td>
                                 </tr>
 
                                 <tr>
