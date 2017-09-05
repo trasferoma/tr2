@@ -13,10 +13,9 @@ class StruttureDb {
 
         $stmt  = $mysqli->prepare(
                                   "SELECT "
-                                . " s.id, s.tipo, l.descrizione_$suffissoPerCampiLingua as descrizione"
+                                . " s.id, s.tipo, s.descrizione_$suffissoPerCampiLingua as descrizione, s.attiva "
                                 . " FROM tr_strutture s "
-                                . " inner join tr_struttura_2_lingue l on s.id = l.id_struttura "
-                                . " order by s.tipo, l.descrizione_$suffissoPerCampiLingua "
+                                . " order by s.tipo, s.descrizione_$suffissoPerCampiLingua "
         );
 
         $stmt->execute();
@@ -35,8 +34,38 @@ class StruttureDb {
         return $risultati;
     }
 
+    public static function getStrutturaByID($hCtx, $id, $suffissoPerCampiLingua)
+    {
+        $mysqli = &$hCtx->hDBCtx;
+        $contatore = null;
 
-/**
+        $stmt  = $mysqli->prepare(
+            "SELECT "
+            . " s.id, s.tipo, s.descrizione_$suffissoPerCampiLingua as descrizione, s.attiva "
+            . " FROM tr_strutture s "
+            . " where s.id = ?"
+
+
+        );
+
+        $stmt->bind_param('d', $id);
+
+        $stmt->execute();
+
+        $stmt->bind_result($contatore);
+
+
+        $stmt->fetch();
+
+
+
+        $stmt->close();
+
+        return $esiste;
+    }
+
+
+    /**
  *	
  */
 } // end of class

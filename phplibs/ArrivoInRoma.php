@@ -34,15 +34,17 @@ class ArrivoInRoma extends BaseClass {
             case "prenota":
                 $this->prenota();
                 break;
-            case "passoE":
+            case "passoD":
                 $this->riepilogoPrenotazione();
                 break;
+                /*
             case "salvaPassoD":
                 $this->salvaDestinazioneShuttle();
                 break;
             case "passoD":
                 $this->consoleDestinazioneShuttle();
                 break;
+                */
             case "salvaPassoC":
                 $this->salvaPasseggeri();
                 break;
@@ -187,8 +189,10 @@ class ArrivoInRoma extends BaseClass {
 
         $this->settaDatiDiBasePerLaVista();
 
+        $descrizioneStruttura = $this->getDescrizioneStruttura();
+
         $smarty->assign("data", $arrivo->getData());
-        $smarty->assign("struttura", $arrivo->getStruttura());
+        $smarty->assign("struttura", $descrizioneStruttura);
         $smarty->assign("mezzoPiuOrario", $arrivo->getMezzoPiuOrario());
         $smarty->assign("numeroAdulti", $arrivo->getNumeroAdulti());
         $smarty->assign("numeroAnimali", $arrivo->getNumeroAnimali());
@@ -199,7 +203,7 @@ class ArrivoInRoma extends BaseClass {
         $smarty->assign("emailContatto", $arrivo->getEmailContatto());
         $smarty->assign("cellulareContatto", $arrivo->getCellulareContatto());
 
-        $smarty->assign("nomeDestinazioneShuttle", $arrivo->getNomeDestinazione());
+        // $smarty->assign("nomeDestinazioneShuttle", $arrivo->getNomeDestinazione());
         $smarty->assign("indirizzoDestinazioneShuttle", $arrivo->getIndirizzoDestinazione());
 
         $smarty->assign("moduloCodificato", urlencode($this->modulo));
@@ -210,6 +214,13 @@ class ArrivoInRoma extends BaseClass {
         $this->setPaginaDaMostrare($smarty->fetch('bookShuttle/arrivoInRoma/riepilogo.tpl'));
     }
 
+    private function getDescrizioneStruttura() {
+        $arrivo = $this->getArrivo();
+        $linguaImpostata = GestioneLingua::getLinguaImpostata();
+        $struttura = StruttureDb::getStrutturaByID($this->hCtx, $arrivo->getStruttura(), $linguaImpostata);
+
+        return $struttura["descrizione"];
+    }
 
     /**
 	 * - crea la chiave
@@ -277,6 +288,7 @@ class ArrivoInRoma extends BaseClass {
         if ($datiValidi) {
             $arrivo = $this->getArrivo();
             $arrivo->setMezzoPiuOrario($_REQUEST["mezzoPiuOrario"]);
+            $arrivo->setIndirizzoDestinazione($_REQUEST["indirizzoDestinazioneShuttle"]);
 
             $this->vaiPasseggeri($_REQUEST["token"]);
         } else {

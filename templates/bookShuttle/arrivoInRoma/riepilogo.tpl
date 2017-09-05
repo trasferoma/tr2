@@ -93,12 +93,12 @@
                                     <td>{#cellulareContatto#}</td>
                                     <td>{$cellulareContatto}</td>
                                 </tr>
-
+<!--
                                 <tr>
                                     <td>{#nomeDestinazioneShuttle#}</td>
                                     <td>{$nomeDestinazioneShuttle}</td>
                                 </tr>
-
+-->
                                 <tr>
                                     <td>{#indirizzoDestinazioneShuttle#}</td>
                                     <td>{$indirizzoDestinazioneShuttle}</td>

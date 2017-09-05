@@ -10,8 +10,9 @@
         datiValidi = false;
 
         mezzoPiuOrarioValido = validazioneMezzoPiuOrario();
+        indirizzoDestinazione = validazioneIndirizzoDestinazione();
 
-        datiValidi = mezzoPiuOrarioValido;
+        datiValidi = mezzoPiuOrarioValido && indirizzoDestinazione;
         // datiValidi = true;
 
         if (datiValidi) {
@@ -21,6 +22,10 @@
 
     function validazioneMezzoPiuOrario() {
         return validazioneCampoObbligatorio("#mezzoPiuOrario" );
+    }
+
+    function validazioneIndirizzoDestinazione() {
+        return validazioneCampoObbligatorio("#indirizzoDestinazioneShuttle")
     }
 
     {/literal}

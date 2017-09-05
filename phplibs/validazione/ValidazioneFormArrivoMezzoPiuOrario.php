@@ -10,16 +10,18 @@ require_once ("./phplibs/validazione/StrumentiDiValidazioneForm.php");
 class ValidazioneFormArrivoMezzoPiuOrario
 {
     private $mezzoPiuOrario = false;
+    private $indirizzoDestinazioneValido = false;
     /**
      * ValidazioneFormArrivoMezzoPiuOrario constructor.
      */
     public function __construct()
     {
         $this->mezzoPiuOrario = $this->validazioneMezzoPiuOrario();
+        $this->indirizzoDestinazioneValido = $this->validazioneIndirizzoDestinazione();
     }
 
     public function datiValidi() {
-        return $this->mezzoPiuOrario;
+        return $this->mezzoPiuOrario && $this->indirizzoDestinazioneValido;
     }
 
 
@@ -38,5 +40,19 @@ class ValidazioneFormArrivoMezzoPiuOrario
     public function isMezzoPiuOrarioValido()
     {
         return $this->mezzoPiuOrario;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isIndirizzoDestinazioneValido()
+    {
+        return $this->indirizzoDestinazioneValido;
+    }
+
+    private function validazioneIndirizzoDestinazione()
+    {
+        $valore = $_REQUEST["indirizzoDestinazioneShuttle"];
+        return StrumentiDiValidazioneForm::campoPresente($valore);
     }
 }
