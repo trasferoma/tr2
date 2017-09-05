@@ -39,12 +39,8 @@
 
                 <header>
                     <h3>{#titoloSelezionaMezziPiuOrari#}</h3>
-                    <p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
                 </header>
-                <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-
                 <hr />
-
                 <form action="index.php" id="form" method="POST">
                     <input type="hidden" name="m" value="{$modulo}">
                     <input type="hidden" name="operazione" value="{$prossimoPasso}">
