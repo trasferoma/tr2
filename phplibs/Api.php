@@ -16,9 +16,13 @@ class Api {
 	 *	@param Context $hCtx Il contesto
 	 *	@param boolean $fShadow flag per la visualizzazione dell'output, se true il risultato viene ritornato in un buffer
 	 */
-	static function risolviDizionario (&$hCtx) {
+	static function risolviDizionario (&$hCtx, $amministrazione) {
 		$smarty = &$hCtx->smarty;
 		GestioneLingua::caricaDizionario($smarty, "Generali");
+
+		if ($amministrazione) {
+            GestioneLingua::caricaDizionario($smarty, "Amministrazione");
+		}
 	}
 	/**
 	 *	Monta la struttura standard dell'applicazione
@@ -27,7 +31,7 @@ class Api {
 	 *	@param SessionContext $hSessionCtx Il contesto della sessione
 	 *	@param Object $modulo riferimento al modulo
 	 */
-	static function visualizzaPagina(&$hCtx, &$hSessionCtx, $modulo, $struct = false, $fShadow = false ) {
+	static function visualizzaPagina(&$hCtx, &$hSessionCtx, $modulo, $struct = false, $fShadow = false, $amministrazione=false ) {
 		$smarty = &$hCtx->smarty;
 
 		if ($struct == false) {
@@ -36,10 +40,6 @@ class Api {
 
 		$smarty->assign("paginaDaVisualizzare", $modulo->getPaginaDaMostrare());
 
-		// echo "<pre>"; print_r($_REQUEST); // exit;
-
-		// echo "<pre>"; print_r($hCtx->aRequest); exit;
-		// phpinfo();
 		if ($_REQUEST["coockieAccettato"] == 1) {
 			$_SESSION["messaggioCoockie"] = "disattivato";
 		}
@@ -50,7 +50,11 @@ class Api {
 			$smarty->assign("mostraAvvisoCookie", false);
 		}
 
-		Api::risolviDizionario($hCtx);
+		Api::risolviDizionario($hCtx, $amministrazione);
+
+		if ($amministrazione) {
+
+		}
 
 		$buffer = $smarty->fetch($struct);
 		if ($fShadow == false) {

@@ -33,7 +33,7 @@ function BaseClass( &$hCtx, &$hSessionCtx, $modulo ) {
 	$this->smarty = &$hCtx->smarty;
 	$this->hCtx 	 = &$hCtx;
 	$this->hSessionCtx = &$hSessionCtx;
-	$this->$modulo  = $modulo;
+	$this->modulo  = $modulo;
 
 	$this->paginaDaMostrare = "";
 }

@@ -6,6 +6,39 @@
  *  “b”	Corrisponde a variabili associate al tipo di dato BLOB, formato binario.
  */
 class UtentiDb {
+
+
+    // ---------------------------------------
+    static function getUtenteByUsernamePiuPassword(&$hCtx, $username, $password) {
+        $mysqli = &$hCtx->hDBCtx;
+
+        $query = "SELECT id, nome, cognome, email, uname, passwd, onoff FROM tr_utenti WHERE uname = ? AND passwd = ? and onoff = 1";
+
+        $stmt = $mysqli->prepare($query);
+
+        if ($stmt == false) {
+            die ("Errore nella query: " . $query);
+        }
+
+        $stmt->bind_param('ss', $username, $password);
+
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        $utente = null;
+
+        while ($row = $result->fetch_assoc()) {
+            if ($utente != null) {
+                die("Esiste più di un utente con stesso user stessa password.");
+            }
+            $utente = $row;
+        }
+        $stmt->close();
+
+        return $utente;
+    }
+
 	// ---------------------------------------
 	static function esisteUtente(&$hCtx, $uname, $passwd) {
         $mysqli = &$hCtx->hDBCtx;
@@ -18,7 +51,6 @@ class UtentiDb {
         $stmt->execute();
 
         $stmt->bind_result($contatore);
-
 
         $stmt->fetch();
 
@@ -56,7 +88,7 @@ class UtentiDb {
         $mysqli = &$hCtx->hDBCtx;
         $uname = "Jester";
 
-        $stmt  = $mysqli->prepare("INSERT INTO tr_utenti (nome) value (?)");
+        $stmt = $mysqli->prepare("INSERT INTO tr_utenti (nome) value (?)");
         $stmt->bind_param('s', $uname);
         $stmt->execute();
 

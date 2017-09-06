@@ -108,8 +108,6 @@
                         </table>
                     </div>
 
-
-
                     <div class="row uniform 50%">
                         <div class="2u 12u(mobile)">
                             <a href="index.php?m={$moduloCodificato}&token={$tokenCodificato}&operazione={$passoPrecedente}" class="button alt">{#indietroStepPrecedenteDiCompilazione#}</a>

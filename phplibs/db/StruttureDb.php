@@ -13,7 +13,7 @@ class StruttureDb {
 
         $stmt  = $mysqli->prepare(
                                   "SELECT "
-                                . " s.id, s.tipo, s.descrizione_$suffissoPerCampiLingua as descrizione, s.attiva "
+                                . " s.id, s.tipo, s.descrizione_$suffissoPerCampiLingua as descrizione, s.attiva, s.tipo "
                                 . " FROM tr_strutture s "
                                 . " order by s.tipo, s.descrizione_$suffissoPerCampiLingua "
         );
@@ -44,24 +44,24 @@ class StruttureDb {
             . " s.id, s.tipo, s.descrizione_$suffissoPerCampiLingua as descrizione, s.attiva "
             . " FROM tr_strutture s "
             . " where s.id = ?"
-
-
         );
 
         $stmt->bind_param('d', $id);
 
         $stmt->execute();
 
-        $stmt->bind_result($contatore);
+        $result = $stmt->get_result();
 
+        $risultati = array();
 
-        $stmt->fetch();
-
-
+        while ($row = $result->fetch_assoc()) {
+            // echo "<pre>"; print_r($row); exit;
+            $risultati = $row;
+        }
 
         $stmt->close();
 
-        return $esiste;
+        return $risultati;
     }
 
 

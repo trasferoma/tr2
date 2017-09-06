@@ -5,7 +5,7 @@ require '../libs/Smarty.class.php';
 $smarty = new Smarty;
 
 $smarty->compile_check = true;
-$smarty->debugging = false;
+$smarty->debugging = true;
 
 $smarty->assign("Name","Fred Irving Johnathan Bradley Peppergill");
 $smarty->assign("FirstName",array("John","Mary","James","Henry"));

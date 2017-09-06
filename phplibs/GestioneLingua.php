@@ -32,6 +32,9 @@ class GestioneLingua {
 		// $smarty->clear_config();
 
         switch ($linguaImpostata) {
+            case Lingue::ABJAD:
+                $smarty->config_load('./../dizionario/abjad.conf', $sezioneDizionario );
+                break;
 			case Lingue::EN:
                 $smarty->config_load('./../dizionario/en.conf', $sezioneDizionario );
 				break;

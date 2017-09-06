@@ -18,16 +18,16 @@ require_once ("CaricatoreDomini.php");
  * @package formazione
  */
 class ArrivoInRoma extends BaseClass {
-	var $modulo = "arrivoInRoma";
-	/** *************************************************** */
-	function ArrivoInRoma(&$hCtx, &$hSessionCtx) {
-		$this->BaseClass($hCtx, $hSessionCtx, $this->modulo);
-		$this->controlloFlusso();
-	}
+    var $modulo = "arrivoInRoma";
+    /** *************************************************** */
+    function ArrivoInRoma(&$hCtx, &$hSessionCtx) {
+        $this->BaseClass($hCtx, $hSessionCtx, $this->modulo);
+        $this->controlloFlusso();
+    }
 
-	/** *************************************************** */
-	public function controlloFlusso() {
-		switch ($_REQUEST["operazione"]) {
+    /** *************************************************** */
+    public function controlloFlusso() {
+        switch ($_REQUEST["operazione"]) {
             case "finePrenotazione":
                 $this->finePrenotazione();
                 break;
@@ -37,14 +37,14 @@ class ArrivoInRoma extends BaseClass {
             case "passoD":
                 $this->riepilogoPrenotazione();
                 break;
-                /*
-            case "salvaPassoD":
-                $this->salvaDestinazioneShuttle();
-                break;
-            case "passoD":
-                $this->consoleDestinazioneShuttle();
-                break;
-                */
+            /*
+        case "salvaPassoD":
+            $this->salvaDestinazioneShuttle();
+            break;
+        case "passoD":
+            $this->consoleDestinazioneShuttle();
+            break;
+            */
             case "salvaPassoC":
                 $this->salvaPasseggeri();
                 break;
@@ -60,36 +60,36 @@ class ArrivoInRoma extends BaseClass {
             case "salvaPassoA":
                 $this->salvaDatoPiuStruttura();
                 break;
-			case "passoA":
-				$this->consoleDataPiuStruttura();
-				break;
-			default:
-				$this->inizializzazione();
-				break;
-		}
-	}
-	/** *************************************************** */
-	private function consoleDataPiuStruttura() {
-		$smarty = &$this->smarty;
+            case "passoA":
+                $this->consoleDataPiuStruttura();
+                break;
+            default:
+                $this->inizializzazione();
+                break;
+        }
+    }
+    /** *************************************************** */
+    private function consoleDataPiuStruttura() {
+        $smarty = &$this->smarty;
 
-		$this->controlloSessioneValida();
+        $this->controlloSessioneValida();
 
-		GestioneLingua::caricaDizionario($smarty, "BookShuttle_ArrivoInRoma");
+        GestioneLingua::caricaDizionario($smarty, "BookShuttle_ArrivoInRoma");
 
-		CaricatoreDomini::listaStrutture($this->hCtx, $smarty, "strutture");
+        CaricatoreDomini::listaStrutture($this->hCtx, $smarty, "strutture");
 
-		$this->settaDatiDiBasePerLaVista();
+        $this->settaDatiDiBasePerLaVista();
 
-       $arrivo = $this->getArrivo();
+        $arrivo = $this->getArrivo();
 
         if ($arrivo != null) {
             $smarty->assign("dataDiArrivo", $arrivo->getData());
             $smarty->assign("strutturaSelezionata", $arrivo->getStruttura());
-		}
+        }
 
-		$smarty->assign("prossimoPasso", "salvaPassoA");
-		$this->setPaginaDaMostrare($smarty->fetch('bookShuttle/arrivoInRoma/selezioneDataPiuStruttura.tpl'));
-	}
+        $smarty->assign("prossimoPasso", "salvaPassoA");
+        $this->setPaginaDaMostrare($smarty->fetch('bookShuttle/arrivoInRoma/selezioneDataPiuStruttura.tpl'));
+    }
 
     /** *************************************************** */
     private function consoleMezziPiuOrari() {
@@ -109,11 +109,12 @@ class ArrivoInRoma extends BaseClass {
 
         if ($arrivo != null) {
             $smarty->assign("mezzoPiuOrarioSelezionato", $arrivo->getMezzoPiuOrario());
+            $smarty->assign("indirizzoDestinazioneShuttle", $arrivo->getIndirizzoDestinazione());
         }
 
-		$smarty->assign("moduloCodificato", urlencode($this->modulo));
-		$smarty->assign("tokenCodificato", $_REQUEST["token"]);
-		$smarty->assign("passoPrecedente", "passoA");
+        $smarty->assign("moduloCodificato", urlencode($this->modulo));
+        $smarty->assign("tokenCodificato", $_REQUEST["token"]);
+        $smarty->assign("passoPrecedente", "passoA");
         $smarty->assign("prossimoPasso", "salvaPassoB");
 
         $this->setPaginaDaMostrare($smarty->fetch('bookShuttle/arrivoInRoma/selezioneMezziPiuOrari.tpl'));
@@ -190,10 +191,11 @@ class ArrivoInRoma extends BaseClass {
         $this->settaDatiDiBasePerLaVista();
 
         $descrizioneStruttura = $this->getDescrizioneStruttura();
+        $descrizioneMezzoPiuOrario = $this->getDescrizioneMezzoPiuOrario();
 
         $smarty->assign("data", $arrivo->getData());
         $smarty->assign("struttura", $descrizioneStruttura);
-        $smarty->assign("mezzoPiuOrario", $arrivo->getMezzoPiuOrario());
+        $smarty->assign("mezzoPiuOrario", $descrizioneMezzoPiuOrario);
         $smarty->assign("numeroAdulti", $arrivo->getNumeroAdulti());
         $smarty->assign("numeroAnimali", $arrivo->getNumeroAnimali());
         $smarty->assign("numeroBambiniDa3A6", $arrivo->getNumeroBambiniDa3A6());
@@ -223,7 +225,7 @@ class ArrivoInRoma extends BaseClass {
     }
 
     /**
-	 * - crea la chiave
+     * - crea la chiave
      * - istanzia l'oggetto contenitore
      * - ridirige al prmo passo di compilazione
      */
@@ -250,26 +252,26 @@ class ArrivoInRoma extends BaseClass {
 
     /**
      *  Valida dati
-	 * 	Mostra errore oppure
-	 *
-	 *  Colleziona le informazioni validate
-	 *  Vai al passo successivo
+     * 	Mostra errore oppure
+     *
+     *  Colleziona le informazioni validate
+     *  Vai al passo successivo
      */
     private function salvaDatoPiuStruttura()
     {
         $this->controlloSessioneValida();
 
-		$datiValidi = $this->validazioneFormDataPiuStruttura();
+        $datiValidi = $this->validazioneFormDataPiuStruttura();
 
-		if ($datiValidi) {
-			$arrivo = $this->getArrivo();
-			$arrivo->setData($_REQUEST["dataArrivo"]);
+        if ($datiValidi) {
+            $arrivo = $this->getArrivo();
+            $arrivo->setData($_REQUEST["dataArrivo"]);
             $arrivo->setStruttura($_REQUEST["struttura"]);
 
             $this->vaiMezziPiuOrari($_REQUEST["token"]);
-		} else {
+        } else {
             $this->vaiDataPiuStruttura($_REQUEST["token"]);
-		}
+        }
     }
 
     /**
@@ -359,7 +361,7 @@ class ArrivoInRoma extends BaseClass {
 
         $this->controlloSessioneValida();
 
-        // PrenotazioniDb::aggiungiPrenotazioneDiArrivoInRoma($this->hCtx, $arrivo);
+        PrenotazioniDb::aggiungiPrenotazioneDiArrivoInRoma($this->hCtx, $arrivo);
 
         $token = $_REQUEST["token"];
         unset($_SESSION[$token]);
@@ -369,18 +371,18 @@ class ArrivoInRoma extends BaseClass {
 
     private function getArrivo()
     {
-    	$token = $_REQUEST["token"];
+        $token = $_REQUEST["token"];
 
-    	if (isset($_SESSION[$token])) {
-    		return $_SESSION[$token];
-		} else {
-    		return null;
-		}
+        if (isset($_SESSION[$token])) {
+            return $_SESSION[$token];
+        } else {
+            return null;
+        }
     }
 
     private function vaiDataPiuStruttura($token)
     {
-    	$tokenCodificato = urlencode ($token);
+        $tokenCodificato = urlencode ($token);
         $indirizzo = sprintf("index.php?m=%s&operazione=passoA&token=%s", $this->modulo, $tokenCodificato);
 
         header("Location: $indirizzo");
@@ -425,11 +427,11 @@ class ArrivoInRoma extends BaseClass {
 
     private function validazioneFormDataPiuStruttura()
     {
-		require_once ("validazione/ValidazioneFormArrivoDataPiuStruttura.php");
+        require_once ("validazione/ValidazioneFormArrivoDataPiuStruttura.php");
 
-		$validatore = new ValidazioneFormArrivoDataPiuStruttura();
+        $validatore = new ValidazioneFormArrivoDataPiuStruttura();
 
-		return $validatore->datiValidi();
+        return $validatore->datiValidi();
     }
 
     private function validazioneFormMezzoPiuOrario()
@@ -490,6 +492,16 @@ class ArrivoInRoma extends BaseClass {
         GestioneLingua::caricaDizionario($smarty, "BookShuttle_ArrivoInRoma");
 
         $this->setPaginaDaMostrare($smarty->fetch('bookShuttle/arrivoInRoma/finePrenotazione.tpl'));
+    }
+
+    private function getDescrizioneMezzoPiuOrario()
+    {
+        $arrivo = $this->getArrivo();
+        $linguaImpostata = GestioneLingua::getLinguaImpostata();
+        $mezzoPiuOrario = MezziPiuOrariDb::getMezzoPiuOrarioByID($this->hCtx, $arrivo->getMezzoPiuOrario(), $linguaImpostata);
+
+        return $mezzoPiuOrario["descrizione"];
+
     }
 
     /** *************************************************** */

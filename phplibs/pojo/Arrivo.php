@@ -21,6 +21,16 @@ class Arrivo implements Serializable
     private $cellulareContatto = null;
     private $nomeDestinazione = null;
     private $indirizzoDestinazione = null;
+    private $tipo = null;
+
+    /**
+     * Arrivo constructor.
+     */
+    public function __construct()
+    {
+        $this->tipo = "arrivo_in_roma";
+    }
+
 
     /**
      * @return null
@@ -222,6 +232,11 @@ class Arrivo implements Serializable
         return $this->indirizzoDestinazione;
     }
 
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+
     /**
      * @param null $indirizzoDestinazione
      */
@@ -246,7 +261,8 @@ class Arrivo implements Serializable
             $this->emailContatto,
             $this->cellulareContatto,
             $this->nomeDestinazione,
-            $this->indirizzoDestinazione
+            $this->indirizzoDestinazione,
+            $this->tipo,
         ]);
     }
 
@@ -275,7 +291,8 @@ class Arrivo implements Serializable
             $this->emailContatto,
             $this->cellulareContatto,
             $this->nomeDestinazione,
-            $this->indirizzoDestinazione
+            $this->indirizzoDestinazione,
+            $this->tipo,
             ) = unserialize($serialized);
     }
 }

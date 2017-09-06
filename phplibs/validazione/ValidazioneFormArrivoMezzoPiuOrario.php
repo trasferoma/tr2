@@ -56,3 +56,4 @@ class ValidazioneFormArrivoMezzoPiuOrario
         return StrumentiDiValidazioneForm::campoPresente($valore);
     }
 }
+?>

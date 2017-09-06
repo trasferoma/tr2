@@ -5,7 +5,6 @@
  */
 require_once("./phplibs/cfg.php");
 require_once("./Smarty/libs/Smarty.class.php");
-require_once("./Smarty/libs/SmartyPaginate.class.php");
 require_once("./phplibs/framework/Utility.php");
 require_once("./phplibs/framework/SessionContext.php");
 require_once("./phplibs/framework/Context.php");

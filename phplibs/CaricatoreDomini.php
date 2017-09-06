@@ -41,6 +41,18 @@ class CaricatoreDomini
         $smarty->assign($sectionDiSmarty, $listaValoriDominio);
     }
 
+    public static function listaTipiStruttura(&$smarty, $sectionDiSmarty)
+    {
+        require_once ("./phplibs/enumerazioni/TipiStruttura.php");
 
+
+        $tipoPorto = $smarty->get_config_vars(TipiStruttura::porto);
+        $tipoAeroporto = $smarty->get_config_vars(TipiStruttura::aeroporto);
+
+        $listaValoriDominio[] = $tipoPorto;
+        $listaValoriDominio[] = $tipoAeroporto;
+
+        $smarty->assign($sectionDiSmarty, $listaValoriDominio);
+    }
 }
 ?>
