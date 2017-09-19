@@ -25,6 +25,7 @@
                     <ul>
                         <li><a href="amministrazione.php">Home</a></li>
                         <li><a href="amministrazione.php?m=strutture">{#strutture#}</a></li>
+                        <li><a href="amministrazione.php?m=mezziPiuOrari">{#mezziPiuOrari#}</a></li>
                         <li>
                             <a href="amministrazione.php?m=strutture" class="icon fa-angle-down">Componenti</a>
                             <ul>

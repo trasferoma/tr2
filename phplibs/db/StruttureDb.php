@@ -64,9 +64,84 @@ class StruttureDb {
         return $risultati;
     }
 
+    public static function getStrutturaByIDCompleta($hCtx, $id)
+    {
+        $mysqli = &$hCtx->hDBCtx;
+        $contatore = null;
 
-    /**
- *	
- */
+        $stmt  = $mysqli->prepare(
+            "SELECT "
+            . " s.id, s.tipo, s.attiva, s.descrizione_it, s.descrizione_en, s.descrizione_abjad "
+            . " FROM tr_strutture s "
+            . " where s.id = ?"
+        );
+
+        $stmt->bind_param('d', $id);
+
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        $risultati = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $risultati = $row;
+        }
+
+        $stmt->close();
+        // echo "<pre>"; print_r($risultati); exit;
+        return $risultati;
+    }
+
+    public static function salvaStruttura($hCtx, $campi)
+    {
+        $mysqli = &$hCtx->hDBCtx;
+
+        $listaColonne = "id, tipo, attiva, descrizione_it, descrizione_en, descrizione_abjad";
+
+        $sql = "INSERT INTO tr_strutture ($listaColonne) values (?,?,?,?,?,?) on duplicate key UPDATE tipo = ?, attiva = ?, descrizione_it = ?, descrizione_en = ?, descrizione_abjad = ?";
+
+/*
+        printf("INSERT INTO tr_strutture ($listaColonne) values ('%s',%d,'%s','%s','%s') on duplicate key UPDATE id = %d,",
+            $campi["id"],
+            $campi["tipo"],
+            $campi["attiva"],
+            $campi["descrizione_it"],
+            $campi["descrizione_en"],
+            $campi["descrizione_abjad"],
+            $campi["id"]);
+
+        exit;
+*/
+        $stmt = $mysqli->prepare($sql);
+
+        if ( false === $stmt ) {
+            die('Errore Preparazione Query: ' . htmlspecialchars($mysqli->error));
+        }
+
+        // echo "<pre>"; print_r($campi); exit;
+
+        $stmt->bind_param('dsdssssdsss',
+            $campi["id"],
+            $campi["tipo"],
+            $campi["attiva"],
+            $campi["descrizione_it"],
+            $campi["descrizione_en"],
+            $campi["descrizione_abjad"],
+            $campi["tipo"],
+            $campi["attiva"],
+            $campi["descrizione_it"],
+            $campi["descrizione_en"],
+            $campi["descrizione_abjad"]
+        );
+
+        $esito = $stmt->execute();
+
+        if ($esito == false) {
+            die('Errore Esecuzione Query: ' . htmlspecialchars($mysqli->error));
+        }
+
+        $stmt->close();
+    }
 } // end of class
 ?>

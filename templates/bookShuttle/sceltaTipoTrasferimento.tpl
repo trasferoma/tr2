@@ -25,7 +25,7 @@
 
                     <ul class="actions fit">
                         <li><a href="?m=arrivoInRoma" class="button special fit">{#arrivoInRoma#}</a></li>
-                        <li><a href="?m=partenzaDaRoma&operazione" class="button fit">{#partenzaDaRoma#}</a></li>
+                        <li><a href="?m=partenzaDaRoma" class="button fit">{#partenzaDaRoma#}</a></li>
                     </ul>
 
             </section>

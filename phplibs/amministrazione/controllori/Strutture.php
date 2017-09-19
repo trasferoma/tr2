@@ -13,12 +13,15 @@ class Strutture extends BaseClass {
 
 	function Strutture(&$hCtx, &$hSessionCtx, $fNoWork=false ) {
 
-		$this->BaseClass($hCtx, $hSessionCtx, "home");
+		$this->BaseClass($hCtx, $hSessionCtx, "strutture");
 		$this->controlloFlusso();
 	}
 
 	public function controlloFlusso() {
 		switch ($_REQUEST["operazione"]) {
+            case "salva":
+                $this->salvaStruttura();
+                break;
             case "nuova":
             	$this->nuovaStruttura();
                 break;
@@ -31,13 +34,32 @@ class Strutture extends BaseClass {
 		}
 	}
 
+	private function salvaStruttura() {
+        $datiValidi = $this->validazioneFormDettaglioStruttura();
+
+        if ($datiValidi) {
+            StruttureDb::salvaStruttura($this->hCtx, $_REQUEST);
+            Utility::redirect("?m=" . $this->modulo);
+        } else {
+            $this->consoleDettaglio($_REQUEST);
+        }
+    }
+
+    private function validazioneFormDettaglioStruttura()
+    {
+        require_once ("./phplibs/validazione/ValidazioneFormDettaglioStruttura.php");
+
+        $validatore = new ValidazioneFormDettaglioStruttura();
+
+        return $validatore->datiValidi();
+    }
+
 	private function lista() {
 		$smarty = &$this->smarty;
 
 		GestioneLingua::caricaDizionario($smarty, "AmministrazioneListaStrutture");
 
 		$this->listaStrutture();
-
 
 		$this->setPaginaDaMostrare($smarty->fetch('amministrazione/strutture/lista.tpl'));
 	}
@@ -68,7 +90,7 @@ class Strutture extends BaseClass {
     private function modificaStruttura()
     {
         $linguaImpostata = GestioneLingua::getLinguaImpostata();
-		$struttura = StruttureDb::getStrutturaByID($linguaImpostata);
+		$struttura = StruttureDb::getStrutturaByIDCompleta($this->hCtx, $_REQUEST["id"]);
 
 		$this->consoleDettaglio($struttura);
     }
@@ -76,6 +98,8 @@ class Strutture extends BaseClass {
     {
         $smarty = &$this->smarty;
         GestioneLingua::caricaDizionario($smarty, "AmministrazioneDettaglioaStrutture");
+
+        // echo "<pre>"; print_r($struttura); exit;
 
         if ($struttura != null) {
             $smarty->assign("id", $struttura["id"]);
@@ -89,9 +113,9 @@ class Strutture extends BaseClass {
                 $smarty->assign("strutturaNonAttivaSelezionata", "selected");
             }
 
-            $smarty->assign("descrizioneIt", $struttura["descrizioneIt"]);
-            $smarty->assign("descrizioneEn", $struttura["descrizioneEn"]);
-            $smarty->assign("descrizioneAbjad", $struttura["descrizioneAbjad"]);
+            $smarty->assign("descrizioneIt", $struttura["descrizione_it"]);
+            $smarty->assign("descrizioneEn", $struttura["descrizione_en"]);
+            $smarty->assign("descrizioneAbjad", $struttura["descrizione_abjad"]);
 		} else {
             $smarty->assign("strutturaAttivaSelezionata", "selected");
             $smarty->assign("strutturaNonAttivaSelezionata", "");

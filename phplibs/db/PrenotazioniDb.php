@@ -41,6 +41,39 @@ class PrenotazioniDb {
         $stmt->close();
     }
 
+    // ---------------------------------------
+    static function aggiungiPrenotazioneDiPartenzaDaRoma(&$hCtx, &$prenotazione) {
+        $mysqli = &$hCtx->hDBCtx;
+
+        $listaColonne = "data_arrivo, id_struttura, id_mezzo_piu_orario, numero_adulti, numero_animali, numero_bambini_3_6, numero_bambini_6_11, nome_contatto, cognome_contatto, email_contatto, cellulare_contatto, indirizzo_destinazione, tipo";
+
+        $stmt = $mysqli->prepare("INSERT INTO tr_prenotazione ($listaColonne) values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
+
+        $data = StrumentiDate::daFormatoItalianoInFormatoDb($prenotazione->getData());
+
+        $stmt->bind_param('sddddddssssss',
+            $data,
+            $prenotazione->getStruttura(),
+            $prenotazione->getMezzoPiuOrario(),
+            $prenotazione->getNumeroAdulti(),
+            $prenotazione->getNumeroAnimali(),
+            $prenotazione->getNumeroBambiniDa3A6(),
+            $prenotazione->getNumeroBambiniDa6A12(),
+            $prenotazione->getNomeContatto(),
+            $prenotazione->getCognomeContatto(),
+            $prenotazione->getEmailContatto(),
+            $prenotazione->getCellulareContatto(),
+            $prenotazione->getIndirizzoDestinazione(),
+            $prenotazione->getTipo()
+        );
+
+        $stmt->execute();
+
+        // printf("%d Row inserted.\n", $stmt->affected_rows);
+
+        $stmt->close();
+    }
+
 
 /**
  *	

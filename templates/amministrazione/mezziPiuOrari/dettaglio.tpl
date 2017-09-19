@@ -1,8 +1,12 @@
 <script src="assets/js/strumentiPerValidazioneForm.js"></script>
 <script>
     {literal}
-    function validazioneTipo() {
-        return validazioneCampoObbligatorio("#tipo" );
+    function validazioneStruttura() {
+        return validazioneCampoObbligatorio("#struttura" );
+    }
+
+    function validazioneDirezione() {
+        return validazioneCampoObbligatorio("#direzione" );
     }
 
     function validazioneAttiva() {
@@ -24,13 +28,14 @@
     function validaForm() {
         datiValidi = false;
 
-        tipoValido = validazioneTipo();
+        strutturaValida = validazioneStruttura();
+        direzioneValida = validazioneDirezione();
         attivaValida = validazioneAttiva();
         descrizioneItValida = validazioneDescrizioneIt();
         descrizioneEnValida = validazioneDescrizioneEn();
         descrizioneAbjadValida = validazioneDescrizioneAbjad();
 
-        datiValidi = tipoValido && attivaValida && descrizioneItValida && descrizioneEnValida && descrizioneAbjadValida;
+        datiValidi = strutturaValida && direzioneValida && attivaValida && descrizioneItValida && descrizioneEnValida && descrizioneAbjadValida;
         // datiValidi = true;
 
         if (datiValidi) {
@@ -59,9 +64,20 @@
                     <div class="row uniform 50%">
                         <div class="5u 12u(mobile)">
                             <div class="select-wrapper">
-                                <select name="tipo" id="tipo">
-                                    <option value="">{#tipoStruttura#}</option>
-                                    {html_options options=$tipiStruttura selected=$tipo}
+                                <select name="struttura" id="struttura">
+                                    <option value="">{#struttura#}</option>
+                                    {html_options options=$strutture selected=$strutturaSelezionata}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row uniform 50%">
+                        <div class="5u 12u(mobile)">
+                            <div class="select-wrapper">
+                                <select name="direzione" id="direzione">
+                                    <option value="">{#selezionareArrivoPartenza#}</option>
+                                    {html_options options=$listaDirezioni selected=$direzione}
                                 </select>
                             </div>
                         </div>
@@ -72,8 +88,8 @@
                             <div class="select-wrapper">
                                 <select name="attiva" id="attiva">
                                     <option value="">{#selezionareAttivaSiNo#}</option>
-                                    <option value="1" {$strutturaAttivaSelezionata}>{#positivo#}</option>
-                                    <option value="0" {$strutturaNonAttivaSelezionata}>{#negativo#}</option>
+                                    <option value="1" {$attivoSelezionato}>{#positivo#}</option>
+                                    <option value="0" {$nonAttivoSelezionato}>{#negativo#}</option>
                                 </select>
                             </div>
                         </div>
