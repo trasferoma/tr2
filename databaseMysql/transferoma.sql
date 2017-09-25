@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Set 19, 2017 alle 15:11
+-- Creato il: Set 25, 2017 alle 09:35
 -- Versione del server: 10.1.21-MariaDB
 -- Versione PHP: 5.6.30
 
@@ -50,10 +50,23 @@ INSERT INTO `tr_mezzi_piu_orari` (`id`, `id_struttura`, `direzione`, `descrizion
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `tr_prenotazione`
+-- Struttura della tabella `tr_passeggeri`
 --
 
-CREATE TABLE `tr_prenotazione` (
+CREATE TABLE `tr_passeggeri` (
+  `id` int(11) NOT NULL,
+  `id_shuttle` int(11) NOT NULL,
+  `id_prenotazione` int(11) NOT NULL,
+  `tipo` set('adulto','bambino3_6','bambino6_11') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `tr_prenotazioni`
+--
+
+CREATE TABLE `tr_prenotazioni` (
   `id` int(11) NOT NULL,
   `data_arrivo` date NOT NULL,
   `id_struttura` int(11) NOT NULL,
@@ -70,13 +83,19 @@ CREATE TABLE `tr_prenotazione` (
   `tipo` set('arrivo_in_roma','partenza_da_roma') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
+-- --------------------------------------------------------
+
 --
--- Dump dei dati per la tabella `tr_prenotazione`
+-- Struttura della tabella `tr_shuttle`
 --
 
-INSERT INTO `tr_prenotazione` (`id`, `data_arrivo`, `id_struttura`, `id_mezzo_piu_orario`, `numero_adulti`, `numero_animali`, `numero_bambini_3_6`, `numero_bambini_6_11`, `nome_contatto`, `cognome_contatto`, `email_contatto`, `cellulare_contatto`, `indirizzo_destinazione`, `tipo`) VALUES
-(2, '2017-09-05', 1, 1, 1, 1, 1, 1, '1', '1', 'xxx@xxx.xx', '3474377079', 'xxxxx', 'arrivo_in_roma'),
-(3, '2017-09-19', 1, 3, 1, 2, 3, 4, '5', '6', 'xxx@xxx.xx', '3474377079', 'zzz', 'partenza_da_roma');
+CREATE TABLE `tr_shuttle` (
+  `id` int(11) NOT NULL,
+  `data_viaggio` date NOT NULL,
+  `id_struttura` int(11) NOT NULL,
+  `id_mezzo_piu_orario` int(11) NOT NULL,
+  `tipo` set('arrivo_in_roma','partenza_da_roma') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -137,9 +156,21 @@ ALTER TABLE `tr_mezzi_piu_orari`
   ADD UNIQUE KEY `id_volo_piu_orario` (`id`);
 
 --
--- Indici per le tabelle `tr_prenotazione`
+-- Indici per le tabelle `tr_passeggeri`
 --
-ALTER TABLE `tr_prenotazione`
+ALTER TABLE `tr_passeggeri`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `tr_prenotazioni`
+--
+ALTER TABLE `tr_prenotazioni`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `tr_shuttle`
+--
+ALTER TABLE `tr_shuttle`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -164,10 +195,20 @@ ALTER TABLE `tr_utenti`
 ALTER TABLE `tr_mezzi_piu_orari`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT per la tabella `tr_prenotazione`
+-- AUTO_INCREMENT per la tabella `tr_passeggeri`
 --
-ALTER TABLE `tr_prenotazione`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `tr_passeggeri`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT per la tabella `tr_prenotazioni`
+--
+ALTER TABLE `tr_prenotazioni`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT per la tabella `tr_shuttle`
+--
+ALTER TABLE `tr_shuttle`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT per la tabella `tr_strutture`
 --

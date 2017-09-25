@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe62466c-2357-4aee-8607-e31347b15e10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/jquery-ui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/jquery-1.12.4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/jquery-ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/GestorePrenotazione.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/db/PasseggeriDb.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/db/ShuttleDb.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phplibs/enumerazioni/TipiPasseggero.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/ArrivoInRoma.php" afterPath="$PROJECT_DIR$/phplibs/ArrivoInRoma.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/db/MezziPiuOrariDb.php" afterPath="$PROJECT_DIR$/phplibs/db/MezziPiuOrariDb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/db/PrenotazioniDb.php" afterPath="$PROJECT_DIR$/phplibs/db/PrenotazioniDb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/site.properties.php" afterPath="$PROJECT_DIR$/phplibs/site.properties.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/strutturaDiBase.tpl" afterPath="$PROJECT_DIR$/templates/strutturaDiBase.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/%%D2^D25^D2565E22%%strutturaDiBase.tpl.php" afterPath="$PROJECT_DIR$/templates_c/%%D2^D25^D2565E22%%strutturaDiBase.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databaseMysql/transferoma.sql" afterPath="$PROJECT_DIR$/databaseMysql/transferoma.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,11 +48,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GestorePrenotazione.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GestorePrenotazione.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/phplibs/GestorePrenotazione.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transferoma.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/databaseMysql/transferoma.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -288,6 +286,11 @@
             <path>
               <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
               <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="databaseMysql" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="phplibs" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -318,9 +321,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\tr2\databaseMysql" />
       <recent name="C:\xampp\htdocs\tr2\phplibs\enumerazioni" />
       <recent name="C:\xampp\htdocs\tr2\phplibs\db" />
-      <recent name="C:\xampp\htdocs\tr2\databaseMysql" />
       <recent name="C:\xampp\htdocs\tr2\phplibs\validazione" />
       <recent name="C:\xampp\htdocs\tr2\templates\bookShuttle\partenzaDaRoma" />
     </key>
@@ -399,7 +402,7 @@
       <workItem from="1505891689997" duration="677000" />
       <workItem from="1505979884078" duration="891000" />
       <workItem from="1506002732570" duration="4689000" />
-      <workItem from="1506237562697" duration="9995000" />
+      <workItem from="1506237562697" duration="10103000" />
     </task>
     <task id="LOCAL-00001" summary="Correzioni">
       <created>1503674355785</created>
@@ -492,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505826779711</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Implementazione">
+      <created>1506324983988</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1506324983988</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -501,7 +511,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158286000" />
+    <option name="totallyTimeSpent" value="158394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -789,13 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/databaseMysql/transferoma.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/Direzioni.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -826,6 +829,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="1310" column="1" lean-forward="false" selection-start-line="1310" selection-start-column="1" selection-end-line="1310" selection-end-column="1" />
+          <folding>
+            <element signature="e#3708#3793#2" expanded="true" />
+            <element signature="e#14702#17051#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -833,6 +840,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -983,6 +991,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseMysql/transferoma.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
