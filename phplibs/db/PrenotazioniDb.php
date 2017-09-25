@@ -14,11 +14,13 @@ class PrenotazioniDb {
 
         $listaColonne = "data_arrivo, id_struttura, id_mezzo_piu_orario, numero_adulti, numero_animali, numero_bambini_3_6, numero_bambini_6_11, nome_contatto, cognome_contatto, email_contatto, cellulare_contatto, indirizzo_destinazione, tipo";
 
-        $stmt = $mysqli->prepare("INSERT INTO tr_prenotazione ($listaColonne) values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $stmt = $mysqli->prepare("INSERT INTO tr_prenotazioni ($listaColonne) values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         $data = StrumentiDate::daFormatoItalianoInFormatoDb($prenotazione->getData());
 
-        $stmt->bind_param('sddddddssssss',
+        // echo "<pre>"; print_r($prenotazione); exit;
+
+        @$stmt->bind_param('sddddddssssss',
                             $data,
                             $prenotazione->getStruttura(),
                             $prenotazione->getMezzoPiuOrario(),
@@ -47,7 +49,7 @@ class PrenotazioniDb {
 
         $listaColonne = "data_arrivo, id_struttura, id_mezzo_piu_orario, numero_adulti, numero_animali, numero_bambini_3_6, numero_bambini_6_11, nome_contatto, cognome_contatto, email_contatto, cellulare_contatto, indirizzo_destinazione, tipo";
 
-        $stmt = $mysqli->prepare("INSERT INTO tr_prenotazione ($listaColonne) values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $stmt = $mysqli->prepare("INSERT INTO tr_prenotazioni ($listaColonne) values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         $data = StrumentiDate::daFormatoItalianoInFormatoDb($prenotazione->getData());
 
@@ -74,7 +76,11 @@ class PrenotazioniDb {
         $stmt->close();
     }
 
-
+    static function getIdUltimaPrenotazioneInserita(&$hCtx)
+    {
+        $mysqli = &$hCtx->hDBCtx;
+        return $mysqli->insert_id;
+    }
 /**
  *	
  */
