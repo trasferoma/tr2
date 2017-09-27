@@ -22,8 +22,8 @@ class GestorePrenotazione
         $idPrenotazione = PrenotazioniDb::getIdUltimaPrenotazioneInserita($hCtx);
 
         $this->aggiungiPasseggeriAdultiAdUnoShuttle($hCtx, $arrivo, $idPrenotazione);
-        // $this->aggiungiPasseggeriBambiniDa3a6AdUnoShuttle($hCtx, $arrivo, $idPrenotazione);
-        // $this->aggiungiPasseggeriBambiniDa6a11AdUnoShuttle($hCtx, $arrivo, $idPrenotazione);
+        $this->aggiungiPasseggeriBambiniDa3a6AdUnoShuttle($hCtx, $arrivo, $idPrenotazione);
+        $this->aggiungiPasseggeriBambiniDa6a11AdUnoShuttle($hCtx, $arrivo, $idPrenotazione);
     }
 
     public function aggiungiPasseggeriAdultiAdUnoShuttle(&$hCtx, &$viaggio, $idPrenotazione) {
@@ -33,11 +33,10 @@ class GestorePrenotazione
         for ($i = 0; $i < $viaggio->getNumeroAdulti(); $i++) {
             if ($numeroPostiDisponibili == 0) {
                 $shuttle = $this->getShuttleAncoraAperto($hCtx, $viaggio);
-                $numeroPostiDisponibili = $shuttle["numeroPasseggeriPresenti"];
+                $numeroPostiDisponibili = MASSIMO_NUMERO_PASSEGGERI_PER_SHUTTLE - $shuttle["numeroPasseggeriPresenti"];
             }
 
             PasseggeriDb::creaPasseggeroAdulto($hCtx, $idPrenotazione, $shuttle["id"]);
-            // $idPasseggero = PasseggeriDb::getIdUltimoPasseggeroInserito($hCtx);
 
             $numeroPostiDisponibili--;
         }
@@ -63,13 +62,13 @@ class GestorePrenotazione
 
         $numeroPostiDisponibili = 0;
 
-        for ($i = 0; $i < $viaggio->getNumeroBambiniDa6A11(); $i++) {
+        for ($i = 0; $i < $viaggio->getNumeroBambiniDa6A12(); $i++) {
             if ($numeroPostiDisponibili == 0) {
                 $shuttle = $this->getShuttleAncoraAperto($hCtx, $viaggio);
                 $numeroPostiDisponibili = $shuttle["numeroPasseggeriPresenti"];
             }
 
-            PasseggeriDb::creaPasseggeroBambinoDa6A11($hCtx, $idPrenotazione, $shuttle["id"]);
+            PasseggeriDb::creaPasseggeroBambinoDa6A12 ($hCtx, $idPrenotazione, $shuttle["id"]);
 
             $numeroPostiDisponibili--;
         }
@@ -85,18 +84,29 @@ class GestorePrenotazione
      */
     public function getShuttleAncoraAperto(&$hCtx, &$viaggio)
     {
+        $shuttleAperto = null;
         $listaShuttle = ShuttleDb::getByViaggio($hCtx, $viaggio);
 
-        if (is_array($listaShuttle)) {
+        // echo "<pre>"; print_r($listaShuttle); exit;
+
+        $trovato = false;
+
+        if (is_array($listaShuttle) ) {
             foreach ($listaShuttle as &$shuttle) {
                 if ($shuttle["numeroPasseggeriPresenti"] < MASSIMO_NUMERO_PASSEGGERI_PER_SHUTTLE) {
-                    return $shuttle;
+                    $trovato = true;
+                    $shuttleAperto = $shuttle;
+                    break;
                 }
             }
-        } else {
-            ShuttleDb::creaShuttleByViaggio($hCtx, $viaggio);
-            return getShuttleAncoraAperto($hCtx, $viaggio);
         }
+
+        if ($trovato == false) {
+            ShuttleDb::creaShuttleByViaggio($hCtx, $viaggio);
+            return $this->getShuttleAncoraAperto($hCtx, $viaggio);
+        }
+
+        return $shuttleAperto;
     }
 
 }

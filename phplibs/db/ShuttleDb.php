@@ -14,7 +14,7 @@ class ShuttleDb {
             die ("Errore nella query: " . $query);
         }
 
-        $data = $viaggio->getData();
+        $data = StrumentiDate::daFormatoItalianoInFormatoDb($viaggio->getData());
         $struttura = $viaggio->getStruttura();
         $mezzoPiuOrario = $viaggio->getMezzoPiuOrario();
         $tipo = $viaggio->getTipo();
@@ -54,12 +54,16 @@ class ShuttleDb {
         }
 
         // echo "<pre>"; print_r($campi); exit;
+        $data = StrumentiDate::daFormatoItalianoInFormatoDb($viaggio->getData());
+        $struttura = $viaggio->getStruttura();
+        $mezzoPiuOrario = $viaggio->getMezzoPiuOrario();
+        $tipo = $viaggio->getTipo();
 
         $stmt->bind_param('sdds',
-            $viaggio->getData(),
-            $viaggio->getStruttura(),
-            $viaggio->getMezzoPiuOrario(),
-            $viaggio->getTipo()
+            $data,
+            $struttura,
+            $mezzoPiuOrario,
+            $tipo
         );
 
         $esito = $stmt->execute();

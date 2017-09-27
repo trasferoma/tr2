@@ -5,7 +5,7 @@ class PasseggeriDb
     static function getNumeroPasseggeriNelloShuttle(&$hCtx, $idShuttle) {
         $mysqli = &$hCtx->hDBCtx;
 
-        $query = "SELECT count(*) as numeroPasseggeri FROM tr_passeggeri WHERE id_shuttle = ?";
+        $query = "SELECT count(*) as numeroPasseggeriPresenti FROM tr_passeggeri WHERE id_shuttle = ?";
 
         $stmt = $mysqli->prepare($query);
 
@@ -23,7 +23,7 @@ class PasseggeriDb
 
         $row = $result->fetch_assoc();
 
-        $numeroPasseggeri = $row["numeroPasseggeri"];
+        $numeroPasseggeri = $row["numeroPasseggeriPresenti"];
 
         $stmt->close();
 
@@ -38,9 +38,9 @@ class PasseggeriDb
     {
         PasseggeriDb::creaPasseggero($hCtx, $idPrenotazione, $idShuttle, TipiPasseggero::bambino3_6);
     }
-    public static function creaPasseggeroBambinoDa6A11($hCtx, $idPrenotazione, $idShuttle)
+    public static function creaPasseggeroBambinoDa6A12($hCtx, $idPrenotazione, $idShuttle)
     {
-        PasseggeriDb::creaPasseggero($hCtx, $idPrenotazione, $idShuttle, TipiPasseggero::bambino6_11);
+        PasseggeriDb::creaPasseggero($hCtx, $idPrenotazione, $idShuttle, TipiPasseggero::bambino6_12);
     }
 
     public static function creaPasseggero($hCtx, $idPrenotazione, $idShuttle, $tipoPasseggero)
