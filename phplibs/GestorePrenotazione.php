@@ -7,6 +7,15 @@ require_once("./phplibs/db/ShuttleDb.php");
 
 class GestorePrenotazione
 {
+    public function aggiungiPrenotazionePartenzaDaRoma(&$hCtx, &$partenza)
+    {
+        PrenotazioniDb::aggiungiPrenotazionePartenzaDaRoma($hCtx, $partenza);
+        $idPrenotazione = PrenotazioniDb::getIdUltimaPrenotazioneInserita($hCtx);
+
+        $this->aggiungiPasseggeriAdultiAdUnoShuttle($hCtx, $partenza, $idPrenotazione);
+        $this->aggiungiPasseggeriBambiniDa3a6AdUnoShuttle($hCtx, $partenza, $idPrenotazione);
+        $this->aggiungiPasseggeriBambiniDa6a12AdUnoShuttle($hCtx, $partenza, $idPrenotazione);
+    }
     /**
      * - Inserisce la prenotazione sul DB
      *
@@ -23,7 +32,7 @@ class GestorePrenotazione
 
         $this->aggiungiPasseggeriAdultiAdUnoShuttle($hCtx, $arrivo, $idPrenotazione);
         $this->aggiungiPasseggeriBambiniDa3a6AdUnoShuttle($hCtx, $arrivo, $idPrenotazione);
-        $this->aggiungiPasseggeriBambiniDa6a11AdUnoShuttle($hCtx, $arrivo, $idPrenotazione);
+        $this->aggiungiPasseggeriBambiniDa6a12AdUnoShuttle($hCtx, $arrivo, $idPrenotazione);
     }
 
     public function aggiungiPasseggeriAdultiAdUnoShuttle(&$hCtx, &$viaggio, $idPrenotazione) {
@@ -58,7 +67,7 @@ class GestorePrenotazione
         }
     }
 
-    public function aggiungiPasseggeriBambiniDa6a11AdUnoShuttle(&$hCtx, &$viaggio, $idPrenotazione) {
+    public function aggiungiPasseggeriBambiniDa6a12AdUnoShuttle(&$hCtx, &$viaggio, $idPrenotazione) {
 
         $numeroPostiDisponibili = 0;
 

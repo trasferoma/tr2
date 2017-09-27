@@ -4,11 +4,12 @@ require_once("./phplibs/framework/Utility.php");
 require_once("./phplibs/framework/UtilityPerFileSystem.php");
 // require_once("./phplibs/enumerazioni/FasiArriviInRoma.php");
 require_once("./phplibs/enumerazioni/FasiPartenzeDaRoma.php");
-require_once ("./phplibs/db/StruttureDb.php");
-require_once ("./phplibs/db/MezziPiuOrariDb.php");
-require_once ("./phplibs/db/PrenotazioniDb.php");
-require_once ("./phplibs/pojo/Partenza.php");
-require_once ("CaricatoreDomini.php");
+require_once("./phplibs/db/StruttureDb.php");
+require_once("./phplibs/db/MezziPiuOrariDb.php");
+require_once("./phplibs/db/PrenotazioniDb.php");
+require_once("./phplibs/pojo/Partenza.php");
+require_once("./phplibs/CaricatoreDomini.php");
+require_once("./phplibs/GestorePrenotazione.php");
 
 /**
  *	PHP CLASS DEFINITION
@@ -355,7 +356,8 @@ class PartenzaDaRoma extends BaseClass {
 
         $this->controlloSessioneValida();
 
-        PrenotazioniDb::aggiungiPrenotazioneDiPartenzaDaRoma($this->hCtx, $viaggio);
+        $gestorePrenotazione = new GestorePrenotazione();
+        $gestorePrenotazione->aggiungiPrenotazioneDiArrivoInRoma($this->hCtx, $viaggio);
 
         $token = $_REQUEST["token"];
         unset($_SESSION[$token]);

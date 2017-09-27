@@ -9,7 +9,17 @@ require_once ("./phplibs/strumenti/StrumentiDate.php");
 class PrenotazioniDb {
 
     // ---------------------------------------
+    static function aggiungiPrenotazionePartenzaDaRoma(&$hCtx, &$prenotazione) {
+        PrenotazioniDb::aggiungiPrenotazionePartenzaArrivoDaRoma($hCtx, $prenotazione);
+    }
+
+    // ---------------------------------------
     static function aggiungiPrenotazioneDiArrivoInRoma(&$hCtx, &$prenotazione) {
+        PrenotazioniDb::aggiungiPrenotazionePartenzaArrivoDaRoma($hCtx, $prenotazione);
+    }
+
+    // ---------------------------------------
+    static function aggiungiPrenotazionePartenzaArrivoDaRoma(&$hCtx, &$prenotazione) {
         $mysqli = &$hCtx->hDBCtx;
 
         $listaColonne = "data_arrivo, id_struttura, id_mezzo_piu_orario, numero_adulti, numero_animali, numero_bambini_3_6, numero_bambini_6_11, nome_contatto, cognome_contatto, email_contatto, cellulare_contatto, indirizzo_destinazione, tipo";

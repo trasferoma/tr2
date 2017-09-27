@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Set 25, 2017 alle 09:35
+-- Creato il: Set 27, 2017 alle 16:54
 -- Versione del server: 10.1.21-MariaDB
 -- Versione PHP: 5.6.30
 
@@ -57,8 +57,24 @@ CREATE TABLE `tr_passeggeri` (
   `id` int(11) NOT NULL,
   `id_shuttle` int(11) NOT NULL,
   `id_prenotazione` int(11) NOT NULL,
-  `tipo` set('adulto','bambino3_6','bambino6_11') NOT NULL
+  `tipo` set('adulto','bambino3_6','bambino6_12') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+--
+-- Dump dei dati per la tabella `tr_passeggeri`
+--
+
+INSERT INTO `tr_passeggeri` (`id`, `id_shuttle`, `id_prenotazione`, `tipo`) VALUES
+(1, 1, 2, 'adulto'),
+(2, 1, 2, 'adulto'),
+(3, 1, 2, 'adulto'),
+(4, 1, 2, 'bambino3_6'),
+(5, 1, 2, 'bambino3_6'),
+(6, 1, 2, ''),
+(7, 1, 3, 'adulto'),
+(8, 1, 3, ''),
+(9, 2, 4, 'adulto'),
+(10, 2, 4, 'bambino6_12');
 
 -- --------------------------------------------------------
 
@@ -83,6 +99,15 @@ CREATE TABLE `tr_prenotazioni` (
   `tipo` set('arrivo_in_roma','partenza_da_roma') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
+--
+-- Dump dei dati per la tabella `tr_prenotazioni`
+--
+
+INSERT INTO `tr_prenotazioni` (`id`, `data_arrivo`, `id_struttura`, `id_mezzo_piu_orario`, `numero_adulti`, `numero_animali`, `numero_bambini_3_6`, `numero_bambini_6_11`, `nome_contatto`, `cognome_contatto`, `email_contatto`, `cellulare_contatto`, `indirizzo_destinazione`, `tipo`) VALUES
+(2, '2017-09-29', 13, 5, 3, 0, 2, 1, 'ytrytr', 'yrtyry', 'eeee@eee.ee', '3474377079', 'tyrytryr', 'partenza_da_roma'),
+(3, '2017-09-29', 13, 5, 1, 0, 0, 1, 'jhjhgj', 'ghjghj', 'xxx@xxx.xx', '3474377079', 'G F F the Old Farmhouse, Helston, Regno Unito', 'partenza_da_roma'),
+(4, '2017-09-29', 13, 5, 1, 0, 0, 1, 'uytu', 'utyuty', 'yyy@yy.yy', '4355677890', 'dfgdfga, Sins, Svizzera', 'partenza_da_roma');
+
 -- --------------------------------------------------------
 
 --
@@ -96,6 +121,14 @@ CREATE TABLE `tr_shuttle` (
   `id_mezzo_piu_orario` int(11) NOT NULL,
   `tipo` set('arrivo_in_roma','partenza_da_roma') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dump dei dati per la tabella `tr_shuttle`
+--
+
+INSERT INTO `tr_shuttle` (`id`, `data_viaggio`, `id_struttura`, `id_mezzo_piu_orario`, `tipo`) VALUES
+(1, '2017-09-29', 13, 5, 'partenza_da_roma'),
+(2, '2017-09-29', 13, 5, 'partenza_da_roma');
 
 -- --------------------------------------------------------
 
@@ -198,17 +231,17 @@ ALTER TABLE `tr_mezzi_piu_orari`
 -- AUTO_INCREMENT per la tabella `tr_passeggeri`
 --
 ALTER TABLE `tr_passeggeri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT per la tabella `tr_prenotazioni`
 --
 ALTER TABLE `tr_prenotazioni`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT per la tabella `tr_shuttle`
 --
 ALTER TABLE `tr_shuttle`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT per la tabella `tr_strutture`
 --
