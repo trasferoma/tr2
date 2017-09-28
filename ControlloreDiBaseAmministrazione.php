@@ -69,6 +69,11 @@ function controlloFlusso($modulo) {
     }
 
 	switch ($modulo) {
+        case "shuttle":
+            $_SERVER["QUERY_STRING"] = "m=shuttle";
+            require_once("./phplibs/amministrazione/controllori/Shuttle.php");
+            $this->currMod = new Shuttle($this->hCtx, $this->hSessionCtx);
+            break;
         case "mezziPiuOrari":
             $_SERVER["QUERY_STRING"] = "m=mezziPiuOrari";
             require_once("./phplibs/amministrazione/controllori/MezziPiuOrari.php");

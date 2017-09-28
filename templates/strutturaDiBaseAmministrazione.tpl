@@ -7,13 +7,13 @@
 	<head>
 		<title>TRANSFEROMA</title>
 		<meta charset="{#codificaPagina#}" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <link rel="stylesheet" href="assets/css/jquery-ui.css">
+        <script src="assets/js/jquery-1.12.4.js"></script>
+        <script src="assets/js/jquery-ui.js"></script>
 
 	</head>
 	<body>
@@ -26,6 +26,7 @@
                         <li><a href="amministrazione.php">Home</a></li>
                         <li><a href="amministrazione.php?m=strutture">{#strutture#}</a></li>
                         <li><a href="amministrazione.php?m=mezziPiuOrari">{#mezziPiuOrari#}</a></li>
+                        <li><a href="amministrazione.php?m=shuttle">{#shuttle#}</a></li>
                         <li>
                             <a href="amministrazione.php?m=strutture" class="icon fa-angle-down">Componenti</a>
                             <ul>
