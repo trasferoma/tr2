@@ -33,14 +33,14 @@ class GestioneLingua {
 
         switch ($linguaImpostata) {
             case Lingue::ABJAD:
-                $smarty->config_load('./../dizionario/abjad.conf', $sezioneDizionario );
+                $smarty->config_load(PATH_FILE_DIZIONARIO . '/abjad.conf', $sezioneDizionario );
                 break;
 			case Lingue::EN:
-                $smarty->config_load('./../dizionario/en.conf', $sezioneDizionario );
+                $smarty->config_load(PATH_FILE_DIZIONARIO . '/en.conf', $sezioneDizionario );
 				break;
             case Lingue::IT:
 			default:
-				$smarty->config_load('./../dizionario/it.conf', $sezioneDizionario );
+				$smarty->config_load(PATH_FILE_DIZIONARIO . '/it.conf', $sezioneDizionario );
                 break;
 		}
     }

@@ -9,17 +9,35 @@ class StruttureDb {
 
     // ---------------------------------------
     static function listaCompleta(&$hCtx, $suffissoPerCampiLingua) {
+        $id = null;
+        $tipo = null;
+        $descrizione = null;
+        $attiva = null;
+
         $mysqli = &$hCtx->hDBCtx;
 
         $stmt  = $mysqli->prepare(
                                   "SELECT "
-                                . " s.id, s.tipo, s.descrizione_$suffissoPerCampiLingua as descrizione, s.attiva, s.tipo "
+                                . " s.id, s.tipo, s.descrizione_$suffissoPerCampiLingua as descrizione, s.attiva "
                                 . " FROM tr_strutture s "
                                 . " order by s.tipo, s.descrizione_$suffissoPerCampiLingua "
         );
 
         $stmt->execute();
 
+        $stmt->bind_result($id, $tipo, $descrizione, $attiva);
+
+        while ($stmt->fetch()) {
+            $riga["id"] = $id;
+            $riga["tipo"] = $tipo;
+            $riga["descrizione"] = $descrizione;
+            $riga["attiva"] = $attiva;
+
+            $risultati[] = $riga;
+        }
+
+        echo "<pre>"; print_r($risultati); exit;
+        /**
         $result = $stmt->get_result();
 
         $risultati = array();
@@ -28,7 +46,7 @@ class StruttureDb {
             // echo "<pre>"; print_r($row); exit;
             $risultati[] = $row;
         }
-
+        */
         $stmt->close();
 
         return $risultati;
