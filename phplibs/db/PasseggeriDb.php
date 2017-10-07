@@ -4,6 +4,7 @@ class PasseggeriDb
 {
     static function getNumeroPasseggeriNelloShuttle(&$hCtx, $idShuttle) {
         $mysqli = &$hCtx->hDBCtx;
+        $numeroPasseggeriPresenti = null;
 
         $query = "SELECT count(*) as numeroPasseggeriPresenti FROM tr_passeggeri WHERE id_shuttle = ?";
 
@@ -17,14 +18,19 @@ class PasseggeriDb
 
         $stmt->execute();
 
-        $result = $stmt->get_result();
+        $stmt->bind_result($numeroPasseggeriPresenti);
 
-        $shuttle = null;
+        $stmt->fetch();
+
+        $numeroPasseggeri = $numeroPasseggeriPresenti;
+
+/*
+        $result = $stmt->get_result();
 
         $row = $result->fetch_assoc();
 
         $numeroPasseggeri = $row["numeroPasseggeriPresenti"];
-
+*/
         $stmt->close();
 
         return $numeroPasseggeri;

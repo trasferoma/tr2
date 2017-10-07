@@ -5,6 +5,11 @@ class ShuttleDb {
     // ---------------------------------------
     static function getByViaggio(&$hCtx, $viaggio) {
         $mysqli = &$hCtx->hDBCtx;
+        $idElemento = null;
+        $dataViaggio = null;
+        $idStruttura = null;
+        $idMezzoPiuOrario = null;
+        $tipoElemento = null;
 
         $query = "SELECT id, data_viaggio, id_struttura, id_mezzo_piu_orario, tipo FROM tr_shuttle WHERE data_viaggio = ? AND id_struttura = ? and id_mezzo_piu_orario = ? and tipo = ?";
 
@@ -23,6 +28,25 @@ class ShuttleDb {
 
         $stmt->execute();
 
+        $stmt->bind_result($idElemento, $dataViaggio, $idStruttura, $idMezzoPiuOrario, $tipoElemento);
+
+        $shuttle = null;
+
+        while ($stmt->fetch()) {
+            $riga["id"] = $idElemento;
+            $riga["data_viaggio"] = $dataViaggio;
+            $riga["id_struttura"] = $idStruttura;
+            $riga["id_mezzo_piu_orario"] = $idMezzoPiuOrario;
+            $riga["tipo"] = $tipoElemento;
+
+            $shuttle = $riga;
+            $numeroPasseggeriPresenti = PasseggeriDb::getNumeroPasseggeriNelloShuttle($hCtx, $shuttle["id"]);
+            $shuttle["numeroPasseggeriPresenti"] = $numeroPasseggeriPresenti;
+
+            $listaShuttle[] = $shuttle;
+        }
+
+        /*
         $result = $stmt->get_result();
 
         $shuttle = null;
@@ -34,6 +58,8 @@ class ShuttleDb {
 
             $listaShuttle[] = $shuttle;
         }
+
+        */
         $stmt->close();
 
         return $listaShuttle;

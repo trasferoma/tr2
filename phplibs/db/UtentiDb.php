@@ -12,6 +12,14 @@ class UtentiDb {
     static function getUtenteByUsernamePiuPassword(&$hCtx, $username, $password) {
         $mysqli = &$hCtx->hDBCtx;
 
+        $idElemento = null;
+        $nome = null;
+        $cognome = null;
+        $email = null;
+        $uname = null;
+        $passwd = null;
+        $onoff = null;
+
         $query = "SELECT id, nome, cognome, email, uname, passwd, onoff FROM tr_utenti WHERE uname = ? AND passwd = ? and onoff = 1";
 
         $stmt = $mysqli->prepare($query);
@@ -24,6 +32,27 @@ class UtentiDb {
 
         $stmt->execute();
 
+        $stmt->bind_result($idElemento, $nome, $cognome, $email, $uname, $passwd, $onoff);
+
+        $utente = null;
+
+        while ($stmt->fetch()) {
+            $riga["id"] = $idElemento;
+            $riga["nome"] = $nome;
+            $riga["cognome"] = $cognome;
+            $riga["email"] = $email;
+            $riga["uname"] = $uname;
+            $riga["passwd"] = $passwd;
+            $riga["onoff"] = $onoff;
+
+            if ($utente != null) {
+                die("Esiste più di un utente con stesso user stessa password.");
+            }
+
+            $utente = $riga;
+        }
+
+/*
         $result = $stmt->get_result();
 
         $utente = null;
@@ -34,6 +63,7 @@ class UtentiDb {
             }
             $utente = $row;
         }
+*/
         $stmt->close();
 
         return $utente;
@@ -53,7 +83,11 @@ class UtentiDb {
         $stmt->bind_result($contatore);
 
         $stmt->fetch();
+/*
+        $stmt->bind_result($contatore);
 
+        $stmt->fetch();
+*/
         if ($contatore > 0) {
             $esiste = true;
         } else {

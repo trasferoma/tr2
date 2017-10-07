@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="fe62466c-2357-4aee-8607-e31347b15e10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/GestioneLingua.php" afterPath="$PROJECT_DIR$/phplibs/GestioneLingua.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/db/MezziPiuOrariDb.php" afterPath="$PROJECT_DIR$/phplibs/db/MezziPiuOrariDb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/db/PasseggeriDb.php" afterPath="$PROJECT_DIR$/phplibs/db/PasseggeriDb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/db/ShuttleDb.php" afterPath="$PROJECT_DIR$/phplibs/db/ShuttleDb.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/db/StruttureDb.php" afterPath="$PROJECT_DIR$/phplibs/db/StruttureDb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/site.properties.php" afterPath="$PROJECT_DIR$/phplibs/site.properties.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/db/UtentiDb.php" afterPath="$PROJECT_DIR$/phplibs/db/UtentiDb.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,56 +31,10 @@
     <favorites_list name="tr2" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GestioneLingua.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phplibs/GestioneLingua.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StruttureDb.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/phplibs/db/StruttureDb.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="38" column="48" lean-forward="false" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-              <folding>
-                <marker date="1507103360485" expanded="true" signature="3232:3401" ph="INSERT INTO tr_strutture... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrivoInRoma.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phplibs/ArrivoInRoma.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="79" column="35" lean-forward="false" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CaricatoreDomini.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phplibs/CaricatoreDomini.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$prenotazione</find>
-      <find>temp</find>
-      <find>getByViaggio</find>
       <find>inserrt</find>
       <find>creaPasseggeroAdulto</find>
       <find>id_sh</find>
@@ -106,6 +62,9 @@
       <find>conf</find>
       <find>dizionario</find>
       <find>diziona</find>
+      <find>descrizioneIt</find>
+      <find>direzione</find>
+      <find>get_result</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -117,7 +76,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/riepilogo.tpl" />
         <option value="$PROJECT_DIR$/phplibs/strumenti/StrumentiDate.php" />
         <option value="$PROJECT_DIR$/templates/amministrazione/strutture/lista.tpl" />
         <option value="$PROJECT_DIR$/phplibs/enumerazioni/TipiStruttura.php" />
@@ -152,10 +110,7 @@
         <option value="$PROJECT_DIR$/templates/strutturaDiBase.tpl" />
         <option value="$PROJECT_DIR$/phplibs/db/Shuttle.php" />
         <option value="$PROJECT_DIR$/phplibs/ArrivoInRoma.php" />
-        <option value="$PROJECT_DIR$/phplibs/db/MezziPiuOrariDb.php" />
         <option value="$PROJECT_DIR$/phplibs/enumerazioni/TipiPasseggero.php" />
-        <option value="$PROJECT_DIR$/phplibs/db/ShuttleDb.php" />
-        <option value="$PROJECT_DIR$/phplibs/db/PasseggeriDb.php" />
         <option value="$PROJECT_DIR$/phplibs/PartenzaDaRoma.php" />
         <option value="$PROJECT_DIR$/phplibs/db/PrenotazioniDb.php" />
         <option value="$PROJECT_DIR$/phplibs/GestorePrenotazione.php" />
@@ -168,6 +123,10 @@
         <option value="$PROJECT_DIR$/phplibs/GestioneLingua.php" />
         <option value="$PROJECT_DIR$/phplibs/site.properties.php" />
         <option value="$PROJECT_DIR$/phplibs/db/StruttureDb.php" />
+        <option value="$PROJECT_DIR$/phplibs/db/UtentiDb.php" />
+        <option value="$PROJECT_DIR$/phplibs/db/ShuttleDb.php" />
+        <option value="$PROJECT_DIR$/phplibs/db/PasseggeriDb.php" />
+        <option value="$PROJECT_DIR$/phplibs/db/MezziPiuOrariDb.php" />
       </list>
     </option>
   </component>
@@ -383,7 +342,7 @@
       <workItem from="1505979884078" duration="891000" />
       <workItem from="1506002732570" duration="4689000" />
       <workItem from="1506237562697" duration="23106000" />
-      <workItem from="1507102893351" duration="465000" />
+      <workItem from="1507102893351" duration="5319000" />
     </task>
     <task id="LOCAL-00001" summary="Correzioni">
       <created>1503674355785</created>
@@ -518,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506583813615</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Implementazione">
+      <created>1507103397464</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1507103397464</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -527,13 +493,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171862000" />
+    <option name="totallyTimeSpent" value="176716000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24886535" sideWeight="0.49312714" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24886535" sideWeight="0.49312714" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -770,53 +735,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/db/MezziPiuOrariDb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3910">
-          <caret line="230" column="16" lean-forward="false" selection-start-line="230" selection-start-column="13" selection-end-line="230" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/db/UtentiDb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="90" column="75" lean-forward="true" selection-start-line="90" selection-start-column="75" selection-end-line="91" selection-end-column="39" />
-          <folding>
-            <marker date="1504523898955" expanded="true" signature="509:622" ph="SELECT id, n... tr_utenti" />
-            <marker date="1504523898955" expanded="true" signature="1379:1453" ph="SELECT count... tr_utenti" />
-            <marker date="1504523898955" expanded="true" signature="1952:1975" ph="SELECT * FRO... tr_utenti" />
-            <marker date="1504523898955" expanded="true" signature="2372:2410" ph="INSERT INTO tr_utenti... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/pojo/Viaggio.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="124" column="42" lean-forward="false" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/db/ShuttleDb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding>
-            <marker date="1506514719589" expanded="true" signature="226:391" ph="SELECT id, d... tr_shuttle" />
-            <marker date="1506514719589" expanded="true" signature="1509:1564" ph="INSERT INTO tr_shuttle... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/db/PrenotazioniDb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <marker date="1506523804414" expanded="true" signature="1282:1360" ph="INSERT INTO tr_prenotazione... " />
-            <marker date="1506523804414" expanded="true" signature="2933:3011" ph="INSERT INTO tr_prenotazione... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -836,21 +758,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/db/PasseggeriDb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="42" column="93" lean-forward="false" selection-start-line="42" selection-start-column="93" selection-end-line="42" selection-end-column="93" />
-          <folding>
-            <marker date="1506515318212" expanded="true" signature="214:297" ph="SELECT count... tr_passeggeri" />
-            <marker date="1506515318212" expanded="true" signature="1562:1618" ph="INSERT INTO tr_shuttle... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/TipiPasseggero.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -966,12 +878,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/db/UtentiDb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="55" column="35" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="35" />
+          <folding>
+            <marker date="1507214239692" expanded="true" signature="678:791" ph="SELECT id, n... tr_utenti" />
+            <marker date="1507214239692" expanded="true" signature="2141:2215" ph="SELECT count... tr_utenti" />
+            <marker date="1507214239692" expanded="true" signature="2784:2807" ph="SELECT * FRO... tr_utenti" />
+            <marker date="1507214239692" expanded="true" signature="3204:3242" ph="INSERT INTO tr_utenti... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/db/ShuttleDb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="35" />
+          <folding>
+            <marker date="1507214585523" expanded="true" signature="376:541" ph="SELECT id, d... tr_shuttle" />
+            <marker date="1507214585523" expanded="true" signature="2360:2415" ph="INSERT INTO tr_shuttle... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/db/PrenotazioniDb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-65">
+          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <folding>
+            <marker date="1506523804414" expanded="true" signature="1282:1360" ph="INSERT INTO tr_prenotazione... " />
+            <marker date="1506523804414" expanded="true" signature="2933:3011" ph="INSERT INTO tr_prenotazione... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/db/PasseggeriDb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="35" />
+          <folding>
+            <marker date="1507215212089" expanded="true" signature="256:339" ph="SELECT count... tr_passeggeri" />
+            <marker date="1507215212089" expanded="true" signature="1720:1776" ph="INSERT INTO tr_shuttle... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/db/MezziPiuOrariDb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="47" column="35" lean-forward="false" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="35" />
+          <folding>
+            <marker date="1507367246762" expanded="true" signature="10355:10555" ph="INSERT INTO tr_mezzi_piu_orari... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/db/StruttureDb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" column="48" lean-forward="false" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+        <state relative-caret-position="221">
+          <caret line="83" column="9" lean-forward="true" selection-start-line="76" selection-start-column="8" selection-end-line="83" selection-end-column="9" />
           <folding>
-            <marker date="1507103360485" expanded="true" signature="3232:3401" ph="INSERT INTO tr_strutture... " />
+            <marker date="1507213676391" expanded="true" signature="4300:4469" ph="INSERT INTO tr_strutture... " />
           </folding>
         </state>
       </provider>

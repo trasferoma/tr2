@@ -36,7 +36,7 @@ class StruttureDb {
             $risultati[] = $riga;
         }
 
-        echo "<pre>"; print_r($risultati); exit;
+        // echo "<pre>"; print_r($risultati); exit;
         /**
         $result = $stmt->get_result();
 
@@ -56,6 +56,10 @@ class StruttureDb {
     {
         $mysqli = &$hCtx->hDBCtx;
         $contatore = null;
+        $idStruttura = null;
+        $tipo = null;
+        $descrizione = null;
+        $attiva = null;
 
         $stmt  = $mysqli->prepare(
             "SELECT "
@@ -68,6 +72,17 @@ class StruttureDb {
 
         $stmt->execute();
 
+        $stmt->bind_result($idStruttura, $tipo, $descrizione, $attiva);
+
+        while ($stmt->fetch()) {
+            $riga["id"] = $idStruttura;
+            $riga["tipo"] = $tipo;
+            $riga["descrizione"] = $descrizione;
+            $riga["attiva"] = $attiva;
+
+            $risultati = $riga;
+        }
+/*
         $result = $stmt->get_result();
 
         $risultati = array();
@@ -76,7 +91,7 @@ class StruttureDb {
             // echo "<pre>"; print_r($row); exit;
             $risultati = $row;
         }
-
+*/
         $stmt->close();
 
         return $risultati;
@@ -86,6 +101,12 @@ class StruttureDb {
     {
         $mysqli = &$hCtx->hDBCtx;
         $contatore = null;
+        $idStruttura = null;
+        $tipo = null;
+        $attiva = null;
+        $descrizioneIt = null;
+        $descrizioneEn = null;
+        $descrizioneAbjad = null;
 
         $stmt  = $mysqli->prepare(
             "SELECT "
@@ -98,6 +119,19 @@ class StruttureDb {
 
         $stmt->execute();
 
+        $stmt->bind_result($idStruttura, $tipo, $attiva, $descrizioneIt, $descrizioneEn, $descrizioneAbjad);
+
+        while ($stmt->fetch()) {
+            $riga["id"] = $idStruttura;
+            $riga["tipo"] = $tipo;
+            $riga["attiva"] = $attiva;
+            $riga["descrizione_it"] = $descrizioneIt;
+            $riga["descrizione_en"] = $descrizioneEn;
+            $riga["descrizione_abjad"] = $descrizioneAbjad;
+
+            $risultati = $riga;
+        }
+/*
         $result = $stmt->get_result();
 
         $risultati = array();
@@ -105,7 +139,7 @@ class StruttureDb {
         while ($row = $result->fetch_assoc()) {
             $risultati = $row;
         }
-
+*/
         $stmt->close();
         // echo "<pre>"; print_r($risultati); exit;
         return $risultati;

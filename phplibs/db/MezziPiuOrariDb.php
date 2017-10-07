@@ -9,6 +9,14 @@ class MezziPiuOrariDb {
     // ---------------------------------------
     static function listaCompleta(&$hCtx, $suffissoPerCampiLingua) {
         $mysqli = &$hCtx->hDBCtx;
+        $idElemento = null;
+        $direzione = null;
+        $idStruttura = null;
+        $strutturaAttiva = null;
+        $tipoStruttura = null;
+        $struttura = null;
+        $descrizione = null;
+        $attiva = null;
 
         $stmt  = $mysqli->prepare(
             " SELECT "
@@ -20,6 +28,23 @@ class MezziPiuOrariDb {
 
         $stmt->execute();
 
+        $stmt->bind_result($idElemento, $direzione, $idStruttura, $strutturaAttiva, $tipoStruttura, $struttura, $descrizione, $attiva);
+
+        $risultati = array();
+
+        while ($stmt->fetch()) {
+            $riga["id"] = $idElemento;
+            $riga["direzione"] = $direzione;
+            $riga["id_struttura"] = $idStruttura;
+            $riga["struttura_attiva"] = $strutturaAttiva;
+            $riga["tipo_struttura"] = $tipoStruttura;
+            $riga["struttura"] = $struttura;
+            $riga["descrizione"] = $descrizione;
+            $riga["attiva"] = $attiva;
+
+            $risultati[] = $riga;
+        }
+/*
         $result = $stmt->get_result();
 
         $risultati = array();
@@ -28,7 +53,7 @@ class MezziPiuOrariDb {
             // echo "<pre>"; print_r($row); exit;
             $risultati[] = $row;
         }
-
+*/
         $stmt->close();
 
         return $risultati;
@@ -37,6 +62,14 @@ class MezziPiuOrariDb {
     // ---------------------------------------
     static function listaInArrivo(&$hCtx, $suffissoPerCampiLingua) {
         $mysqli = &$hCtx->hDBCtx;
+        $idElemento = null;
+        $direzione = null;
+        $idStruttura = null;
+        $strutturaAttiva = null;
+        $tipoStruttura = null;
+        $struttura = null;
+        $descrizione = null;
+        $attiva = null;
 
         $stmt  = $mysqli->prepare(
             " SELECT "
@@ -49,6 +82,24 @@ class MezziPiuOrariDb {
 
         $stmt->execute();
 
+        $stmt->bind_result($idElemento, $direzione, $idStruttura, $strutturaAttiva, $tipoStruttura, $struttura, $descrizione, $attiva);
+
+        $risultati = array();
+
+        while ($stmt->fetch()) {
+            $riga["id"] = $idElemento;
+            $riga["direzione"] = $direzione;
+            $riga["id_struttura"] = $idStruttura;
+            $riga["struttura_attiva"] = $strutturaAttiva;
+            $riga["tipo_struttura"] = $tipoStruttura;
+            $riga["struttura"] = $struttura;
+            $riga["descrizione"] = $descrizione;
+            $riga["attiva"] = $attiva;
+
+            $risultati[] = $riga;
+        }
+
+/*
         $result = $stmt->get_result();
 
         $risultati = array();
@@ -57,7 +108,7 @@ class MezziPiuOrariDb {
             // echo "<pre>"; print_r($row); exit;
             $risultati[] = $row;
         }
-
+*/
         $stmt->close();
 
         return $risultati;
@@ -66,6 +117,14 @@ class MezziPiuOrariDb {
     // ---------------------------------------
     static function listaInPartenza(&$hCtx, $suffissoPerCampiLingua) {
         $mysqli = &$hCtx->hDBCtx;
+        $idElemento = null;
+        $direzione = null;
+        $idStruttura = null;
+        $strutturaAttiva = null;
+        $tipoStruttura = null;
+        $struttura = null;
+        $descrizione = null;
+        $attiva = null;
 
         $stmt  = $mysqli->prepare(
             " SELECT "
@@ -78,6 +137,23 @@ class MezziPiuOrariDb {
 
         $stmt->execute();
 
+        $stmt->bind_result($idElemento, $direzione, $idStruttura, $strutturaAttiva, $tipoStruttura, $struttura, $descrizione, $attiva);
+
+        $risultati = array();
+
+        while ($stmt->fetch()) {
+            $riga["id"] = $idElemento;
+            $riga["direzione"] = $direzione;
+            $riga["id_struttura"] = $idStruttura;
+            $riga["struttura_attiva"] = $strutturaAttiva;
+            $riga["tipo_struttura"] = $tipoStruttura;
+            $riga["struttura"] = $struttura;
+            $riga["descrizione"] = $descrizione;
+            $riga["attiva"] = $attiva;
+
+            $risultati[] = $riga;
+        }
+/*
         $result = $stmt->get_result();
 
         $risultati = array();
@@ -86,7 +162,7 @@ class MezziPiuOrariDb {
             // echo "<pre>"; print_r($row); exit;
             $risultati[] = $row;
         }
-
+*/
         $stmt->close();
 
         return $risultati;
@@ -94,6 +170,11 @@ class MezziPiuOrariDb {
     // ---------------------------------------
     static function listaCompletaSpecificoMezzoPiuOrario(&$hCtx, $suffissoPerCampiLingua, $idStruttura) {
         $mysqli = &$hCtx->hDBCtx;
+
+        $idElemento = null;
+        $idStruttura = null;
+        $descrizione = null;
+        $attiva = null;
 
         $stmt  = $mysqli->prepare(
             " SELECT "
@@ -107,6 +188,20 @@ class MezziPiuOrariDb {
 
         $stmt->execute();
 
+        $stmt->bind_result($idElemento, $idStruttura, $descrizione, $attiva);
+
+        $risultati = array();
+
+        while ($stmt->fetch()) {
+            $riga["id"] = $idElemento;
+            $riga["id_struttura"] = $idStruttura;
+            $riga["descrizione"] = $descrizione;
+            $riga["attiva"] = $attiva;
+
+            $risultati[] = $riga;
+        }
+
+        /*
         $result = $stmt->get_result();
 
         $risultati = array();
@@ -115,6 +210,7 @@ class MezziPiuOrariDb {
             // echo "<pre>"; print_r($row); exit;
             $risultati[] = $row;
         }
+        */
 
         $stmt->close();
 
@@ -125,7 +221,11 @@ class MezziPiuOrariDb {
     public static function getMezzoPiuOrarioByID($hCtx, $id, $suffissoPerCampiLingua)
     {
         $mysqli = &$hCtx->hDBCtx;
-        $contatore = null;
+
+        $idElemento = null;
+        $idStruttura = null;
+        $descrizione = null;
+        $attiva = null;
 
         $stmt  = $mysqli->prepare(
             "SELECT "
@@ -138,6 +238,21 @@ class MezziPiuOrariDb {
 
         $stmt->execute();
 
+        $stmt->bind_result($idElemento, $idStruttura, $descrizione, $attiva);
+
+        $risultati = array();
+
+        while ($stmt->fetch()) {
+            $riga["id"] = $idElemento;
+            $riga["id_struttura"] = $idStruttura;
+            $riga["descrizione"] = $descrizione;
+            $riga["attiva"] = $attiva;
+
+            $risultati[] = $riga;
+        }
+
+
+        /*
         $result = $stmt->get_result();
 
         $risultati = array();
@@ -146,7 +261,7 @@ class MezziPiuOrariDb {
             // echo "<pre>"; print_r($row); exit;
             $risultati = $row;
         }
-
+        */
         $stmt->close();
 
         return $risultati;
@@ -155,7 +270,14 @@ class MezziPiuOrariDb {
     public static function getMezzoPiuOrarioByIDCompleto($hCtx, $id)
     {
         $mysqli = &$hCtx->hDBCtx;
-        $contatore = null;
+
+        $idElemento = null;
+        $direzione = null;
+        $idStruttura = null;
+        $attiva = null;
+        $descrizioneIt = null;
+        $descrizioneEn = null;
+        $descrizioneAbjad = null;
 
         $stmt  = $mysqli->prepare(
             "SELECT "
@@ -176,6 +298,22 @@ class MezziPiuOrariDb {
             die('Errore Esecuzione Query: ' . htmlspecialchars($mysqli->error));
         }
 
+        $stmt->bind_result($idElemento, $direzione, $idStruttura, $attiva, $descrizioneIt, $descrizioneEn, $descrizioneAbjad);
+
+        $risultati = array();
+
+        while ($stmt->fetch()) {
+            $riga["id"] = $idElemento;
+            $riga["id_struttura"] = $idStruttura;
+            $riga["attiva"] = $attiva;
+            $riga["descrizioneIt"] = $descrizioneIt;
+            $riga["descrizioneEn"] = $descrizioneEn;
+            $riga["descrizioneAbjad"] = $descrizioneAbjad;
+
+            $risultati[] = $riga;
+        }
+
+/*
         $result = $stmt->get_result();
 
         $risultati = array();
@@ -183,7 +321,7 @@ class MezziPiuOrariDb {
         while ($row = $result->fetch_assoc()) {
             $risultati = $row;
         }
-
+*/
         $stmt->close();
         //echo "<pre>"; print_r($risultati); exit;
         return $risultati;
