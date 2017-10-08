@@ -14,7 +14,7 @@ class StrumentiDiValidazioneForm
      * @param $valore
      * @return bool
      */
-    public function campoPresente($valore)
+    static public function campoPresente($valore)
     {
         return $valore != null && $valore != "";
     }
@@ -25,7 +25,7 @@ class StrumentiDiValidazioneForm
      * @param $valore
      * @return bool
      */
-    public function isValoreUnaDataValida($valore)
+    static public function isValoreUnaDataValida($valore)
     {
         DateTime::createFromFormat('d/m/Y', $valore);
         $esitoCreazioneData = DateTime::getLastErrors();
@@ -34,7 +34,7 @@ class StrumentiDiValidazioneForm
         return $validazione;
     }
 
-    public function dataMaggioreUgualeOggi($valore)
+    static public function dataMaggioreUgualeOggi($valore)
     {
         $dataInserita = DateTime::createFromFormat('d/m/Y', $valore);
 
@@ -48,7 +48,7 @@ class StrumentiDiValidazioneForm
         return $validazione;
     }
 
-    public function isNumericoMaggioreUgualeZero($valore)
+    static public function isNumericoMaggioreUgualeZero($valore)
     {
         $campoNumericoValido = false;
 
@@ -68,7 +68,7 @@ class StrumentiDiValidazioneForm
      * @param $valore
      * @return bool
      */
-    function isValoreUnNumeroDiTelefono($valore) {
+    static function isValoreUnNumeroDiTelefono($valore) {
         $soloNumeri = preg_replace('/\D/', '', $valore);
         $numeroDicaratteri = strlen($soloNumeri);
 
@@ -79,5 +79,4 @@ class StrumentiDiValidazioneForm
     {
         return filter_var($valore, FILTER_VALIDATE_EMAIL);
     }
-
 }
