@@ -27,6 +27,7 @@ class ShuttleDb {
         $stmt->bind_param('sdds', $data, $struttura, $mezzoPiuOrario, $tipo);
 
         $stmt->execute();
+        $stmt->store_result();
 
         $stmt->bind_result($idElemento, $dataViaggio, $idStruttura, $idMezzoPiuOrario, $tipoElemento);
 
@@ -40,11 +41,14 @@ class ShuttleDb {
             $riga["tipo"] = $tipoElemento;
 
             $shuttle = $riga;
+
             $numeroPasseggeriPresenti = PasseggeriDb::getNumeroPasseggeriNelloShuttle($hCtx, $shuttle["id"]);
             $shuttle["numeroPasseggeriPresenti"] = $numeroPasseggeriPresenti;
 
             $listaShuttle[] = $shuttle;
         }
+
+        $stmt->free_result();
 
         /*
         $result = $stmt->get_result();

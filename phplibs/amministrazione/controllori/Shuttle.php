@@ -59,14 +59,14 @@ class Shuttle extends BaseClass {
 
 		GestioneLingua::caricaDizionario($smarty, "Amministrazione_Shuttle");
 
-		$this->listaMezziPiuOrari();
+		$this->listaViaggi();
 
         $smarty->assign("modulo", $this->modulo);
 
 		$this->setPaginaDaMostrare($smarty->fetch('amministrazione/shuttle/lista.tpl'));
 	}
 
-    private function listaMezziPiuOrari() {
+    private function listaViaggi() {
         $linguaImpostata = GestioneLingua::getLinguaImpostata();
         $listaElementi = MezziPiuOrariDb::listaCompleta($this->hCtx, $linguaImpostata);
 

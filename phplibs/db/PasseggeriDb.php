@@ -6,12 +6,16 @@ class PasseggeriDb
         $mysqli = &$hCtx->hDBCtx;
         $numeroPasseggeriPresenti = null;
 
+
         $query = "SELECT count(*) as numeroPasseggeriPresenti FROM tr_passeggeri WHERE id_shuttle = ?";
 
         $stmt = $mysqli->prepare($query);
+        // echo "<pre>"; print_r($hCtx); exit;
 
         if ($stmt == false) {
-            die ("Errore nella query: " . $query);
+            echo mysqli_connect_errno(); echo " - ";
+            die ("getNumeroPasseggeriNelloShuttle: Errore nella query: " . $query);
+
         }
 
         $stmt->bind_param('d', $idShuttle);
