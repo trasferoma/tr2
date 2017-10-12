@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fe62466c-2357-4aee-8607-e31347b15e10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dizionario/it.conf" afterPath="$PROJECT_DIR$/dizionario/it.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/amministrazione/controllori/Shuttle.php" afterPath="$PROJECT_DIR$/phplibs/amministrazione/controllori/Shuttle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/amministrazione/controllori/Strutture.php" afterPath="$PROJECT_DIR$/phplibs/amministrazione/controllori/Strutture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/db/ShuttleDb.php" afterPath="$PROJECT_DIR$/phplibs/db/ShuttleDb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/enumerazioni/Direzioni.php" afterPath="$PROJECT_DIR$/phplibs/enumerazioni/Direzioni.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/amministrazione/shuttle/lista.tpl" afterPath="$PROJECT_DIR$/templates/amministrazione/shuttle/lista.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/amministrazione/strutture/lista.tpl" afterPath="$PROJECT_DIR$/templates/amministrazione/strutture/lista.tpl" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -420,7 +413,7 @@
       <workItem from="1505979884078" duration="891000" />
       <workItem from="1506002732570" duration="4689000" />
       <workItem from="1506237562697" duration="23106000" />
-      <workItem from="1507102893351" duration="16327000" />
+      <workItem from="1507102893351" duration="16941000" />
     </task>
     <task id="LOCAL-00001" summary="Correzioni">
       <created>1503674355785</created>
@@ -583,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507703055888</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Implementazione">
+      <created>1507791855985</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1507791855985</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -592,7 +592,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187724000" />
+    <option name="totallyTimeSpent" value="188338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
