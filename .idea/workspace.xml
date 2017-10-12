@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="fe62466c-2357-4aee-8607-e31347b15e10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dizionario/it.conf" afterPath="$PROJECT_DIR$/dizionario/it.conf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/amministrazione/controllori/Shuttle.php" afterPath="$PROJECT_DIR$/phplibs/amministrazione/controllori/Shuttle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/db/PasseggeriDb.php" afterPath="$PROJECT_DIR$/phplibs/db/PasseggeriDb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/amministrazione/controllori/Strutture.php" afterPath="$PROJECT_DIR$/phplibs/amministrazione/controllori/Strutture.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/db/ShuttleDb.php" afterPath="$PROJECT_DIR$/phplibs/db/ShuttleDb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phplibs/enumerazioni/Direzioni.php" afterPath="$PROJECT_DIR$/phplibs/enumerazioni/Direzioni.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/amministrazione/shuttle/lista.tpl" afterPath="$PROJECT_DIR$/templates/amministrazione/shuttle/lista.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/amministrazione/strutture/lista.tpl" afterPath="$PROJECT_DIR$/templates/amministrazione/strutture/lista.tpl" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,59 +34,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PartenzaDaRoma.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phplibs/PartenzaDaRoma.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="425" column="64" lean-forward="false" selection-start-line="425" selection-start-column="64" selection-end-line="425" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValidazioneFormPartenzaDataPiuStruttura.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phplibs/validazione/ValidazioneFormPartenzaDataPiuStruttura.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShuttleDb.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phplibs/db/ShuttleDb.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-              <folding>
-                <marker date="1507703022074" expanded="true" signature="376:541" ph="SELECT id, d... tr_shuttle" />
-                <marker date="1507703022074" expanded="true" signature="2423:2478" ph="INSERT INTO tr_shuttle... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Shuttle.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/phplibs/amministrazione/controllori/Shuttle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="61" column="26" lean-forward="false" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+            <state relative-caret-position="416">
+              <caret line="84" column="11" lean-forward="false" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PasseggeriDb.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/phplibs/db/PasseggeriDb.php">
+      <file leaf-file-name="lista.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/amministrazione/shuttle/lista.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-              <folding>
-                <marker date="1507703022163" expanded="true" signature="257:309" ph="SELECT count... tr_passeggeri" />
-                <marker date="1507703022163" expanded="true" signature="257:340" ph="SELECT count... tr_passeggeri" />
-                <marker date="1507703022163" expanded="true" signature="1855:1911" ph="INSERT INTO tr_shuttle... " />
-              </folding>
+            <state relative-caret-position="377">
+              <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="it.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dizionario/it.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="519">
+              <caret line="217" column="31" lean-forward="false" selection-start-line="217" selection-start-column="31" selection-end-line="217" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Strutture.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phplibs/amministrazione/controllori/Strutture.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="59" column="80" lean-forward="false" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="80" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,20 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tr_shuttle</find>
-      <find>Passeggero</find>
-      <find>tr_</find>
-      <find>Ultimo</find>
-      <find>last</find>
-      <find>getNule</find>
-      <find>ultimo</find>
-      <find>getNumeroBambiniDa6A11</find>
-      <find>getNumeroBambiniDa6A12</find>
-      <find>numeroPasseggeri</find>
-      <find>MASSIMO_NUMERO_PASSEGGERI_PER_SHUTTLE</find>
-      <find>$data</find>
-      <find>aggiungiPrenotazioneDiArrivoInRoma</find>
-      <find>getShuttleAncoraAperto</find>
       <find>aggiungiPasseggeriBambiniDa3a6AdUnoShuttle</find>
       <find>bambino6_11</find>
       <find>GestorePrenotazione</find>
@@ -119,12 +92,29 @@
       <find>ValidazioneFormPartenzaDataPiuStruttura.ph</find>
       <find>valida</find>
       <find>validazione/</find>
-      <find>numeroPasseggeriPresenti</find>
       <find>getNumeroPasseggeriNelloShuttle</find>
+      <find>numeroPasseggeriPresenti</find>
+      <find>getByViaggio</find>
+      <find>Contr</find>
+      <find>Struttura</find>
+      <find>TipoStr</find>
+      <find>lingua</find>
+      <find>$linguaImpostata</find>
+      <find>MezziPiuOrariDb</find>
+      <find>arrivo</find>
+      <find>Porto</find>
+      <find>listaStrutture</find>
+      <find>lista</find>
+      <find>#data</find>
+      <find>|date_format</find>
+      <find>listaViaggi</find>
     </findStrings>
     <replaceStrings>
       <replace />
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\xampp\htdocs\tr2\phplibs\enumerazioni</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -132,17 +122,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/amministrazione/strutture/lista.tpl" />
         <option value="$PROJECT_DIR$/phplibs/enumerazioni/TipiStruttura.php" />
         <option value="$PROJECT_DIR$/phplibs/framework/BaseClass.php" />
         <option value="$PROJECT_DIR$/ControlloreDiBase.php" />
-        <option value="$PROJECT_DIR$/phplibs/amministrazione/controllori/Strutture.php" />
         <option value="$PROJECT_DIR$/phplibs/validazione/ValidazioneFormDettaglioStruttura.php" />
         <option value="$PROJECT_DIR$/templates/amministrazione/strutture/dettaglio.tpl" />
         <option value="$PROJECT_DIR$/templates/amministrazione/MezziPiuOrari/lista.tpl" />
         <option value="$PROJECT_DIR$/templates/amministrazione/mezziPiuOrari/lista.tpl" />
         <option value="$PROJECT_DIR$/phplibs/validazione/ValidazioneFormDettaglioMezzoPiuOrario.php" />
-        <option value="$PROJECT_DIR$/phplibs/enumerazioni/Direzioni.php" />
         <option value="$PROJECT_DIR$/templates/amministrazione/mezziPiuOrari/dettaglio.tpl" />
         <option value="$PROJECT_DIR$/phplibs/amministrazione/controllori/MezziPiuOrari.php" />
         <option value="$PROJECT_DIR$/templates/bookShuttle/sceltaTipoTrasferimento.tpl" />
@@ -170,9 +157,7 @@
         <option value="$PROJECT_DIR$/phplibs/GestorePrenotazione.php" />
         <option value="$PROJECT_DIR$/ControlloreDiBaseAmministrazione.php" />
         <option value="$PROJECT_DIR$/documenti/simulazione sposta passeggeri" />
-        <option value="$PROJECT_DIR$/dizionario/it.conf" />
         <option value="$PROJECT_DIR$/templates/strutturaDiBaseAmministrazione.tpl" />
-        <option value="$PROJECT_DIR$/templates/amministrazione/shuttle/lista.tpl" />
         <option value="$PROJECT_DIR$/phplibs/GestioneLingua.php" />
         <option value="$PROJECT_DIR$/phplibs/site.properties.php" />
         <option value="$PROJECT_DIR$/phplibs/db/StruttureDb.php" />
@@ -180,9 +165,14 @@
         <option value="$PROJECT_DIR$/phplibs/db/MezziPiuOrariDb.php" />
         <option value="$PROJECT_DIR$/phplibs/validazione/ValidazioneFormArrivoDataPiuStruttura.php" />
         <option value="$PROJECT_DIR$/phplibs/validazione/StrumentiDiValidazioneForm.php" />
-        <option value="$PROJECT_DIR$/phplibs/amministrazione/controllori/Shuttle.php" />
-        <option value="$PROJECT_DIR$/phplibs/db/ShuttleDb.php" />
         <option value="$PROJECT_DIR$/phplibs/db/PasseggeriDb.php" />
+        <option value="$PROJECT_DIR$/phplibs/db/ShuttleDb.php" />
+        <option value="$PROJECT_DIR$/phplibs/enumerazioni/Direzioni.php" />
+        <option value="$PROJECT_DIR$/phplibs/amministrazione/controllori/Strutture.php" />
+        <option value="$PROJECT_DIR$/templates/amministrazione/strutture/lista.tpl" />
+        <option value="$PROJECT_DIR$/phplibs/amministrazione/controllori/Shuttle.php" />
+        <option value="$PROJECT_DIR$/dizionario/it.conf" />
+        <option value="$PROJECT_DIR$/templates/amministrazione/shuttle/lista.tpl" />
       </list>
     </option>
   </component>
@@ -260,7 +250,39 @@
               <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
               <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="phplibs" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="db" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="amministrazione" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="phplibs" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="amministrazione" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controllori" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="amministrazione" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="amministrazione" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="shuttle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tr2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tr2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="amministrazione" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="strutture" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -398,7 +420,7 @@
       <workItem from="1505979884078" duration="891000" />
       <workItem from="1506002732570" duration="4689000" />
       <workItem from="1506237562697" duration="23106000" />
-      <workItem from="1507102893351" duration="9769000" />
+      <workItem from="1507102893351" duration="16327000" />
     </task>
     <task id="LOCAL-00001" summary="Correzioni">
       <created>1503674355785</created>
@@ -554,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507492179315</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Implementazione">
+      <created>1507703055888</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1507703055888</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -563,7 +592,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181166000" />
+    <option name="totallyTimeSpent" value="187724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -606,7 +635,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28640777" sideWeight="0.50687283" order="2" side_tool="true" content_ui="tabs" />
@@ -651,34 +680,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/amministrazione/strutture/dettaglio.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="64" column="41" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="64" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/amministrazione/mezziPiuOrari/dettaglio.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="79" column="73" lean-forward="false" selection-start-line="79" selection-start-column="59" selection-end-line="79" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookShuttle/arrivoInRoma/selezioneDataPiuStruttura.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="71" column="129" lean-forward="true" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookShuttle/partenzaDaRoma/finePrenotazione.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/bookShuttle/partenzaDaRoma/riepilogo.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
@@ -735,24 +736,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/FasiArriviInRoma.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/FasiPartenzeDaRoma.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/Direzioni.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -768,6 +756,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="10988" column="36" lean-forward="true" selection-start-line="10988" selection-start-column="36" selection-end-line="10988" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -794,17 +785,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/db/Shuttle.php" />
-    <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/TipiStruttura.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/jquery-ui.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="8822" column="19" lean-forward="false" selection-start-line="8822" selection-start-column="19" selection-end-line="8822" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -812,21 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="124" column="42" lean-forward="false" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/GestorePrenotazione.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="79" column="49" lean-forward="false" selection-start-line="79" selection-start-column="49" selection-end-line="79" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/TipiPasseggero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -835,13 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ControlloreDiBaseAmministrazione.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="78" column="70" lean-forward="false" selection-start-line="78" selection-start-column="70" selection-end-line="78" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -861,24 +824,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dizionario/it.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="206" column="25" lean-forward="false" selection-start-line="206" selection-start-column="25" selection-end-line="206" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/strutturaDiBaseAmministrazione.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="54" lean-forward="false" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/amministrazione/shuttle/lista.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -893,14 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ControlloreDiBase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -940,16 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/db/MezziPiuOrariDb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="47" column="35" lean-forward="false" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="35" />
-          <folding>
-            <marker date="1507367246762" expanded="true" signature="10355:10555" ph="INSERT INTO tr_mezzi_piu_orari... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/db/StruttureDb.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -960,26 +892,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/PartenzaDaRoma.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="425" column="64" lean-forward="false" selection-start-line="425" selection-start-column="64" selection-end-line="425" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/validazione/StrumentiDiValidazioneForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="80" column="5" lean-forward="false" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/validazione/ValidazioneFormPartenzaDataPiuStruttura.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1008,25 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/db/ShuttleDb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <marker date="1507703022074" expanded="true" signature="376:541" ph="SELECT id, d... tr_shuttle" />
-            <marker date="1507703022074" expanded="true" signature="2423:2478" ph="INSERT INTO tr_shuttle... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phplibs/amministrazione/controllori/Shuttle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="61" column="26" lean-forward="false" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phplibs/db/PasseggeriDb.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1036,6 +933,161 @@
             <marker date="1507703022163" expanded="true" signature="257:340" ph="SELECT count... tr_passeggeri" />
             <marker date="1507703022163" expanded="true" signature="1855:1911" ph="INSERT INTO tr_shuttle... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/validazione/ValidazioneFormPartenzaDataPiuStruttura.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/PartenzaDaRoma.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="425" column="64" lean-forward="false" selection-start-line="425" selection-start-column="64" selection-end-line="425" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/GestorePrenotazione.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="96" column="21" lean-forward="false" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ControlloreDiBaseAmministrazione.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="72" column="49" lean-forward="false" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/amministrazione/mezziPiuOrari/lista.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ControlloreDiBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="74" column="66" lean-forward="false" selection-start-line="74" selection-start-column="66" selection-end-line="74" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/TipiStruttura.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/TipiPasseggero.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/db/MezziPiuOrariDb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="65" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="65" />
+          <folding>
+            <marker date="1507367246762" expanded="true" signature="10355:10555" ph="INSERT INTO tr_mezzi_piu_orari... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/db/ShuttleDb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="116" column="29" lean-forward="true" selection-start-line="116" selection-start-column="29" selection-end-line="116" selection-end-column="29" />
+          <folding>
+            <marker date="1507706215250" expanded="true" signature="376:541" ph="SELECT id, d... tr_shuttle" />
+            <marker date="1507706215250" expanded="true" signature="2423:2478" ph="INSERT INTO tr_shuttle... " />
+            <marker date="1507706215250" expanded="true" signature="3605:3819" ph="SELECT shu.d... tr_shuttle" />
+            <marker date="1507706215250" expanded="true" signature="3605:3896" ph="SELECT shu.d... tr_shuttle" />
+            <marker date="1507706215250" expanded="true" signature="3605:3897" ph="SELECT shu.d... tr_shuttle" />
+            <marker date="1507706215250" expanded="true" signature="3605:3988" ph="SELECT shu.d... tr_shuttle" />
+            <marker date="1507706215250" expanded="true" signature="3605:4004" ph="SELECT shu.d... tr_shuttle" />
+            <marker date="1507706215250" expanded="true" signature="3605:4128" ph="SELECT shu.d... tr_shuttle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/FasiArriviInRoma.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/enumerazioni/Direzioni.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/amministrazione/controllori/Strutture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="59" column="80" lean-forward="false" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/amministrazione/strutture/lista.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="43" column="22" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="43" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phplibs/amministrazione/controllori/Shuttle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="84" column="11" lean-forward="false" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smarty/demo/templates/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="64" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dizionario/it.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="217" column="31" lean-forward="false" selection-start-line="217" selection-start-column="31" selection-end-line="217" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/amministrazione/shuttle/lista.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>

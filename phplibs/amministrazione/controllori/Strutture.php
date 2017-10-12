@@ -70,7 +70,7 @@ class Strutture extends BaseClass {
 
         foreach ($listaElementi as $elemento) {
             $tipo = $this->smarty->get_config_vars($elemento["tipo"]);
-
+            // echo "<pre>";print_r($this->smarty->get_config_vars()); exit;
             $elementoFe = $elemento;
             $elementoFe["tipo"] = $tipo;
 

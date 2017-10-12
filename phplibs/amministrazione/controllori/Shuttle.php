@@ -2,6 +2,7 @@
 require_once("./phplibs/framework/BaseClass.php");
 require_once("./phplibs/framework/Utility.php");
 require_once("./phplibs/db/MezziPiuOrariDb.php");
+require_once("./phplibs/db/ShuttleDb.php");
 require_once("./phplibs/CaricatoreDomini.php");
 require_once("./phplibs/framework/UtilityPerFileSystem.php");
 
@@ -13,7 +14,7 @@ class Shuttle extends BaseClass {
 
 	function Shuttle(&$hCtx, &$hSessionCtx, $fNoWork=false ) {
 
-		$this->BaseClass($hCtx, $hSessionCtx, "mezziPiuOrari");
+		$this->BaseClass($hCtx, $hSessionCtx, "shuttle");
 		$this->controlloFlusso();
 	}
 
@@ -57,7 +58,8 @@ class Shuttle extends BaseClass {
 	private function lista() {
 		$smarty = &$this->smarty;
 
-		GestioneLingua::caricaDizionario($smarty, "Amministrazione_Shuttle");
+        GestioneLingua::caricaDizionario($smarty, "Amministrazione_Shuttle");
+		GestioneLingua::caricaDizionario($smarty, "Amministrazione_ListaViaggi");
 
 		$this->listaViaggi();
 
@@ -68,17 +70,14 @@ class Shuttle extends BaseClass {
 
     private function listaViaggi() {
         $linguaImpostata = GestioneLingua::getLinguaImpostata();
-        $listaElementi = MezziPiuOrariDb::listaCompleta($this->hCtx, $linguaImpostata);
 
-        // echo "<pre>"; print_r($listaElementi); exit;
+        $listaElementi = ShuttleDb::listaViaggi($this->hCtx, $linguaImpostata);
 
         foreach ($listaElementi as $elemento) {
-            $tipo = $this->smarty->get_config_vars($elemento["tipo_struttura"]);
-            $direzione = $this->smarty->get_config_vars($elemento["direzione"]);
+            $tipo = $this->smarty->get_config_vars($elemento["tipo"]);
 
             $elementoFe = $elemento;
-            $elementoFe["tipo_struttura"] = $tipo;
-            $elementoFe["direzione"] = $direzione;
+            $elementoFe["tipo"] = $tipo;
 
             $listaElementiFe[] = $elementoFe;
 		}

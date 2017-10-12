@@ -12,6 +12,7 @@
                         <tr>
                             <th>{#idStruttura#}</th>
                             <th>{#descrizioneStruttura#}</th>
+                            <th>{#tipoStruttura#}</th>
                             <th>{#attivaStruttura#}</th>
                             <th>{#console#}</th>
                         </tr>
@@ -21,6 +22,7 @@
                                 <tr>
                                     <td>{$listaElementiFe[riga].id}</td>
                                     <td>{$listaElementiFe[riga].descrizione}</td>
+                                    <td>{$listaElementiFe[riga].tipo}</td>
                                     <td>
                                         {if $listaElementiFe[riga].attiva eq "1"}
                                             {#attiva#}

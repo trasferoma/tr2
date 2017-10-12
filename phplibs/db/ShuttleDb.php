@@ -105,5 +105,50 @@ class ShuttleDb {
         $stmt->close();
 
     }
+
+    public static function listaViaggi($hCtx, $suffissoPerCampiLingua)
+    {
+        $mysqli = &$hCtx->hDBCtx;
+        $dataViaggio = null;
+        $idStruttura = null;
+        $descrizioneStruttura = null;
+        $idMezzoPiuOrario = null;
+        $descrizioneMezzoPiuOrario = null;
+        $tipoElemento = null;
+
+        $query = "SELECT shu.data_viaggio, shu.id_struttura, stru.descrizione_$suffissoPerCampiLingua as struttura, shu.id_mezzo_piu_orario, mezzi.descrizione_$suffissoPerCampiLingua as mezzo_piu_orario, shu.tipo FROM tr_shuttle shu "
+            . " inner join tr_strutture stru on stru.id = shu.id_struttura "
+            . " inner join tr_mezzi_piu_orari mezzi on mezzi.id = shu.id_mezzo_piu_orario "
+            . " where data_viaggio >= DATE_ADD(CURDATE(), INTERVAL -1 DAY) GROUP BY data_viaggio, id_struttura, id_mezzo_piu_orario, tipo";
+
+        $stmt = $mysqli->prepare($query);
+
+        if ($stmt == false) {
+            die ("Errore nella query: " . $query);
+        }
+
+        $stmt->execute();
+
+        $stmt->bind_result($dataViaggio, $idStruttura, $descrizioneStruttura, $idMezzoPiuOrario, $descrizioneMezzoPiuOrario, $tipoElemento);
+
+        $viaggio = null;
+
+        while ($stmt->fetch()) {
+            $riga["data_viaggio"] = $dataViaggio;
+            $riga["id_struttura"] = $idStruttura;
+            $riga["struttura"] = $descrizioneStruttura;
+            $riga["id_mezzo_piu_orario"] = $idMezzoPiuOrario;
+            $riga["mezzo_piu_orario"] = $descrizioneMezzoPiuOrario;
+            $riga["tipo"] = $tipoElemento;
+
+            $viaggio = $riga;
+
+            $listaViaggi[] = $viaggio;
+        }
+
+        $stmt->close();
+
+        return $listaViaggi;
+    }
 } // end of class
 ?>
