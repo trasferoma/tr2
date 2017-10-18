@@ -19,6 +19,7 @@
 	<body>
 		<div id="page-wrapper">
 			<!-- Header -->
+			
             <header id="header">
                 <h1 class="logo"><a href="#top"><img src="images/logo.png" /></a></h1>
                 <nav id="nav">
@@ -65,6 +66,8 @@
                 </nav>
                 <div class="nav-shadow"></div>
             </header>
+
+			<div class="mobile-header"></div>
 
 			<!-- Main -->
 
