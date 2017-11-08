@@ -3061,10 +3061,25 @@
 				z-index: 0;
 			}
 
+/* mobile header */
+	.mobile-header {
+		display:none;
+	}
+	@media screen and (max-width: 840px) {
+		.mobile-header {
+			width:auto;
+			background-image:url(../../images/logo2.png);
+			background-position:center top;
+			background-repeat:no-repeat;
+			height:92px;
+			display:block;
+			margin-bottom:-5px;
+		}
+	}
+
 /* Fullbanner */
 	.fullbanner {
 		width:100%;
-		/*margin-top:0.5em;*/
 	}
 	@media screen and (max-width: 640px) {
 		.fullbanner {
