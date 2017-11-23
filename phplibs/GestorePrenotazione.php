@@ -7,22 +7,32 @@ require_once("./phplibs/db/ShuttleDb.php");
 
 class GestorePrenotazione
 {
+    /**
+     * - Salva la prenotazione;
+     * - Numero di passeggeri del gruppo;
+     * - Prendi shuttle (o crealo) dove entra il gruppo;
+     * - Inserisci i passeggeri nello shuttle;
+     *
+     * @param $hCtx
+     * @param $partenza
+     */
     public function aggiungiPrenotazionePartenzaDaRoma(&$hCtx, &$partenza)
     {
         PrenotazioniDb::aggiungiPrenotazionePartenzaDaRoma($hCtx, $partenza);
         $idPrenotazione = PrenotazioniDb::getIdUltimaPrenotazioneInserita($hCtx);
 
-        $this->aggiungiPasseggeriAdultiAdUnoShuttle($hCtx, $partenza, $idPrenotazione);
-        $this->aggiungiPasseggeriBambiniDa3a6AdUnoShuttle($hCtx, $partenza, $idPrenotazione);
-        $this->aggiungiPasseggeriBambiniDa6a12AdUnoShuttle($hCtx, $partenza, $idPrenotazione);
+        $numeroPasseggeri = $partenza->getNumeroPasseggeriComplessivo();
+        $shuttle = $this->getShuttleConPostoPerIlGruppo($hCtx, $partenza, $numeroPasseggeri);
+
+        $this->aggiungiPasseggeriAdultiAdUnoShuttle($hCtx, $partenza, $idPrenotazione, $shuttle["id"]);
+        $this->aggiungiPasseggeriBambiniDa3a6AdUnoShuttle($hCtx, $partenza, $idPrenotazione, $shuttle["id"]);
+        $this->aggiungiPasseggeriBambiniDa6a12AdUnoShuttle($hCtx, $partenza, $idPrenotazione, $shuttle["id"]);
     }
     /**
      * - Inserisce la prenotazione sul DB
-     *
-     * - crea i record passeggeri
-     * - per ogni passeggero:
-     *      - prende lo shuttle con posto libero (se non c'e' lo crea)
-     *      - inserisce il passeggero
+     * - Numero di passeggeri del gruppo;
+     * - Prendi shuttle (o crealo) dove entra il gruppo;
+     * - Inserisci i passeggeri nello shuttle;
      *
      */
     public function aggiungiPrenotazioneDiArrivoInRoma(&$hCtx, &$arrivo)
@@ -30,56 +40,65 @@ class GestorePrenotazione
         PrenotazioniDb::aggiungiPrenotazioneDiArrivoInRoma($hCtx, $arrivo);
         $idPrenotazione = PrenotazioniDb::getIdUltimaPrenotazioneInserita($hCtx);
 
-        $this->aggiungiPasseggeriAdultiAdUnoShuttle($hCtx, $arrivo, $idPrenotazione);
-        $this->aggiungiPasseggeriBambiniDa3a6AdUnoShuttle($hCtx, $arrivo, $idPrenotazione);
-        $this->aggiungiPasseggeriBambiniDa6a12AdUnoShuttle($hCtx, $arrivo, $idPrenotazione);
+        $numeroPasseggeri = $arrivo->getNumeroPasseggeriComplessivo();
+
+        $shuttle = $this->getShuttleConPostoPerIlGruppo($hCtx, $arrivo, $numeroPasseggeri);
+
+        $this->aggiungiPasseggeriAdultiAdUnoShuttle($hCtx, $arrivo, $idPrenotazione, $shuttle["id"]);
+        $this->aggiungiPasseggeriBambiniDa3a6AdUnoShuttle($hCtx, $arrivo, $idPrenotazione, $shuttle["id"]);
+        $this->aggiungiPasseggeriBambiniDa6a12AdUnoShuttle($hCtx, $arrivo, $idPrenotazione, $shuttle["id"]);
     }
 
-    public function aggiungiPasseggeriAdultiAdUnoShuttle(&$hCtx, &$viaggio, $idPrenotazione) {
+    public function getShuttleConPostoPerIlGruppo(&$hCtx, $viaggio, $numeroPasseggeri) {
+        $shuttleAperto = null;
+        $listaShuttle = ShuttleDb::getByViaggio($hCtx, $viaggio);
 
-        $numeroPostiDisponibili = 0;
+       // echo "<pre>"; print_r($listaShuttle); exit;
 
+        $trovato = false;
+
+        if (is_array($listaShuttle))
+        {
+            foreach ($listaShuttle as &$shuttle)
+            {
+                if (($shuttle["numeroPasseggeriPresenti"] + $numeroPasseggeri) <= MASSIMO_NUMERO_PASSEGGERI_PER_SHUTTLE)
+                {
+                    $trovato = true;
+                    // $shuttleAperto = $shuttle;
+                    break;
+                }
+            }
+        }
+
+        if ($trovato == false)
+        {
+            ShuttleDb::creaShuttleByViaggio($hCtx, $viaggio);
+            $idShuttle = ShuttleDb::getIdUltimoShuttleInserito($hCtx);
+            $shuttle = ShuttleDb::getById($hCtx, $idShuttle);
+        }
+
+        $shuttleAperto = $shuttle;
+
+        // echo "<pre>"; print_r($shuttleAperto); exit;
+
+        return $shuttleAperto;
+    }
+
+    public function aggiungiPasseggeriAdultiAdUnoShuttle(&$hCtx, &$viaggio, $idPrenotazione, $idShuttle) {
         for ($i = 0; $i < $viaggio->getNumeroAdulti(); $i++) {
-            if ($numeroPostiDisponibili == 0) {
-                $shuttle = $this->getShuttleAncoraAperto($hCtx, $viaggio);
-                $numeroPostiDisponibili = MASSIMO_NUMERO_PASSEGGERI_PER_SHUTTLE - $shuttle["numeroPasseggeriPresenti"];
-            }
-
-            PasseggeriDb::creaPasseggeroAdulto($hCtx, $idPrenotazione, $shuttle["id"]);
-
-            $numeroPostiDisponibili--;
+            PasseggeriDb::creaPasseggeroAdulto($hCtx, $idPrenotazione, $idShuttle);
         }
     }
 
-    public function aggiungiPasseggeriBambiniDa3a6AdUnoShuttle(&$hCtx, &$viaggio, $idPrenotazione) {
-
-        $numeroPostiDisponibili = 0;
-
+    public function aggiungiPasseggeriBambiniDa3a6AdUnoShuttle(&$hCtx, &$viaggio, $idPrenotazione, $idShuttle) {
         for ($i = 0; $i < $viaggio->getNumeroBambiniDa3A6(); $i++) {
-            if ($numeroPostiDisponibili == 0) {
-                $shuttle = $this->getShuttleAncoraAperto($hCtx, $viaggio);
-                $numeroPostiDisponibili = $shuttle["numeroPasseggeriPresenti"];
-            }
-
-            PasseggeriDb::creaPasseggeroBambinoDa3A6($hCtx, $idPrenotazione, $shuttle["id"]);
-
-            $numeroPostiDisponibili--;
+            PasseggeriDb::creaPasseggeroBambinoDa3A6($hCtx, $idPrenotazione, $idShuttle);
         }
     }
 
-    public function aggiungiPasseggeriBambiniDa6a12AdUnoShuttle(&$hCtx, &$viaggio, $idPrenotazione) {
-
-        $numeroPostiDisponibili = 0;
-
+    public function aggiungiPasseggeriBambiniDa6a12AdUnoShuttle(&$hCtx, &$viaggio, $idPrenotazione, $idShuttle) {
         for ($i = 0; $i < $viaggio->getNumeroBambiniDa6A12(); $i++) {
-            if ($numeroPostiDisponibili == 0) {
-                $shuttle = $this->getShuttleAncoraAperto($hCtx, $viaggio);
-                $numeroPostiDisponibili = $shuttle["numeroPasseggeriPresenti"];
-            }
-
-            PasseggeriDb::creaPasseggeroBambinoDa6A12 ($hCtx, $idPrenotazione, $shuttle["id"]);
-
-            $numeroPostiDisponibili--;
+            PasseggeriDb::creaPasseggeroBambinoDa6A12($hCtx, $idPrenotazione, $idShuttle);
         }
     }
 

@@ -27,7 +27,7 @@
                                 <td>{$listaElementiFe[riga].mezzo_piu_orario}</td>
                                 <td>{$listaElementiFe[riga].tipo}</td>
 
-                                <td><a href="?m=strutture&operazione=modifica&id={$listaElementiFe[riga].id}" class="button special small">{#bottoneModificaViaggio#}</a></td>
+                                <td><a href="?m=shuttle&operazione=dettaglioViaggio&idStruttura={$listaElementiFe[riga].id_struttura}&idMezzoPiuOrario={$listaElementiFe[riga].id_mezzo_piu_orario}&dataViaggio={$listaElementiFe[riga].data_viaggio|escape:'url'}&tipo={$listaElementiFe[riga].tipoCodificato}" class="button special small">{#bottoneModificaViaggio#}</a></td>
                             </tr>
                         {/section}
                         </tbody>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.30, created on 2017-09-21 16:57:30
+<?php /* Smarty version 2.6.30, created on 2017-11-09 08:05:11
          compiled from strutturaDiBase.tpl */ ?>
 <!DOCTYPE HTML>
 <!--
@@ -22,6 +22,7 @@
 	<body>
 		<div id="page-wrapper">
 			<!-- Header -->
+			
             <header id="header">
                 <h1 class="logo"><a href="#top"><img src="images/logo.png" /></a></h1>
                 <nav id="nav">
@@ -78,6 +79,8 @@
                 </nav>
                 <div class="nav-shadow"></div>
             </header>
+
+			<div class="mobile-header"></div>
 
 			<!-- Main -->
 

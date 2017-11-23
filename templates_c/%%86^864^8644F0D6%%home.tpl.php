@@ -1,27 +1,53 @@
-<?php /* Smarty version 2.6.19, created on 2017-08-30 09:38:49
+<?php /* Smarty version 2.6.30, created on 2017-11-09 08:05:11
          compiled from home.tpl */ ?>
 <div class="fullbanner" id="top">
     <div class="12u" style="pointer-events: none;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11457290.45890233!2d14.05549351014667!3d45.48611744998677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1500453366402&t=p&amp;&z=2;" width="100%" height="640" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d113058.29266373909!2d12.50024475472406!3d41.872480684446366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1507748250325" width="100%" height="640" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 </div>
 
 <section id="main" class="container">
     <div class="row">
-        <div class="12u">
+        <div class="6u">
             <!-- Home -->
             <section id="home" class="box">
-                <h3>Home</h3>
+                <h3>מחיר ללא תחרות וללא עמלות של סוכנים</h3>
 
-                <h4>Componenti</h4>
-                <ol>
-                    <li><a href="index.php?m=testo">Testo</a></li>
-                    <li><a href="index.php?m=liste">Liste</a></li>
-                    <li><a href="index.php?m=tabelle">Tabelle</a></li>
-                    <li><a href="index.php?m=bottoni">Bottoni</a></li>
-                    <li><a href="index.php?m=form">Form</a></li>
-                    <li><a href="index.php?m=immagini">Immagini</a></li>
-                </ol>
+                <p>
+				 אנו עומדים מאחורי המחירים שלנו. הזהרו מסוכנים המבטיחים לכם את השירות הזול ביותר. הסעות שדה התעופה שלנו עולות כמחיר כרטיס רכבת למרכז העיר, אבל איתנו לא תצטרכו להטלטל עם המזוודות ולקחת אוטובוס למלון מהתחנה המרכזית. אנו נחכה לכם ביציאה מהטרמינל ונדאג לשים אתכם בפתח המלון. 
+				</p>
+</section>
+        </div>
+		<div class="6u">
+            <!-- Home -->
+            <section id="home" class="box">
+                <h3>דיוק</h3>
+
+                <p>
+				 אנו מתגאים בעובדה שאנו מחכים לכם ולא להפך. איתנו לא תצטרכו לחפש את עמדת השאטלים לאחר טיסה מתישה. אנו ממתינים לכם מיד עם כניסתכם לאולם הטרמינל כ-25 צעדים בלבד שמאלה! 
+				</p>
+            </section>
+        </div>
+    </div>
+	<div class="row">
+        <div class="6u">
+            <!-- Home -->
+            <section id="home" class="box">
+                <h3>שירות</h3>
+                <p>
+				 איתנו תרגישו בבית גם מחוץ לגבולות המדינה. משיחת הטלפון הראשונה ועד החזרה לארץ אנו עומדים לשירותכם בכל בעיה ושאלה. אנו מכירים את הדרישות של קהל הלקוחות מהארץ ושמחים לתת יד ולעזור בכל נושא כאשר אהבת ישראל עומדת תמיד לנגד עינינו. 
+				</p>
+            </section>
+        </div>
+		<div class="6u">
+            <!-- Home -->
+            <section id="home" class="box">
+                <h3>בטיחות</h3>
+
+                <p>
+				 איתנו הבטיחות שלכם בידיים טובות.
+כל הנהגים שלנו מקפידים לנסוע על פי חוקי התנועה, וכל הרכבים שלנו בעלי רשיונות מלאים וכוללים ביטוח, כולל צד שלישי. 
+				</p>
             </section>
         </div>
     </div>

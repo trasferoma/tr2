@@ -1,8 +1,54 @@
 <?php
 require_once ("./phplibs/db/PasseggeriDb.php");
+require_once ("./phplibs/strumenti/StrumentiDate.php");
 
 class ShuttleDb {
     // ---------------------------------------
+    static function getById(&$hCtx, $id) {
+        $mysqli = &$hCtx->hDBCtx;
+        $idElemento = null;
+        $dataViaggio = null;
+        $idStruttura = null;
+        $idMezzoPiuOrario = null;
+        $tipoElemento = null;
+
+        $query = "SELECT id, data_viaggio, id_struttura, id_mezzo_piu_orario, tipo FROM tr_shuttle WHERE id = ?";
+
+        $stmt = $mysqli->prepare($query);
+
+        if ($stmt == false) {
+            die ("Errore nella query: " . $query);
+        }
+
+        $stmt->bind_param('d', $id);
+
+        $stmt->execute();
+        $stmt->store_result();
+
+        $stmt->bind_result($idElemento, $dataViaggio, $idStruttura, $idMezzoPiuOrario, $tipoElemento);
+
+        $shuttle = null;
+
+        $stmt->fetch();
+
+        $riga["id"] = $idElemento;
+        $riga["data_viaggio"] = $dataViaggio;
+        $riga["id_struttura"] = $idStruttura;
+        $riga["id_mezzo_piu_orario"] = $idMezzoPiuOrario;
+        $riga["tipo"] = $tipoElemento;
+
+        $shuttle = $riga;
+
+        $numeroPasseggeriPresenti = PasseggeriDb::getNumeroPasseggeriNelloShuttle($hCtx, $shuttle["id"]);
+        $shuttle["numeroPasseggeriPresenti"] = $numeroPasseggeriPresenti;
+
+        $stmt->free_result();
+
+        $stmt->close();
+
+        return $shuttle;
+    }
+
     static function getByViaggio(&$hCtx, $viaggio) {
         $mysqli = &$hCtx->hDBCtx;
         $idElemento = null;
@@ -99,11 +145,16 @@ class ShuttleDb {
         $esito = $stmt->execute();
 
         if ($esito == false) {
-            die('Errore Esecuzione Query: ' . htmlspecialchars($mysqli->error));
+            die('creaShuttleByViaggio -> Errore Esecuzione Query: ' . htmlspecialchars($mysqli->error));
         }
 
         $stmt->close();
 
+    }
+    public static function getIdUltimoShuttleInserito(&$hCtx)
+    {
+        $mysqli = &$hCtx->hDBCtx;
+        return $mysqli->insert_id;
     }
 
     public static function listaViaggi($hCtx, $suffissoPerCampiLingua)
@@ -119,7 +170,8 @@ class ShuttleDb {
         $query = "SELECT shu.data_viaggio, shu.id_struttura, stru.descrizione_$suffissoPerCampiLingua as struttura, shu.id_mezzo_piu_orario, mezzi.descrizione_$suffissoPerCampiLingua as mezzo_piu_orario, shu.tipo FROM tr_shuttle shu "
             . " inner join tr_strutture stru on stru.id = shu.id_struttura "
             . " inner join tr_mezzi_piu_orari mezzi on mezzi.id = shu.id_mezzo_piu_orario "
-            . " where data_viaggio >= DATE_ADD(CURDATE(), INTERVAL -1 DAY) GROUP BY data_viaggio, id_struttura, id_mezzo_piu_orario, tipo";
+            . " where data_viaggio >= DATE_ADD(CURDATE(), INTERVAL -1 DAY) GROUP BY data_viaggio, id_struttura, id_mezzo_piu_orario, tipo"
+            . " order by data_viaggio ";
 
         $stmt = $mysqli->prepare($query);
 
@@ -134,6 +186,58 @@ class ShuttleDb {
         $viaggio = null;
 
         while ($stmt->fetch()) {
+            $riga["data_viaggio"] = $dataViaggio;
+            $riga["id_struttura"] = $idStruttura;
+            $riga["struttura"] = $descrizioneStruttura;
+            $riga["id_mezzo_piu_orario"] = $idMezzoPiuOrario;
+            $riga["mezzo_piu_orario"] = $descrizioneMezzoPiuOrario;
+            $riga["tipo"] = $tipoElemento;
+
+            $viaggio = $riga;
+
+            $listaViaggi[] = $viaggio;
+        }
+
+        $stmt->close();
+
+        return $listaViaggi;
+    }
+
+    public static function listaShuttleDelViaggio($hCtx, $suffissoPerCampiLingua, $dataViaggio, $idStruttura, $idMezzoPiuOrario, $tipo) {
+        $mysqli = &$hCtx->hDBCtx;
+
+        $idShuttle = null;
+        $descrizioneStruttura = null;
+        $descrizioneMezzoPiuOrario = null;
+        $tipoElemento = null;
+
+        $query = "SELECT shu.id, stru.descrizione_$suffissoPerCampiLingua as struttura, mezzi.descrizione_$suffissoPerCampiLingua as mezzo_piu_orario, shu.tipo FROM tr_shuttle shu "
+            . " inner join tr_strutture stru on stru.id = shu.id_struttura "
+            . " inner join tr_mezzi_piu_orari mezzi on mezzi.id = shu.id_mezzo_piu_orario "
+            . " where data_viaggio = ? and shu.id_struttura = ? and shu.id_mezzo_piu_orario = ? and shu.tipo = ?";
+
+
+        $stmt = $mysqli->prepare($query);
+
+        if ($stmt == false) {
+            die ("Errore nella query: " . $query);
+        }
+
+        $stmt->bind_param('sdds',
+            $dataViaggio,
+            $idStruttura,
+            $idMezzoPiuOrario,
+            $tipo
+        );
+
+        $stmt->execute();
+
+        $stmt->bind_result($idShuttle, $descrizioneStruttura, $descrizioneMezzoPiuOrario, $tipoElemento);
+
+        $viaggio = null;
+
+        while ($stmt->fetch()) {
+            $riga["idShuttle"] = $idShuttle;
             $riga["data_viaggio"] = $dataViaggio;
             $riga["id_struttura"] = $idStruttura;
             $riga["struttura"] = $descrizioneStruttura;

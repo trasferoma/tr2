@@ -6,3 +6,5 @@ Server: localhost
 Nome DB: transferoma
 Utente DB: root
 Password DB:
+
+i file che hanno il carattere _ prima del nome sono dei backup.

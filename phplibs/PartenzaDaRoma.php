@@ -359,6 +359,9 @@ class PartenzaDaRoma extends BaseClass {
         $gestorePrenotazione = new GestorePrenotazione();
         $gestorePrenotazione->aggiungiPrenotazioneDiArrivoInRoma($this->hCtx, $viaggio);
 
+        $this->inviaEmailRiepilogoAlCliente();
+        $this->inviaEmailRiepilogoAllAmministratore();
+
         $token = $_REQUEST["token"];
         unset($_SESSION[$token]);
 
@@ -499,6 +502,83 @@ class PartenzaDaRoma extends BaseClass {
         return $mezzoPiuOrario["descrizione"];
 
     }
+
+
+    private function inviaEmailRiepilogoAlCliente()
+    {
+        $smarty = &$this->smarty;
+
+        $this->controlloSessioneValida();
+
+        GestioneLingua::caricaDizionario($smarty, "BookShuttle_PartenzaDaRoma");
+
+        $viaggio = $this->getPartenza();
+
+        $descrizioneStruttura = $this->getDescrizioneStruttura();
+        $descrizioneMezzoPiuOrario = $this->getDescrizioneMezzoPiuOrario();
+
+        $smarty->assign("data", $viaggio->getData());
+        $smarty->assign("struttura", $descrizioneStruttura);
+        $smarty->assign("mezzoPiuOrario", $descrizioneMezzoPiuOrario);
+        $smarty->assign("numeroAdulti", $viaggio->getNumeroAdulti());
+        $smarty->assign("numeroAnimali", $viaggio->getNumeroAnimali());
+        $smarty->assign("numeroBambiniDa3A6", $viaggio->getNumeroBambiniDa3A6());
+        $smarty->assign("numeroBambiniDa6A12", $viaggio->getNumeroBambiniDa6A12());
+        $smarty->assign("nomeContatto", $viaggio->getNomeContatto());
+        $smarty->assign("cognomeContatto", $viaggio->getCognomeContatto());
+        $smarty->assign("emailContatto", $viaggio->getEmailContatto());
+        $smarty->assign("cellulareContatto", $viaggio->getCellulareContatto());
+
+        $smarty->assign("nomeDestinazioneShuttle", $viaggio->getNomeDestinazione());
+        $smarty->assign("indirizzoDestinazioneShuttle", $viaggio->getIndirizzoDestinazione());
+
+        $corpoEmail = $smarty->fetch('bookShuttle/partenzaDaRoma/emailRiepilogoPerIlCliente.tpl');
+
+        $oggettoEmail = $this->smarty->get_config_vars("oggettoEmailRiepilogoPerIlCliente");
+
+        // echo "<pre>"; print_r($oggettoEmail); exit;
+        // echo "<pre>"; print_r($corpoEmail); exit;
+
+        @mail($viaggio->getEmailContatto(), $oggettoEmail, $corpoEmail);
+    }
+
+    private function inviaEmailRiepilogoAllAmministratore()
+    {
+        $smarty = &$this->smarty;
+
+        $this->controlloSessioneValida();
+
+        GestioneLingua::caricaDizionario($smarty, "BookShuttle_PartenzaDaRoma");
+
+        $viaggio = $this->getPartenza();
+
+        $descrizioneStruttura = $this->getDescrizioneStruttura();
+        $descrizioneMezzoPiuOrario = $this->getDescrizioneMezzoPiuOrario();
+
+        $smarty->assign("data", $viaggio->getData());
+        $smarty->assign("struttura", $descrizioneStruttura);
+        $smarty->assign("mezzoPiuOrario", $descrizioneMezzoPiuOrario);
+        $smarty->assign("numeroAdulti", $viaggio->getNumeroAdulti());
+        $smarty->assign("numeroAnimali", $viaggio->getNumeroAnimali());
+        $smarty->assign("numeroBambiniDa3A6", $viaggio->getNumeroBambiniDa3A6());
+        $smarty->assign("numeroBambiniDa6A12", $viaggio->getNumeroBambiniDa6A12());
+        $smarty->assign("nomeContatto", $viaggio->getNomeContatto());
+        $smarty->assign("cognomeContatto", $viaggio->getCognomeContatto());
+        $smarty->assign("emailContatto", $viaggio->getEmailContatto());
+        $smarty->assign("cellulareContatto", $viaggio->getCellulareContatto());
+
+        // $smarty->assign("nomeDestinazioneShuttle", $arrivo->getNomeDestinazione());
+        $smarty->assign("indirizzoDestinazioneShuttle", $viaggio->getIndirizzoDestinazione());
+
+        $corpoEmail = $smarty->fetch('bookShuttle/partenzaDaRoma/emailRiepilogoPerAmministratore.tpl');
+
+        $oggettoEmail = $this->smarty->get_config_vars("oggettoEmailRiepilogoPerAmministratore");
+
+        // echo "<pre>"; print_r($corpoEmail); exit;
+
+        @mail(EMAIL_AMMINISTRATORE, $oggettoEmail, $corpoEmail);
+    }
+
 
     /** *************************************************** */
 } //End of class definition.

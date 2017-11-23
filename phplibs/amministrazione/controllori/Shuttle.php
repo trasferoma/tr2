@@ -20,40 +20,20 @@ class Shuttle extends BaseClass {
 
 	public function controlloFlusso() {
 		switch ($_REQUEST["operazione"]) {
-            case "salva":
-                $this->salva();
-                break;
-            case "nuova":
-            	$this->nuova();
-                break;
-			case "modifica":
-                $this->modifica();
-				break;
+        case "salva":
+            $this->salva();
+            break;
+        case "nuova":
+            $this->nuova();
+            break;
+        case "dettaglioViaggio":
+            $this->dettaglioViaggio();
+            break;
 		default:
 			$this->lista();
 			break;
 		}
 	}
-
-	private function salva() {
-        $datiValidi = $this->validazioneFormDettaglioMezzoPiuOrario();
-
-        if ($datiValidi) {
-            MezziPiuOrariDb::salvaMezzoPiuOrario($this->hCtx, $_REQUEST);
-            Utility::redirect("?m=" . $this->modulo);
-        } else {
-            $this->consoleDettaglio($_REQUEST);
-        }
-    }
-
-    private function validazioneFormDettaglioMezzoPiuOrario()
-    {
-        require_once ("./phplibs/validazione/validazioneFormDettaglioMezzoPiuOrario.php");
-
-        $validatore = new ValidazioneFormDettaglioMezzoPiuOrario();
-
-        return $validatore->datiValidi();
-    }
 
 	private function lista() {
 		$smarty = &$this->smarty;
@@ -77,6 +57,7 @@ class Shuttle extends BaseClass {
             $tipo = $this->smarty->get_config_vars($elemento["tipo"]);
 
             $elementoFe = $elemento;
+            $elementoFe["tipoCodificato"] = $elementoFe["tipo"];
             $elementoFe["tipo"] = $tipo;
 
             $listaElementiFe[] = $elementoFe;
@@ -87,62 +68,103 @@ class Shuttle extends BaseClass {
 		$this->smarty->assign("listaElementiFe", $listaElementiFe);
     }
 
-    private function nuova()
-    {
-        $this->consoleDettaglio(null);
-    }
-
-    private function modifica()
-    {
-        $struttura = MezziPiuOrariDb::getMezzoPiuOrarioByIDCompleto($this->hCtx, $_REQUEST["id"]);
-
-		$this->consoleDettaglio($struttura);
-    }
-    private function consoleDettaglio($mezzoPiuOrario)
+    /**
+     *
+     */
+    private function dettaglioViaggio()
     {
         $smarty = &$this->smarty;
-        GestioneLingua::caricaDizionario($smarty, "AmministrazioneDettaglioaMezzoPiuOrario");
 
-        // echo "<pre>"; print_r($mezzoPiuOrario); exit;
+        GestioneLingua::caricaDizionario($smarty, "Amministrazione_Shuttle");
+        GestioneLingua::caricaDizionario($smarty, "Amministrazione_DettaglioViaggio");
 
-        if ($mezzoPiuOrario != null) {
-            $smarty->assign("id", $mezzoPiuOrario["id"]);
-            $smarty->assign("strutturaSelezionata", $mezzoPiuOrario["id_struttura"]);
-            $smarty->assign("direzione", $mezzoPiuOrario["direzione"]);
-/*
-            if ($mezzoPiuOrario["direzione"] == "arrivo") {
-                $smarty->assign("arrivoSelezionato", "selected");
-                $smarty->assign("partenzaSelezionato", "");
-            } else if ($mezzoPiuOrario["direzione"] == "partenza") {
-                $smarty->assign("arrivoSelezionato", "partenza");
-                $smarty->assign("partenzaSelezionato", "selected");
-            }
-*/
-            $smarty->assign("direzione", $mezzoPiuOrario["direzione"]);
+        $listaDati = $this->caricaDatiDelViaggio();
+
+        // echo "<pre>"; print_r($listaDati); exit;
+
+        $this->mostraInfoViaggio($listaDati);
+        $this->mostraTuttiGliShuttle($listaDati);
+
+        $smarty->assign("moduloCodificato", urlencode($this->modulo));
+
+        $this->setPaginaDaMostrare($smarty->fetch('amministrazione/shuttle/dettaglio.tpl'));
+    }
+
+    private function mostraTuttiGliShuttle($listaDati) {
+        reset($listaDati);
+        $smarty = &$this->smarty;
+        $smarty->assign("listaDati", $listaDati);
+       // echo "<pre>"; print_r($listaDati); exit;
+
+        /*
+
+        foreach ($listaDati as $shuttle) {
+            $this->mostraSingoloShuttle($shuttle);
+        }
+        */
+    }
+
+    /**
+     *  [idShuttle] => 3
+     *  [data_viaggio] => 2017-11-29
+     *  [id_struttura] => 1
+     *  [struttura] => Ciampino
+     *  [id_mezzo_piu_orario] => 1
+        [mezzo_piu_orario] => Descrizione 1
+        [tipo] => arrivo_in_roma
+        [passeggeri] => Array
+        (
+            [0] => Array
+            (
+                [id] => 11
+                [id_shuttle] => 3
+                [id_prenotazione] => 3
+                [tipo] => adulto
+                [nome_contatto] => yyy
+                [cognome_contatto] => yyy
+                [email_contatto] => yyy@yy.yy
+                [cellulare_contatto] => 3474377011
+                [indirizzo_destinazione] => xxxyyy
+            )
+     */
+    private function mostraSingoloShuttle($shuttle) {
+        $smarty = &$this->smarty;
+
+        echo "<pre>"; print_r($shuttle); exit;
+    }
 
 
-            if ($mezzoPiuOrario["attiva"] == "1") {
-                $smarty->assign("attivoSelezionato", "selected");
-                $smarty->assign("nonAttivoSelezionato", "");
-            } else if ($mezzoPiuOrario["attiva"] == "0") {
-                $smarty->assign("attivoSelezionato", "");
-                $smarty->assign("nonAttivoSelezionato", "selected");
-            }
+    private function mostraInfoViaggio($listaDati) {
+        $smarty = &$this->smarty;
 
-            $smarty->assign("descrizioneIt", $mezzoPiuOrario["descrizione_it"]);
-            $smarty->assign("descrizioneEn", $mezzoPiuOrario["descrizione_en"]);
-            $smarty->assign("descrizioneAbjad", $mezzoPiuOrario["descrizione_abjad"]);
-		} else {
-            $smarty->assign("attivoSelezionato", "selected");
-            $smarty->assign("nonAttivoSelezionato", "");
-		}
+        foreach ($listaDati as $shuttle) {
+            $tipo = $this->smarty->get_config_vars($shuttle["tipo"]);
 
-        $smarty->assign("modulo", $this->modulo);
+            $smarty->assign("shuttleDataViaggio", $shuttle["data_viaggio"]);
+            $smarty->assign("shuttleStruttura", $shuttle["struttura"]);
+            $smarty->assign("shuttleMezzoPiuOrario", $shuttle["mezzo_piu_orario"]);
+            $smarty->assign("shuttleTipo", $tipo);
+            break;
+        }
+    }
 
-        CaricatoreDomini::listaStrutture($this->hCtx, $smarty, "strutture");
-        CaricatoreDomini::listaDirezioni($smarty, "listaDirezioni");
+    private function caricaDatiDelViaggio()
+    {
 
-        $this->setPaginaDaMostrare($smarty->fetch('amministrazione/mezziPiuOrari/dettaglio.tpl'));
+        $linguaImpostata = GestioneLingua::getLinguaImpostata();
+
+        $listaShuttleDelViaggio = ShuttleDb::listaShuttleDelViaggio($this->hCtx, $linguaImpostata, $_REQUEST["dataViaggio"], $_REQUEST["idStruttura"], $_REQUEST["idMezzoPiuOrario"], $_REQUEST["tipo"]);
+
+        foreach ($listaShuttleDelViaggio as $shuttle) {
+            $listaPasseggeri = PasseggeriDb::getListaPasseggeriByIdShuttle($this->hCtx, $shuttle["idShuttle"]);
+            // echo "<pre>"; print_r($listaPasseggeri); exit;
+            $shuttle["passeggeri"] = $listaPasseggeri;
+            $listaCompleta[] = $shuttle;
+        }
+
+        // $listaShuttleDelViaggio = ShuttleDb::getByViaggio($hCtx, $viaggio);
+
+        return $listaCompleta;
     }
 }
 ?>

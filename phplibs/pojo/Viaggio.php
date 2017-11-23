@@ -236,7 +236,9 @@ abstract class Viaggio implements Serializable
         $this->indirizzoDestinazione = $indirizzoDestinazione;
     }
 
-
+    public function getNumeroPasseggeriComplessivo() {
+        return $this->getNumeroAdulti() + $this->getNumeroBambiniDa3A6() + $this->getNumeroBambiniDa6A12();
+    }
 
     public function serialize() {
         // echo "1"; exit;

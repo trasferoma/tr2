@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Set 27, 2017 alle 16:54
+-- Creato il: Nov 23, 2017 alle 08:06
 -- Versione del server: 10.1.21-MariaDB
 -- Versione PHP: 5.6.30
 
@@ -65,16 +65,24 @@ CREATE TABLE `tr_passeggeri` (
 --
 
 INSERT INTO `tr_passeggeri` (`id`, `id_shuttle`, `id_prenotazione`, `tipo`) VALUES
-(1, 1, 2, 'adulto'),
-(2, 1, 2, 'adulto'),
-(3, 1, 2, 'adulto'),
-(4, 1, 2, 'bambino3_6'),
-(5, 1, 2, 'bambino3_6'),
-(6, 1, 2, ''),
-(7, 1, 3, 'adulto'),
-(8, 1, 3, ''),
-(9, 2, 4, 'adulto'),
-(10, 2, 4, 'bambino6_12');
+(1, 1, 1, 'adulto'),
+(2, 1, 1, 'adulto'),
+(3, 1, 1, 'bambino6_12'),
+(4, 2, 2, 'adulto'),
+(5, 2, 2, 'adulto'),
+(6, 2, 2, 'adulto'),
+(7, 2, 2, 'adulto'),
+(8, 3, 3, 'adulto'),
+(9, 3, 3, 'adulto'),
+(10, 3, 3, 'adulto'),
+(11, 3, 3, 'adulto'),
+(12, 3, 3, 'adulto'),
+(13, 4, 4, 'adulto'),
+(14, 4, 4, 'adulto'),
+(15, 4, 4, 'adulto'),
+(16, 4, 4, 'adulto'),
+(17, 4, 4, 'adulto'),
+(18, 4, 4, 'adulto');
 
 -- --------------------------------------------------------
 
@@ -104,9 +112,10 @@ CREATE TABLE `tr_prenotazioni` (
 --
 
 INSERT INTO `tr_prenotazioni` (`id`, `data_arrivo`, `id_struttura`, `id_mezzo_piu_orario`, `numero_adulti`, `numero_animali`, `numero_bambini_3_6`, `numero_bambini_6_11`, `nome_contatto`, `cognome_contatto`, `email_contatto`, `cellulare_contatto`, `indirizzo_destinazione`, `tipo`) VALUES
-(2, '2017-09-29', 13, 5, 3, 0, 2, 1, 'ytrytr', 'yrtyry', 'eeee@eee.ee', '3474377079', 'tyrytryr', 'partenza_da_roma'),
-(3, '2017-09-29', 13, 5, 1, 0, 0, 1, 'jhjhgj', 'ghjghj', 'xxx@xxx.xx', '3474377079', 'G F F the Old Farmhouse, Helston, Regno Unito', 'partenza_da_roma'),
-(4, '2017-09-29', 13, 5, 1, 0, 0, 1, 'uytu', 'utyuty', 'yyy@yy.yy', '4355677890', 'dfgdfga, Sins, Svizzera', 'partenza_da_roma');
+(1, '2017-11-12', 2, 1, 2, 0, 0, 1, 'Pippo', 'Dens', 'pippo.dens@gmail.com', '3474377011', 'Viale Roma, 12, Pietrasanta, LU, Italia', 'arrivo_in_roma'),
+(2, '2017-11-29', 2, 1, 4, 0, 0, 0, 'xxx', 'xxx', 'xxx@xx.xx', '3474377011', 'xxx', 'arrivo_in_roma'),
+(3, '2017-11-29', 1, 1, 5, 0, 0, 0, 'yyy', 'yyy', 'yyy@yy.yy', '3474377011', 'xxxyyy', 'arrivo_in_roma'),
+(4, '2017-11-29', 1, 1, 6, 0, 0, 0, 'zzz', 'zzz', 'zzz@zz.zz', '3474377011', 'zzz', 'arrivo_in_roma');
 
 -- --------------------------------------------------------
 
@@ -127,8 +136,10 @@ CREATE TABLE `tr_shuttle` (
 --
 
 INSERT INTO `tr_shuttle` (`id`, `data_viaggio`, `id_struttura`, `id_mezzo_piu_orario`, `tipo`) VALUES
-(1, '2017-09-29', 13, 5, 'partenza_da_roma'),
-(2, '2017-09-29', 13, 5, 'partenza_da_roma');
+(1, '2017-11-12', 2, 1, 'arrivo_in_roma'),
+(2, '2017-11-29', 2, 1, 'arrivo_in_roma'),
+(3, '2017-11-29', 1, 1, 'arrivo_in_roma'),
+(4, '2017-11-29', 1, 1, 'arrivo_in_roma');
 
 -- --------------------------------------------------------
 
@@ -231,7 +242,7 @@ ALTER TABLE `tr_mezzi_piu_orari`
 -- AUTO_INCREMENT per la tabella `tr_passeggeri`
 --
 ALTER TABLE `tr_passeggeri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT per la tabella `tr_prenotazioni`
 --
@@ -241,7 +252,7 @@ ALTER TABLE `tr_prenotazioni`
 -- AUTO_INCREMENT per la tabella `tr_shuttle`
 --
 ALTER TABLE `tr_shuttle`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT per la tabella `tr_strutture`
 --

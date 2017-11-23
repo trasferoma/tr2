@@ -223,6 +223,7 @@ class MezziPiuOrariDb {
         $mysqli = &$hCtx->hDBCtx;
 
         $idElemento = null;
+        $direzione = null;
         $idStruttura = null;
         $descrizione = null;
         $attiva = null;
@@ -238,7 +239,7 @@ class MezziPiuOrariDb {
 
         $stmt->execute();
 
-        $stmt->bind_result($idElemento, $idStruttura, $descrizione, $attiva);
+        $stmt->bind_result($idElemento, $direzione, $idStruttura, $descrizione, $attiva);
 
         $risultati = array();
 

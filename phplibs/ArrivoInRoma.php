@@ -371,6 +371,9 @@ class ArrivoInRoma extends BaseClass {
 
         $gestorePrenotazione->aggiungiPrenotazioneDiArrivoInRoma($this->hCtx, $arrivo);
 
+        $this->inviaEmailRiepilogoAlCliente();
+        $this->inviaEmailRiepilogoAllAmministratore();
+
         $token = $_REQUEST["token"];
         unset($_SESSION[$token]);
 
@@ -510,6 +513,80 @@ class ArrivoInRoma extends BaseClass {
 
         return $mezzoPiuOrario["descrizione"];
 
+    }
+
+    private function inviaEmailRiepilogoAlCliente()
+    {
+        $smarty = &$this->smarty;
+
+        $this->controlloSessioneValida();
+
+        GestioneLingua::caricaDizionario($smarty, "BookShuttle_ArrivoInRoma");
+
+        $arrivo = $this->getArrivo();
+
+        $descrizioneStruttura = $this->getDescrizioneStruttura();
+        $descrizioneMezzoPiuOrario = $this->getDescrizioneMezzoPiuOrario();
+
+        $smarty->assign("data", $arrivo->getData());
+        $smarty->assign("struttura", $descrizioneStruttura);
+        $smarty->assign("mezzoPiuOrario", $descrizioneMezzoPiuOrario);
+        $smarty->assign("numeroAdulti", $arrivo->getNumeroAdulti());
+        $smarty->assign("numeroAnimali", $arrivo->getNumeroAnimali());
+        $smarty->assign("numeroBambiniDa3A6", $arrivo->getNumeroBambiniDa3A6());
+        $smarty->assign("numeroBambiniDa6A12", $arrivo->getNumeroBambiniDa6A12());
+        $smarty->assign("nomeContatto", $arrivo->getNomeContatto());
+        $smarty->assign("cognomeContatto", $arrivo->getCognomeContatto());
+        $smarty->assign("emailContatto", $arrivo->getEmailContatto());
+        $smarty->assign("cellulareContatto", $arrivo->getCellulareContatto());
+
+        // $smarty->assign("nomeDestinazioneShuttle", $arrivo->getNomeDestinazione());
+        $smarty->assign("indirizzoDestinazioneShuttle", $arrivo->getIndirizzoDestinazione());
+
+        $corpoEmail = $smarty->fetch('bookShuttle/arrivoInRoma/emailRiepilogoPerIlCliente.tpl');
+
+        // echo "<pre>"; print_r($corpoEmail); exit;
+
+        $oggettoEmail = $this->smarty->get_config_vars("oggettoEmailRiepilogoPerIlCliente");
+
+        @mail($arrivo->getEmailContatto(), $oggettoEmail, $corpoEmail);
+    }
+
+    private function inviaEmailRiepilogoAllAmministratore()
+    {
+        $smarty = &$this->smarty;
+
+        $this->controlloSessioneValida();
+
+        GestioneLingua::caricaDizionario($smarty, "BookShuttle_ArrivoInRoma");
+
+        $arrivo = $this->getArrivo();
+
+        $descrizioneStruttura = $this->getDescrizioneStruttura();
+        $descrizioneMezzoPiuOrario = $this->getDescrizioneMezzoPiuOrario();
+
+        $smarty->assign("data", $arrivo->getData());
+        $smarty->assign("struttura", $descrizioneStruttura);
+        $smarty->assign("mezzoPiuOrario", $descrizioneMezzoPiuOrario);
+        $smarty->assign("numeroAdulti", $arrivo->getNumeroAdulti());
+        $smarty->assign("numeroAnimali", $arrivo->getNumeroAnimali());
+        $smarty->assign("numeroBambiniDa3A6", $arrivo->getNumeroBambiniDa3A6());
+        $smarty->assign("numeroBambiniDa6A12", $arrivo->getNumeroBambiniDa6A12());
+        $smarty->assign("nomeContatto", $arrivo->getNomeContatto());
+        $smarty->assign("cognomeContatto", $arrivo->getCognomeContatto());
+        $smarty->assign("emailContatto", $arrivo->getEmailContatto());
+        $smarty->assign("cellulareContatto", $arrivo->getCellulareContatto());
+
+        // $smarty->assign("nomeDestinazioneShuttle", $arrivo->getNomeDestinazione());
+        $smarty->assign("indirizzoDestinazioneShuttle", $arrivo->getIndirizzoDestinazione());
+
+        $corpoEmail = $smarty->fetch('bookShuttle/arrivoInRoma/emailRiepilogoPerAmministratore.tpl');
+
+        $oggettoEmail = $this->smarty->get_config_vars("oggettoEmailRiepilogoPerAmministratore");
+
+        // echo "<pre>"; print_r(EMAIL_AMMINISTRATORE); exit;
+
+        @mail(EMAIL_AMMINISTRATORE, $oggettoEmail, $corpoEmail);
     }
 
     /** *************************************************** */

@@ -190,7 +190,7 @@ class StruttureDb {
         $esito = $stmt->execute();
 
         if ($esito == false) {
-            die('Errore Esecuzione Query: ' . htmlspecialchars($mysqli->error));
+            die('salvaStruttura -> Errore Esecuzione Query: ' . htmlspecialchars($mysqli->error));
         }
 
         $stmt->close();
